@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>模型列表</title>
+	<link href="css/base.css" rel="stylesheet" type="text/css">
+	<link href="css/table.css" rel="stylesheet" type="text/css">
+	<script language="javascript" type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div class="row">
+<table width="100%" border="0" cellpadding="0" cellspacing="1" align="center">
+	<tr>
+		<td height="26" >
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			<td align="left">
+			<a class="coolbg np" href="<!--{site_url('content/models/add')}-->?_=<!--{time()}-->">增加模型</a>
+			</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<form name="form1" method="post" action="<!--{site_url('content/models/updateSort')}-->">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="table">
+	<tr align="center" height="25">
+		<th width="5%">id</th>
+		<th>模型名称</th>
+		<th width="15%">模型类型</th>
+		<th width="50%">模型简介</th>
+		<th width="15%">操作</th>
+	</tr>
+<!--{if !empty($lists) }-->
+<!--{foreach $lists as $v }-->
+	<tr align="center" height="26" align="center">
+		<td align="center">{$v.id}</td>
+		<td align="left">{$v.name}</td>
+		<td align="center">{$v.type_name}</td>
+		<td align="center">{$v.description}</td>
+		<td align="center">
+			<a href="{site_url('content/models/edit/'.$v['id'])}?_=<!--{time()}-->"><u>更改</u></a>
+			<a href="javascript:;" onclick="model_del('{$v.id}');" class="del"><u>删除</u></a>
+		</td>
+	</tr>
+<!--{/foreach}-->
+<!--{else}-->
+	<tr align="center" height="26" align="center">
+	<td colspan="8">
+	信息为空
+	</td>
+	</tr>
+<!--{/if}-->
+</table>
+</form>
+</div>
+<script>
+// 删除
+function model_del (id) {
+	if (window.confirm('你确定要删除该信息吗？删除后不可恢复！')) {
+		var modeldelurl = "<!--{site_url('content/models/del')}-->";
+		$.ajax({
+			type : "POST",
+			dataType : "json",
+			url : modeldelurl,
+			data : {
+				id:id
+			},
+				complete : function() {
+			},
+			success : function(result) {
+				if (result.code != 1000) {
+					alert(result.msg);
+				} else {
+					window.location.reload();
+				}
+			},
+			error : function(ae) {
+			},
+			async : true
+		});
+		return true;
+	}else{
+		return false;
+	}
+}
+</script>
+</body>
+</html>

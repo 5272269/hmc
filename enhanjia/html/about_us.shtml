@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>漢家族-关于我们</title>
+		<meta content="" name="description">
+	    <meta content="" name="keywords">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link href="css/mobilemenu.css" rel="stylesheet" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="uc/header.html" -->
+		<div class="box about">
+			<div class="inner_banner" id="slide-banner">
+                <ul class="slides">
+                    <li>
+                        <img src="img/about_banner.jpg" />
+				        <div class="container">
+					        <p class="en">Concentration</p>
+					        <h3>专注</h3>
+					        <p>我们专注于家族传承</p>
+					        <a href="javascript:;">查看更多</a>
+				        </div>
+                    </li>
+                    <li>
+                        <img src="img/about_banner.jpg" />
+				        <div class="container">
+					        <p class="en">Connection</p>
+					        <h3>连接</h3>
+					        <p>我们专注于家族传承</p>
+					        <a href="javascript:;">查看更多</a>
+				        </div>
+                    </li>
+                    <li>
+                        <img src="img/about_banner.jpg" />
+				        <div class="container">
+					        <p class="en">Contribution</p>
+					        <h3>给予</h3>
+					        <p>我们专注于家族传承</p>
+					        <a href="javascript:;">查看更多</a>
+				        </div>
+                    </li>
+                    <li>
+                        <img src="img/about_banner.jpg" />
+				        <div class="container">
+					        <p class="en">Compassion</p>
+					        <h3>关心</h3>
+					        <p>我们专注于家族传承</p>
+					        <a href="javascript:;">查看更多</a>
+				        </div>
+                    </li>
+                    <li>
+                        <img src="img/about_banner.jpg" />
+				        <div class="container">
+					        <p class="en">Community</p>
+					        <h3>家族</h3>
+					        <p>我们专注于家族传承</p>
+					        <a href="javascript:;">查看更多</a>
+				        </div>
+                    </li>
+                </ul>
+			</div>
+			<div class="about_text container">
+				<h3>漢家族办公室是亚洲领先的家族办公室，以极致精密、至臻专业的态度，帮助全球华人家族传承有序。漢家族自全球集结了丰富的传承落地资源，集成为系统解决“家族财产保护、家族财富保障、家族传承规划”的综合性解决方案平台。</h3>
+				<!--<p>
+					保险咨询、金融服务、金融咨询、金融信息、金融评估（保险、银行、不动产）、不动产估价、艺术品估价、财政估算、经纪、有价证券经纪、财产保护、财富保障、传承规划。
+				</p>-->
+			</div>
+			<ul class="inner_list">
+				<li class="active">
+					<div class="inner_about">
+						<img src="img/about01.jpg" />
+						<div class="cover_box"></div>
+						<div class="hover_box">
+							<h3>五个世纪的守望</h3>
+							<!--<p>
+
+									五个世纪的守望是华人超富家族的愿景目标，也是漢家族办公室的愿景目标。漢家族研究院广泛研究了古今中外的家族传承案例，发现了解决家族传承有序有效的落地方法。倘若家族人能够重回古道——自然之道，重建城垣——心灵之垣。回到自然健康的生活状态，回归真正高品质的生活，为心灵构筑起充满正能量的城垣，每个家族都可以做到传承五个世纪。
+
+							</p>-->
+						</div>
+					</div>	
+				</li>
+				<li>
+					<div class="inner_about">
+						<img src="img/about02.jpg" />
+						<div class="cover_box"></div>
+						<div class="hover_box">
+							<h3>精益专注，至臻专业</h3>
+							<!--<p>
+								精益”是对英文Lean 的翻译，是“极端<br>”和“精准”的含义，精<br>益专注——代表了漢家族办公室品牌在“传承”这份事
+								业上的坚定性格。
+								“精益”是对英文Lean的翻译，是“极其精准”的含义，精益专注——代表了漢家族办公室品牌在“传承”这份事业上的坚定性格。“至臻”来源于“至臻主义”：倡导对事物的内在规律进行探索，对世界本质进行终极追问。至臻专业——代表了漢家族办公室品牌在家族传承管理系统上，追求最好、最完美的精神。
+							</p>-->
+						</div>
+					</div>	
+				</li>
+				<li>
+					<div class="inner_about">
+						<img src="img/about03.jpg" />
+						<div class="cover_box"></div>
+						<div class="hover_box">
+							<h3>财富有价，传承无价</h3>
+							<!--<p>
+								正像公元前202年，刘邦建立的汉王朝前后<br>传承了500<br>年一样，汉家族办公室将守护华人超富家<br>族传承500年，
+								<br>为他们的家族财产保护、家族财富保障、<br>家族传承规划、<br>提供最高等级的服务—专注。
+								虽然，华人超富家族积累的巨额财富来之不易，但是，创造财富的精神和能力更为珍贵，更具社会化的积极影响力。让财富、创造财富的精神和能力传承下去，才是不可估量的社会价值。漢家族办公室，为家族传承助力，为家族和睦铸爱，为家族后世注入无尽的希望。
+							</p>-->
+						</div>
+					</div>	
+				</li>
+				<li>
+					<div class="inner_about">
+						<img src="img/about04.jpg" />
+						<div class="cover_box"></div>
+						<div class="hover_box">
+							<h3>从一代到世代</h3>
+							<!--<p>
+								漢家族办公室肩负“创家族传奇，立百世基业”的使命，开创了
+								华人超富家族有序有效传承的先河。以世界领先的“漢·家族传承管理
+								系统”伴随他们从今天的第一代企业家、创业家，传承到二代、三代……
+								让每一个被服务的家族，从时代的荣耀，化身为世世代代的荣耀。
+							</p>-->
+						</div>
+					</div>	
+				</li>
+				<li>
+					<div class="inner_about">
+						<img src="img/about05.jpg" />
+						<div class="cover_box"></div>
+						<div class="hover_box">
+							<h3>重回古道，重建城垣</h3>
+							<!--<p>
+								古道是自然之道，追寻高品质生命与生活之道。城垣是心灵的城垣，追求有底线、有分寸的修心之道。
+							</p>-->
+						</div>
+					</div>	
+				</li>
+				<li>
+					<div class="inner_about">
+						<img src="img/about06.jpg" />
+						<div class="cover_box"></div>
+						<div class="hover_box">
+							<h3>创家族传奇，立百世基业</h3>
+							<!--<p>
+								漢家族办公室，正是为华人超富家族传承“从一代到世世代代”而创立，肩负起“创家族传奇，立百世基业”的企业使命。漢家族办公室于全球顶级家族传承领域苦心追寻5年后，研发创造出专为华人超富家族量身定制的“漢·家族传承管理系统”，从一代、二代的绩效指标提升、从健康生命、健康生活管理入手，为家族传承注入关键的基因。协助家族传奇跨越时空障碍，持续绽放曜目的光芒。
+							</p>-->
+						</div>
+					</div>	
+				</li>
+			</ul>
+		</div>	
+		<!--#include file="uc/footer.html" -->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+        <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="js/mobilemenu.js" ></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+</html>

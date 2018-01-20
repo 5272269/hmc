@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>模型修改</title>
+	<link href="css/model.css" rel="stylesheet" type="text/css">
+	<link href="__PUBLIC__/js/tagsInput/jquery.tagsinput.css" rel="stylesheet" type="text/css">
+	<link href="__PUBLIC__/js/tagsInput/jquery-ui.css" rel="stylesheet" type="text/css">
+	<script language="javascript" type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
+	<script language="javascript" type="text/javascript" src="__PUBLIC__/js/tagsInput/jquery.tagsinput.js"></script>
+	<script language="javascript" type="text/javascript" src="__PUBLIC__/js/tagsInput/jquery-ui.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/model.js"></script>
+<script language="javascript">
+    var num = {$num};
+</script>
+</head>
+<body>
+	<div class="container">
+		<form name="form1" action="<!--{site_url('content/models/edit')}-->" enctype="multipart/form-data" method="post">
+			<input type="hidden" name="dopost" value="save" />
+			<input type="hidden" name="id" value="{$info.id}" />
+			<input type="hidden" name="engnum" value="{$num}" />
+			<ul class="box">
+                <li>
+                    <ul class="item">
+                        <li class="first clearfix">
+                            <label>模型名称：</label>
+                            <div class="area">
+                                <input type="text" name="name" value="{$info.name}" />
+                            </div>
+                        </li>
+						<li class="clearfix">
+							<label>模型类型：</label>
+							<div class="area">
+								<select name="type" class="model_type">
+									<option value="doc"<!--{if $info.type == 'doc'}--> selected="selected"<!--{/if}-->>文档</option>
+									<option value="form"<!--{if $info.type == 'form'}--> selected="selected"<!--{/if}-->>表单</option>
+									<option value="page"<!--{if $info.type == 'page'}--> selected="selected"<!--{/if}-->>页面</option>
+								</select>
+							</div>
+						</li>
+                        <li class="clearfix">
+                            <label>模型描述：</label>
+                            <div class="area">
+                                <textarea name="description">{$info.description}</textarea>
+                            </div>
+                        </li>
+                        <li class="add"><input type="button" class="submit" value="添加字段"></li>
+                    </ul>
+                </li>
+				<li id="data0">
+					<ul class="item">
+						<li class="clearfix"><label>字段名称：</label><div class="area"><input type="text" value="标题" readonly="readonly" /></div></li>
+						<li class="clearfix">
+							<label>字段英文：</label>
+							<div class="area">
+								<input type="text" value="title" readonly="readonly" />
+							</div>
+						</li>
+						<li class="clearfix">
+							<label>类型：</label>
+							<div class="area">
+								<input type="text" value="单行文本" readonly="readonly" />
+							</div>
+						</li>
+						<li class="clearfix">
+							<label>排序：</label>
+							<div class="area">
+								<input type="text" value="0" readonly="readonly" />
+							</div>
+						</li>
+					</ul>
+				</li>
+<!--{foreach $field as $v}-->
+				<li id="data{$v.id}">
+					<ul class="item">
+						<li class="clearfix"><label>字段名称：</label><div class="area"><input type="text" name="title{$v.id}" value="{$v.title}" class="field_title" /></div></li>
+						<li class="clearfix">
+							<label>字段英文：</label>
+							<div class="area">
+								<input type="text" value="{$v.field}" name="engname{$v.id}" readonly="readonly" />
+							</div>
+						</li>
+						<li class="model clearfix">
+							<label>类型：</label>
+							<div class="area">
+								<select name="type{$v.id}" class="field_type" >
+<!--{if $info.type == 'doc'}-->
+									<option value="text"<!--{if $v.type =='text'}--> selected="selected"<!--{/if}-->>单行文本</option>
+									<option value="textarea"<!--{if $v.type =='textarea'}--> selected="selected"<!--{/if}-->>多行文本</option>
+									<option value="date"<!--{if $v.type =='date'}--> selected="selected"<!--{/if}-->>日期</option>
+									<option value="pic"<!--{if $v.type =='pic'}--> selected="selected"<!--{/if}-->>图片</option>
+									<option value="pics"<!--{if $v.type =='pics'}--> selected="selected"<!--{/if}-->>图片集</option>
+									<option value="file"<!--{if $v.type =='file'}--> selected="selected"<!--{/if}-->>单文件</option>
+									<option value="files"<!--{if $v.type =='files'}--> selected="selected"<!--{/if}-->>多文件</option>
+									<option value="radio"<!--{if $v.type =='radio'}--> selected="selected"<!--{/if}-->>单选</option>
+									<option value="checkbox"<!--{if $v.type =='checkbox'}--> selected="selected"<!--{/if}-->>多选</option>
+									<option value="password"<!--{if $v.type =='password'}--> selected="selected"<!--{/if}-->>密码</option>
+									<option value="editor"<!--{if $v.type =='editor'}--> selected="selected"<!--{/if}-->>编辑器</option>
+									<option value="select"<!--{if $v.type =='select'}--> selected="selected"<!--{/if}-->>下拉选项</option>
+									<option value="re_select"<!--{if $v.type =='re_select'}--> selected="selected"<!--{/if}-->>关联选项</option>
+<!--{elseif $info.type == 'form'}-->
+									<option value="text"<!--{if $v.type =='text'}--> selected="selected"<!--{/if}-->>单行文本</option>
+									<option value="textarea"<!--{if $v.type =='textarea'}--> selected="selected"<!--{/if}-->>多行文本</option>
+									<option value="date"<!--{if $v.type =='date'}--> selected="selected"<!--{/if}-->>日期</option>
+									<option value="radio"<!--{if $v.type =='radio'}--> selected="selected"<!--{/if}-->>单选</option>
+									<option value="checkbox"<!--{if $v.type =='checkbox'}--> selected="selected"<!--{/if}-->>多选</option>
+									<option value="select"<!--{if $v.type =='select'}--> selected="selected"<!--{/if}-->>下拉选项</option>
+									<option value="re_select"<!--{if $v.type =='re_select'}--> selected="selected"<!--{/if}-->>关联选项</option>
+<!--{elseif $info.type == 'page'}-->
+									<option value="text"<!--{if $v.type =='text'}--> selected="selected"<!--{/if}-->>单行文本</option>
+									<option value="textarea"<!--{if $v.type =='textarea'}--> selected="selected"<!--{/if}-->>多行文本</option>
+									<option value="date"<!--{if $v.type =='date'}--> selected="selected"<!--{/if}-->>日期</option>
+									<option value="pic"<!--{if $v.type =='pic'}--> selected="selected"<!--{/if}-->>图片</option>
+									<option value="pics"<!--{if $v.type =='pics'}--> selected="selected"<!--{/if}-->>图片集</option>
+									<option value="file"<!--{if $v.type =='file'}--> selected="selected"<!--{/if}-->>单文件</option>
+									<option value="files"<!--{if $v.type =='files'}--> selected="selected"<!--{/if}-->>多文件</option>
+									<option value="radio"<!--{if $v.type =='radio'}--> selected="selected"<!--{/if}-->>单选</option>
+									<option value="checkbox"<!--{if $v.type =='checkbox'}--> selected="selected"<!--{/if}-->>多选</option>
+									<option value="editor"<!--{if $v.type =='editor'}--> selected="selected"<!--{/if}-->>编辑器</option>
+									<option value="select"<!--{if $v.type =='select'}--> selected="selected"<!--{/if}-->>下拉选项</option>
+									<option value="re_select"<!--{if $v.type =='re_select'}--> selected="selected"<!--{/if}-->>关联选项</option>
+<!--{/if}-->
+								</select>
+							</div>
+						</li>
+						<li class="clearfix">
+							<label>排序：</label>
+							<div class="area">
+								<input type="text" name="sort{$v.id}" value="{$v.sort}" class="field_sort" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')"/>
+							</div>
+						</li>
+						<li class="show clearfix"<!--{if $v.type!='radio' && $v.type!='checkbox' && $v.type!='select'}--> style="display: none"<!--{/if}-->>
+							<label>预设值：</label>
+							<div class="area">
+								<input type="text" name="value{$v.id}" class="field_value" id="tags_{$v.id}" value="{$v.value}"/>
+							</div>
+						</li>
+					</ul>
+					<input type="button" class="delete submit" value="删除字段" onclick="data_delete(this)">
+				</li>
+<!--{/foreach}-->
+                <li class="last"><input type="button" class="submit" value="提交" onclick="return data_submit()"></li>
+			</ul>
+		</form>
+		<div class="template" style="display: none">
+			<ul class="item">
+				<li class="clearfix"><label>字段名称：</label><div class="area"><input type="text" name="title{$num+1}" class="field_title" /></div></li>
+				<li class="clearfix">
+					<label>字段英文：</label>
+					<div class="area">
+						<input type="text" class="engname" name="engname{$num+1}" value="" />
+					</div>
+				</li>
+				<li class="model clearfix">
+				</li>
+				<li class="clearfix">
+					<label>排序：</label>
+					<div class="area">
+						<input type="text" name="sort{$num+1}" class="field_sort" value="0"  onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')"/>
+					</div>
+				</li>
+				<li class="show clearfix" style="display: none">
+					<label>预设值：</label>
+					<div class="area">
+						<input type="text" name="value{$num+1}" class="field_value" id="tags_{$num+1}"/>
+					</div>
+				</li>
+			</ul>
+			<input type="button" class="delete submit" value="删除字段" onclick="data_delete(this)">
+		</div>
+		<div id="model_doc" style="display: none">
+			<label>类型：</label>
+			<div class="area">
+				<select name="type{$num+1}" class="field_type" >
+					<option value="text" selected="selected">单行文本</option>
+					<option value="textarea">多行文本</option>
+					<option value="date">日期</option>
+					<option value="pic">图片</option>
+					<option value="pics">图片集</option>
+					<option value="file">单文件</option>
+					<option value="files">多文件</option>
+					<option value="radio">单选</option>
+					<option value="checkbox">多选</option>
+					<option value="password">密码</option>
+					<option value="editor">编辑器</option>
+					<option value="select">下拉选项</option>
+					<option value="re_select">关联选项</option>
+				</select>
+			</div>
+		</div>
+		<div id="model_form" style="display: none">
+			<label>类型：</label>
+			<div class="area">
+				<select name="type{$num+1}" class="field_type" >
+					<option value="text" selected="selected">单行文本</option>
+					<option value="textarea">多行文本</option>
+					<option value="date">日期</option>
+					<option value="radio">单选</option>
+					<option value="checkbox">多选</option>
+					<option value="select">下拉选项</option>
+					<option value="re_select">关联选项</option>
+				</select>
+			</div>
+		</div>
+		<div id="model_page" style="display: none">
+			<label>类型：</label>
+			<div class="area">
+				<select name="type{$num+1}" class="field_type" >
+					<option value="text" selected="selected">单行文本</option>
+					<option value="textarea">多行文本</option>
+					<option value="date">日期</option>
+					<option value="pic">图片</option>
+					<option value="pics">图片集</option>
+					<option value="file">单文件</option>
+					<option value="files">多文件</option>
+					<option value="radio">单选</option>
+					<option value="checkbox">多选</option>
+					<option value="editor">编辑器</option>
+					<option value="select">下拉选项</option>
+					<option value="re_select">关联选项</option>
+				</select>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+	function onAddTag(tag) {
+		alert("添加: " + tag);
+	}
+	function onRemoveTag(tag) {
+		alert("删除: " + tag);
+	}
+	function onChangeTag(input,tag) {
+		alert("修改: " + tag);
+	}
+	$(function() {
+		$('.box .field_value').tagsInput({width:'auto'});
+	});
+
+</script>
+</body>
+</html>

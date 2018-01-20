@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>漢家族-漢家族研究院详情页</title>
+		<meta content="" name="description">
+		<meta content="" name="keywords">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+		<link href="css/reset.css" rel="stylesheet">
+		<link href="css/base.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/allchecks.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/respond.css" />
+		<link rel="stylesheet" href="css/jcDate.css">
+		<link href="css/mobilemenu.css" rel="stylesheet" />
+		<!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+
+	<body>
+		<!--#include file="uc/header.html" -->
+		<div class="box institute_detail">
+			<div class="container">
+				<div class="location">
+					<a href="/">首页</a>
+					<span>&gt;</span>
+					<a href="javascript:;">调查问卷</a>
+				</div>
+				<div class="inner_title">
+					<h3>RiskMetri财富保障评估系统</h3>
+					<p>基本信息评估</p>
+				</div>
+				<div class="switch_tags">
+					<a href="questionnaire_1.shtml" class="active">基本信息评估</a>
+					<a href="questionnaire_2.shtml">风险评估</a>
+				</div>
+				<div class="questionnaire-box">
+					<div class="why-show">
+						尊敬的客户：
+						<br />为了尽可能准确的了解您的投资习惯及风险承受能力，请您花一点时间完成以下的调查问卷。谢谢！
+					</div>
+					<div class="items">
+						<dl>
+							<dt>1、您的性别是：</dt>
+							<dd>
+								<ul>
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label class="new_label">男</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">女</label>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt>2、您的出生年份为：</dt>
+							<dd class="person_date">
+                                <input type="text" name="name" class="pro_name date" value="请输入您的出生日期" id="blur" />
+
+                                <span><img src="img/person_date.png" alt=""></span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>3、您的最高学历为：</dt>
+							<dd>
+								<ul>
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label class="new_label">高中及以下</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">专科</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">本科</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">硕士及以上</label>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt>4、考虑所有收入来源，您个人的税前年收入属于哪一类别：</dt>
+							<dd>
+								<ul>
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label class="new_label">1000万元以下</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">1000万元至5000万元</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">5000万元至1亿元</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">1亿元至5亿元</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">5亿元以上</label>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt>5、您是否已婚？</dt>
+							<dd>
+								<ul>
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label class="new_label">是</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">否</label>
+									</li>
+
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt>6、如果已婚，您的家庭年收入属于以下哪一类别？</dt>
+							<dd>
+								<ul>
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label class="new_label">1000万元以下</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">1000万元至5000万元</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">5000万元至1亿元</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">1亿元至5亿元</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">5亿元以上</label>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt>7、除您以外，还有几位家庭成员需要您供养？</dt>
+							<dd>
+								<ul>
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label class="new_label">没有</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">1位</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">2位</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">3位</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">4位或以上</label>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt>8、您的家庭净资产应归于以下哪一类？</dt>
+							<dd>
+								<ul>
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label class="new_label">1亿元以下</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">1亿元至10亿元</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">10亿元至50亿元</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">50亿元至100亿元</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label class="new_label">4位或以上</label>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="question_submit">
+					    <a href="javascript:;">提交评估问卷</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--#include file="uc/footer.html" -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/mobilemenu.js" ></script>
+		<script type="text/javascript" src="js/icheck.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/jQuery-jcDate.js"></script>
+		    <script type="text/javascript">
+			$(function (){
+				$("input.date").jcDate({					       
+		
+					Event : "click",
+					Speed : 100,
+					Left : 0,
+					Top : 50,
+					format : "-",
+					Timeout : 100
+		
+				});
+			});
+		</script>
+	</body>
+
+</html>

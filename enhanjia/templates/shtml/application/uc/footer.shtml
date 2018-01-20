@@ -1,0 +1,96 @@
+<footer class="footer container">
+	<div class="idea_box clearfix">
+		<a class="foot_logo float_l" title="HMCFamily" href="/">
+			<img src="img/footer_logo.png"  />
+		</a>
+		<div class="idea float_l">
+			<span>Suggestion Box</span>
+			<input type="text" name="idea" id="idea" value="Please enter your valued suggestions " />
+			<a href="javascript:;">Submit </a>
+		</div>
+		<div class="follow_us float_l">
+			<span>Know more about us</span>
+			<a href="javascript:;"></a>
+			<div class="code-con"><img src="img/code.jpg" alt="qrcode"></div>
+		</div>
+	</div>
+
+	<div class="mobile-idea idea_box">
+		<div class="clearfix">
+			<a class="foot_logo float_l" title="HMCFamily" href="/">
+				<img src="img/mobile/f-logo.png"  />
+			</a>
+			<div class="follow_us float_r clearfix">
+				<span class="float_l">Know more about us</span>
+				<a href="javascript:;" class="float_r"></a>
+                <div class="code-con"><img src="img/code.jpg" alt="qrcode"></div>
+			</div>
+		</div>
+		<div class="idea">
+			<span>Suggestion Box</span>
+			<input type="text" name="idea" id="idea" value="Please enter your valued suggestions " />
+			<a href="javascript:;">Submit</a>
+		</div>	
+	</div>
+
+	<ul class="footer_nav clearfix">
+		<li class="style01">
+			<!--{omp:nav_get_parent_url data="assign" list="hanjiazu" id="2"}-->
+			<span><a href="{site_url($hanjiazu)}" title="HMCFamily">HMCFO</a></span>
+		</li>
+		<li class="style02">
+			<!--{omp:nav_get_parent_url data="assign" list="caifu" id="3"}-->
+			<span><a href="{site_url($caifu)}">Family Wealth Management</a></span>
+			<!--{omp:doc_listinfo data="assign" list="caifu_list" id="3" sort="sort ASC"}-->
+			<!--{loop $caifu_list.infolist as $v}-->
+			<a href="{$v.url}" title="{$v.title}">{$v.title}</a>
+			<!--{/loop}-->
+		</li>
+		<li class="style03">
+			<!--{omp:nav_get_parent_url data="assign" list="cishan" id="4"}-->
+			<span><a href="{site_url($cishan)}" title="HMCFamily Charity">Family Charity</a></span>
+			<a href="{site_url($cishan)}" title="The HMCFamily Office Charity Service">Family Charity Service</a>
+			<!--{omp:nav_get_parent_url data="assign" list="yihui" id="8"}-->
+			<a href="{site_url($yihui)}" title="EV Foundation">EV Foundation</a>
+			<!--{omp:nav_get_parent_url data="assign" list="guanai" id="9"}-->
+			<a href="{site_url($guanai)}" title="Care Foundation">Care Foundation </a>
+		</li>
+		<li class="style04">
+			<!--{omp:nav_get_parent_url data="assign" list="yanjiuyuan" id="5"}-->
+			<span><a href="{site_url($yanjiuyuan)}" title="HMCFamily Office Research Institute">HMCFO Research Institute</a> </span>
+			<!--{omp:doc_listinfo data="assign" list="yanjiuyuan_list" id="5" sort="sort ASC"}-->
+			<!--{loop $yanjiuyuan_list.infolist as $v}-->
+			<a href="{$v.url}" title="{$v.title}" alt="{$v.title}">{$v.title}</a>
+			<!--{/loop}-->
+		</li>
+		<li class="style05">
+			<!--{omp:nav_get_parent_url data="assign" list="learn" id="6"}-->
+			<span><a href="{site_url($learn)}" title="HMCFamily LEARN Lifestyle">HMCFO LEARN Lifestyle</a></span>
+		</li>
+	</ul>
+	<div class="copyright clearfix">
+		<p class="float_l">Copyright® 2011 HMCFAMILY OFFICE |  All rights reserved |  Beijing ICP Filing No. 13050370| Privacy Policy</p>
+		<div class="f_nav float_r">
+			<span>HMCFamily Office Mailbox ：</span>
+			<a href="mailto:service@hmcfo.com">service@hmcfo.com</a>	
+			<!--{omp:nav_get_parent_url data="assign" list="about_us" id="19"}-->
+			<a href="{site_url($about_us)}" title="Contact us" style="font-weight: bold;">Contact us </a>
+		</div>
+	</div>
+</footer>
+<script>
+		var logoutUrl = '{site_url('member/logon')}';
+		function dologout(){
+			if(window.confirm('你确定要注销登录吗？')){
+				var url = logoutUrl+"?time="+Math.random();
+				$.post(url,{},function(result){
+					alert('注销成功!');
+					window.location.reload();
+				});
+                return true;
+              }else{
+                return false;
+             }
+			
+		}
+</script>

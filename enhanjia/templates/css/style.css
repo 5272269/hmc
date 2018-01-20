@@ -1,0 +1,256 @@
+.logo-env {
+  width: 100%;
+  padding: 25px 10px 16px;
+  color:#ffffff;
+  font-size:20px;
+  text-align:middle;
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.logo-env .logo {
+  float: left;
+  font-weight:bold;
+}
+.sidebar-collapse{
+position: relative;
+float: right;
+}
+.sidebar-collapse a {
+    background: url(list.png) no-repeat scroll 0 0 transparent;
+    width: 34px; height: 32px; display: inline-block;
+}
+.top {
+	height:37px;
+	width:100%;
+      padding: 0 0 16px;
+      margin: 0 0 17px;
+      border-bottom: 1px solid #d6d7d9;
+	overflow:hidden;
+	clear:both;
+}
+.top .top_link ul li.welcome {
+    border-right: medium none;
+    color: #424B51;
+    padding-right: 6px;
+}
+.top .top_link ul li a {
+    color: #424B51;
+    padding-left: 11px;
+    padding-right: 11px;
+    text-decoration: none;
+}
+.dbox dt.lside {
+    background: url(dlgtitle.gif) repeat-x scroll 0 0 transparent;
+    border-bottom: 1px solid #D3DBDE;
+}
+.dbox {
+    border: 1px solid #D3DBDE;
+    margin-left: 1%;
+    margin-top: 8px;
+    width: 98%;
+}
+.dbox dt {
+    color: #424B51;
+    cursor: move;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+}
+a b {
+    color: #424B51;
+}
+b, strong {
+    color: #424B51;
+}
+.topnav {
+    background: url("admin_top_bg.gif") repeat-x scroll left -37px transparent;
+    clear: both;
+    height: 29px;
+    overflow: hidden;
+    width: 100%;
+}
+a.mmac div {
+    background: url("leftbg2.gif") no-repeat scroll 0 0 transparent;
+    color: #325304;
+    font-weight: bold;
+    height: 37px !important;
+    padding: 6px 4px 4px 10px;
+    word-wrap: break-word;
+}
+a.mm:hover div {
+	background:url(leftbg2.gif) no-repeat;
+	color:#424B51;
+}
+dl.bitem dt b, dl.bitem2 dt b {
+    color: #aaabae
+}
+
+dl.bitem {
+  clear:both;
+  margin:0px;
+  border-bottom: 1px solid #2C303C;
+  color: #fff;
+  background:#0064c4;
+}
+dl.bitem .sitemu{border-top: 1px solid #2C303C;}
+dl.bitem2 {
+  clear:both;
+  margin:0px;
+  color: #fff;
+  border-bottom: 1px solid #2C303C;
+  background:#353D48;
+}
+dl.bitem dt, dl.bitem2 dt, dl.bitem2 .single {
+  height:25px;
+  line-height:25px;
+  padding: 10px 20px;
+  cursor:pointer;
+}
+dl.bitem2 .single {
+  display:block;
+  color: #fff;
+  text-decoration: none;
+}
+dl.bitem dt b, dl.bitem2 dt b {
+  color:#aaabae;
+}
+dl.bitem dd, dl.bitem2 dd {
+  background-color:#2b303a;
+}
+div.items {
+  clear:both;
+  padding:0px;
+  height:0px;
+}
+.fllct {
+  float:left;
+  width:85px;
+}
+.flrct {
+  float:left;
+}
+.sitemu li{
+  border-bottom: 1px solid #262D37;
+}
+.sitemu li:hover{
+  background: #2d323d
+}
+.sitemu li a{color: #aaabae;
+  padding:10px 0px 10px 35px;
+  line-height:14px;
+  display:block;
+  text-decoration: none;
+}
+.sitemu li a.selected{
+    color: #fff;
+}
+.sitemu li ul{
+    border-top: 1px solid #262D37;
+}
+.sitemu li .submenu1 a{
+    padding-left: 50px;
+}
+.sitemu li .submenu2 a{
+    padding-left: 65px;
+}
+.sitemu li a.active{color: #fff;background:url(../images/menunewbg2.gif) right 10px no-repeat;}
+
+a.mmac div {
+  background:url(<?php echo base_url();?>public/admin/images/leftbg2.gif) no-repeat;
+  height:37px!important;
+  height:47px;
+  padding:6px 4px 4px 10px;
+  word-wrap: break-word;
+  word-break : break-all;
+  font-weight:bold;
+  color:#325304;
+}
+a.mm div {
+  background:url(<?php echo base_url();?>public/admin/images/leftmbg1.gif) no-repeat;
+  height:37px!important;
+  height:47px;
+  padding:6px 4px 4px 10px;
+  word-wrap: break-word;
+  word-break : break-all;
+  font-weight:bold;
+  color:#475645;
+  cursor:pointer;
+}
+a.mm:hover div {
+  background:url(<?php echo base_url();?>public/admin/images/leftbg2.gif) no-repeat;
+  color:#4F7632;
+}
+.mmf {
+  height:1px;
+  padding:5px 7px 5px 7px;
+}
+#mainct {
+  
+}
+.index_menu2{width: 100%;background: #2F3541; outline: none;}
+.index_menu2 table{border:none; float: none;width:100%;}
+#skinlist {
+    display: block;
+    height: 11px;
+  margin-top: 10px;
+    overflow: hidden;
+    width: 86px;
+}
+#skin div {
+    float: left;
+}
+#skin li {
+    cursor: pointer;
+    float: left;
+    height: 11px;
+    width: 14px;
+}
+#def div, #s1 div, #s2 div, #s3 div, #s4 div{
+    background-image: url("<?php echo base_url();?>public/admin/images/skinbutton.png");
+    background-repeat: no-repeat;
+}
+#s1 div {
+    background-position: 0 0px;
+}
+#s2 div {
+    background-position: 0 -11px;
+}
+#s3 div {
+    background-position: 0 -22px;
+}
+#s4 div {
+    background-position: 0 -33px;
+}
+#s1 div.sel {
+    background: url("<?php echo base_url();?>public/admin/images/skinbutton.png") no-repeat scroll -14px top transparent;
+}
+#s2 div.sel {
+    background: url("<?php echo base_url();?>public/admin/images/skinbutton.png") no-repeat scroll -14px -11px transparent;
+}
+#s3 div.sel {
+    background: url("<?php echo base_url();?>public/admin/images/skinbutton.png") no-repeat scroll -14px -22px transparent;
+}
+#s4 div.sel {
+    background: url("<?php echo base_url();?>public/admin/images/skinbutton.png") no-repeat scroll -14px -33px transparent;
+}
+
+/***登录页***/
+.sign_l{width:34.436%; height:100%; padding-top:0; background:url(../images/sign_l.png); position:absolute; top:0; left:8%;}
+.sign_l .mark_wenhao{width:3.374%; float:right; margin:26px 20px 0 0;}
+.sign_l .title_1{margin-left:7.566%; margin-top:59px;}
+.sign_l .title_1 p{font-size:30px; color:#2e3641;}
+.sign_l .title_1 .p_1{font-size:24px; margin-top:0;}
+.sign_l .sign_form{margin-top:63px; margin-left:7.566%;}
+.sign_l .sign_form .input_text1{width:86.094%; height:46px; border:0; font-family:Microsoft Yahei; font-size:16px; color:#7f7f7f; border-bottom:1px solid #cdcdcd; background:none;}
+.sign_l .sign_form .input_text2{margin-top:30px;}
+.sign_l .sign_form .form_p{font-size:14px; color:#cf201b; margin-top:10px;}
+.sign_l .sign_form .button_p{margin-top:27px; height:50px;}
+.sign_l .sign_form .button_1{width:20.415%; border:0; cursor:pointer;}
+
+.sign_r{width:65.563%; height:100%; background:green;}
+.logo{width:14.779%; margin-left:7.566%;}
+
+.footer{position:absolute; bottom:30px; left:7.566%;}
+.footer p{font-size:12px; line-height:16px; color:#818181;}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>漢家族-家族研究院</title>
+		<meta content="" name="description">
+	    <meta content="" name="keywords">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link href="css/mobilemenu.css" rel="stylesheet" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="uc/header.html" -->
+		<div class="box institute">
+			<div class="inner_banner">
+				<img src="img/charity_banner.jpg" />
+				<div class="container">
+					<p class="en">Research Institute</p>
+					<h3>漢家族研究院</h3>
+					<p>家族办公室行业白皮书</p>
+					<p>家族生存环境研究报告</p>
+					<p>富可过三代白皮书</p>
+				</div>
+			</div>
+			<ul class="institute_con container">
+				<li>
+					<div class="con_img float_l">
+						<img src="img/institute01.jpg" />
+					</div>
+					<div class="con_text float_r">
+						<h3><a href="institute_detail.shtml">家族办公室行业白皮书</a></h3>
+						<p>
+							<!--客户是 一位富有的创业家。他有一位妻子，膝下一子一女。他的公司主要生产建筑材料并在亚洲某股票交易所上市。他与
+							夫人都持有国外护照并拥有国外的长期居住权。他在多个国家拥有不同的资产。-->
+							肩负使命 拓业之荒，对于中国超高净值家族来说，当下的全球经济一体化格局是一场史无 前例的机遇与挑战。如何将家族企业
+							扩展到海外市场，资产互不干涉， 需要采用最佳的国际化实践策略来经营自己的企业，以及应付复杂的 多管辖税收体系，同时
+							由于自身影响力的不断扩大，肩负的社会责任 也与日俱增。
+						</p>
+						<a href="institute_detail.shtml" class="down">了解详情</a>
+					</div>
+				</li>
+				<li>
+					<div class="con_img float_l">
+						<img src="img/institute02.jpg" />
+					</div>
+					<div class="con_text float_r">
+						<h3>家族生存环境研究报告</h3>
+						<p>
+							对于华人超富家族来说，全球经济一体化的格局是一场史无前例的挑战与机遇。随着我国经济迅速国际化，改革开放的不断深
+							入，华人超富家族需要正确认识国内外形势，以全球化的视野来瞄准家族与家族企业的发展方向。
+						</p>
+						<a href="institute_detail02.shtml" class="down">了解详情</a>
+					</div>
+				</li>
+				<li>
+					<div class="con_img float_l">
+						<img src="img/institute03.jpg" />
+					</div>
+					<div class="con_text float_r">
+						<h3>富可过三代白皮书</h3>
+						<p>
+							众所周知，中国有句俗语，叫“富不过三代”。事实上，这句话并非空穴来风，而是有事实依据的。根据J. Astrachan的一项
+							家族商业研究显示，30%的家族企业能存活到第二代，9%可以传到第三代，只有3%可以传到第四代。这项研究表明，如果不做
+							周密的安排，代际传承将是财富耗散的第一杀手。
+						</p>
+						<a href="institute_detail01.shtml" class="down">了解详情</a>
+					</div>
+				</li>
+			</ul>
+		</div>	
+		<!--#include file="uc/footer.html" -->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/mobilemenu.js" ></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+</html>

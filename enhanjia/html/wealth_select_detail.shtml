@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>漢家族-精选基金</title>
+		<meta content="" name="description">
+	    <meta content="" name="keywords">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link href="css/mobilemenu.css" rel="stylesheet" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="uc/header.html" -->
+		<div class="box wealth_detail">
+			<div class="container">
+				<div class="location">
+					<a href="/">首页</a>
+					<span>&gt;</span>
+					<a href="javascript:;">家族财富保障</a>
+					<span>&gt;</span>
+					<a href="javascript:;">全球精选基金</a>
+				</div>
+				<div class="inner_title">
+					<h3>家族财富基金</h3>
+					<p>全球精选基金</p>
+				</div>
+				<div class="inner_text">
+					<h3>传家宝全球精选基金</h3>
+					<p>
+						由我们的国际化专家团队构建缜密的对冲基金精选系统，为您的家族甄选美国、欧洲等海外市场业绩卓越的对冲基金进行投资，
+						有效隔离中国境内的投资风险。
+					</p>
+					<h4>投资理念</h4>
+					<!--<p>
+						2014年9月9日晚，有着亚洲品牌年度“奥斯卡”之称的第9届“亚洲品牌盛典”活动在香港亚洲电视台圆满落幕，作为中国第一家
+						符合国际标准的家族办公室——漢•家族办公室荣获“亚洲品牌十大创新企业”大奖，这是中国家族办公室行。
+					</p>-->
+					<ul>
+						<li>超越整个对冲基金行业产生超额收益</li>
+						<li>通过多策略、跨地域投资减少收益波动</li>
+						<li>评估制胜策略获取最优回报</li>
+					</ul>
+					<h4>投资策略</h4>
+					<!--<p>
+						2014年9月9日晚，有着亚洲品牌年度“奥斯卡”之称的第9届“亚洲品牌盛典”活动在香港亚洲电视台圆满落幕，作为中国第一家
+						符合国际标准的家族办公室——漢•家族办公室荣获“亚洲品牌十大创新企业”大奖，这是中国家族办公室行。
+					</p>-->
+					<ul>
+						<li>对全球7000个对冲基金定量分析优中选优</li>
+						<li>对投资团队实地尽职调查定性分析眼见为实</li>
+						<li>以稀缺通道组合投资于高门槛欧美顶级基金</li>
+					</ul>
+					<h4>认购流程</h4>
+					<!--<p>
+						2014年9月9日晚，有着亚洲品牌年度“奥斯卡”之称的第9届“亚洲品牌盛典”活动在香港亚洲电视台圆满落幕，作为中国第一家
+						符合国际标准的家族办公室——漢•家族办公室荣获“亚洲品牌十大创新企业”大奖，这是中国家族办公室行。
+					</p>-->
+					<ul>
+						<li>
+							预约下单
+							<p>了解基金基本情况</p>
+							<p>选定基金，预约下单</p>
+							<p>客服人员致电，确认订单</p>
+						</li>
+						<li>
+							产品咨询
+							<p>预约产品咨询时间</p>
+							<p>选基金管理团队提供产品咨询服务</p>
+							<p>明确基金认购意向</p>
+						</li>
+						<li>
+							签约打款
+							<p>签署《基金认购协议》</p>
+							<p>划拨基金认购款</p>
+							<p>基金认购交易完成</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+		<!--#include file="uc/footer.html" -->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/mobilemenu.js" ></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+</html>

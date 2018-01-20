@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>漢家族-漢家族研究院详情页</title>
+		<meta content="" name="description">
+	    <meta content="" name="keywords">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link href="css/mobilemenu.css" rel="stylesheet" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="uc/header.html" -->
+		<div class="box institute_detail">
+			<div class="container">
+				<div class="location">
+					<a href="/">首页</a>
+					<span>&gt;</span>
+					<a href="javascript:;">漢家族研究院</a>
+					<span>&gt;</span>
+					<a href="javascript:;">富可过三代白皮书</a>
+				</div>
+				<div class="inner_title">
+					<h3>汉家族研究院</h3>
+					<p>富可过三代白皮书</p>
+				</div>
+				<div class="inner_text">
+					<p>
+						众所周知，中国有句俗语，叫“富不过三代”。事实上，这句话并非空穴来风，而是有事实依据的。<span>根据J. Astrachan的一项家族
+						商业研究显示，30%的家族企业能存活到第二代，9%可以传到第三代，只有3%可以传到第四代。这项研究表明，如果不做周密的安
+						排，代际传承将是财富耗散的第一杀手。</span>
+					</p>
+					<p>
+						中国对外开放已经有30多年的时间，在这期间发生了许多经济奇迹，从而创造了大量的财富。超高净值人群作为“第一代财富创造
+						者”，克服了许许多多的挑战，才得以构建如今的财富和社会地位。作为先富起来的一批人，他们率先积累了大量的财富。同样，
+						他们也将率先面临着财富保障与传承的挑战，而财富传承失败的成本是巨大无比的。在未来5到15年里，大约90%的中国第一代财
+						富创造者将陆陆续续面临着家族财富传承的挑战。作为传承财富的第一代人，他们之前没有接受过相关的教育，也没有任何先例
+						可供参考。在这种情况下，家族财富成功传承到第二代的比例可能连30%都达不到。
+					</p>
+					<p>
+						此外，中国超高净值人群的第一次家族传承将遭遇中国经济的“新常态”。与之前每年10-12%的GDP增长速度不同，中国的GDP增
+						长率将降低到每年5-7%。行业竞争将迅速加剧，很多家族企业处于产能过剩的行业，需要从传统的“老经济”行业转移到“新经
+						济”行业，转型过程中将面临巨大的挑战。
+					</p>
+					<p>
+						值得庆幸的是，随着信息全球化的发展，中国的超高净值人群现在可以在中国以外寻找家族传承的经验。来自北美和欧洲的一些
+						家族已经打破了“富不过三代”的魔咒，成功地将家族财富传承到第四代第五代。毫无疑问，在家族传承过程中创建的传承系统将
+						帮助这些家族将财富传承给未来的更多代后人。虽然每个时代的政治和经济都不同，但是很明显存在一些共同的原则，可以使这
+						些家族王朝创建家族持续传承的架构。
+					</p>
+					<p>
+						这些原则包括：维持家族基业代代相传的欲望；转变家族传承的思维模式，家族传承不仅仅是将家族企业和家族财富交给下一代；
+						更为重要的是，通过整体的规划、适当的家族宪法以及合理的法律架构和家族治理结构，使“传承文化”在家族成员的日常行为中
+						制度化。
+					</p>
+					<p>
+						<span>以整体规划的方式制度化家族传承文化的秘密武器就是启用家族办公室。中国超高净值人群在家族传承的过程中会犯各种错误，
+						而采纳家族办公室专家的专业意见，制定并执行家族传承规划，将大大增加家族传承成功的机会。</span>
+					</p>
+					<p>
+						漢家族办公室与胡润一起整理分析了四十多个世界上传承超过三代人的超富家族案例。这些家族的名称或企业已经成为财富、
+						成功和传奇的代名词。每一个家族都有一个关于他们创家族传奇、立百事基业的故事与大家分享。
+					</p>
+					<p>
+						让我们一起在其中探寻“富可过三代”的秘密。
+					</p>
+				</div>
+			</div>
+		</div>	
+		<!--#include file="uc/footer.html" -->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/mobilemenu.js" ></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+</html>

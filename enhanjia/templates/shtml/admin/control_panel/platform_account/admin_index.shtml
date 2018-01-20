@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>管理员</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/table.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="row">
+  <!--添加-->
+  <table width="100%" border="0" cellpadding="0" cellspacing="1" align="center">
+    <tr>
+      <td height="26" >
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+        <td align="left">
+              <input type='button' class="coolbg np" onClick="location='<!--{site_url('control_panel/platform_account/add')}-->';" value='添加管理员' />
+        </td>
+        </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <!--列表-->
+  <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" id="needset" class="table">
+  <tr>
+    <th width="12%" align="center">用户名</th>
+    <th width="12%" align="center">姓名</th>
+    <th width="12%" align="center">账户组</th>
+    <th width="20%" align="center">登录信息</th>
+    <th width="20%" align="center">操作</th>
+  </tr>
+  <!--{foreach $info as $k=>$v }-->
+  <tr align="center">
+    <td>{$v.username}</td>
+    <td>{$v.realname}</td>
+    <td>{$v.role_name}</td>
+    <td align="left">
+	登录次数：{$v.login_count} 次<br />
+  <!--{if $v.last_login_time}-->
+    登录时间：<!--{date('Y-m-d H:i:s',$v.last_login_time)}--><br />
+  <!--{/if}-->
+	登录IP：{$v.last_login_ip}<br />
+  <!--{if $v.modify_time}-->
+    上次修改时间：<!--{date('Y-m-d H:i:s', $v.modify_time)}-->
+  <!--{else}-->
+    上次修改时间：<!--{date('Y-m-d H:i:s', $v.create_time)}-->
+  <!--{/if}-->
+	</td>
+    <td>
+		<a href='{site_url('control_panel/platform_account/edit').'?id='.$v.id}'><u>更改</u></a>
+		<!--{if $v.id <> 2}-->
+		<a href="javascript:;" onclick="del_info('{$v.id}');" class="del"><u>删除</u></a>
+		<!--{/if}-->
+	</td>
+  </tr>
+  <!--{/foreach}-->
+</table>
+</div>
+
+<script language="javascript" type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
+<script>
+// 删除
+function del_info (id) {
+	var data = {id : id};
+	if (window.confirm('你确定要删除该信息吗？删除后不可恢复！')) {
+		var url = "<!--{site_url('control_panel/platform_account/del')}-->";
+		$.ajax({
+          type : "POST",
+          dataType : "json",
+          url : url,
+          data : data,
+          complete : function() {
+          },
+          success : function(result) {
+          	alert(result.show_info);
+            window.location.reload();
+          },
+          error : function(ae) {
+          },
+          async : true
+          });
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+</script>
+</body>
+</html>

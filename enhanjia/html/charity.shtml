@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>漢家族-家族慈善机构</title>
+		<meta content="" name="description">
+	    <meta content="" name="keywords">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link href="css/mobilemenu.css" rel="stylesheet" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="uc/header.html" -->
+		<div class="box charity">
+			<div class="inner_banner">
+				<img src="img/cishan_banner.jpg" />
+				<div class="container">
+					<p class="en">Charity</p>
+					<h3>家族慈善</h3>
+					<p>家族慈善捐赠咨询服务</p>
+					<p>优质慈善资源对接服务</p>
+					<p>家族慈善项目设计服务</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="inner_text charity-inner-text">
+					<h3>漢家族慈善</h3>
+					<p>我们拥有专业的家族慈善顾问团队和资源，为您提供全面、专业的慈善咨询和顾问服务，帮助家族提升社会影响力，成为您专属的慈善顾问同伴。</p>
+					<h4>服务内容</h4>
+					<ul>
+						<li>
+							<h5>家族慈善捐赠咨询服务</h5>
+							<p>为家族慈善捐赠方向和形式提供合理建议和规划。提供详尽的家族慈善捐赠建议报告。为家族推荐适合的受赠方，达成捐赠目标。</p>
+						</li>
+						<li>
+							<h5>优质慈善资源对接服务</h5>
+							<p>为家族慈善寻找、接洽优秀的公益项目或执行团队。提供公益项目或执行团队推荐报告，对接优秀公益项目或执行团队，完成相应接洽手续。</p>
+						</li>
+						<li>
+							<h5>家族慈善项目设计服务</h5>
+							<P>为家族慈善设计适合家族文化传承核心理念的公益慈善项目或活动。提供项目设计方案及详细的项目执行计划书。</P>
+							
+						</li>
+					</ul>
+					
+					<!--<h4>优质慈善资源对接服务</h4>
+					<ul>
+						<li>
+							服务介绍
+							<p>为家族慈善寻找、接洽优秀的公益项目或执行团队。</p>
+						</li>
+						<li>
+							服务指标
+							<p>提供公益项目或执行团队推荐报告</p>
+							<p>对接优秀公益项目或执行团队，完成相应接洽手续</p>
+						</li>
+						<li>
+							服务流程
+							<p>客户需求</p>
+							<p>寻找公益项目/ 执行机构</p>
+							<p>尽职调查</p>
+							<p>筛选确定</p>
+							<p>资源有效对接</p>
+						</li>
+					</ul>-->
+					<!--<h4>家族慈善项目设计服务</h4>
+					<ul>
+						<li>
+							服务内容
+							<p>为家族慈善设计适合家族文化传承核心理念的公益慈善项目或活动</p>
+						</li>
+						<li>
+							服务指标
+							<p>提供项目设计方案及详细的项目执行计划书</p>
+						</li>
+						<li>
+							服务流程
+							<p>确定议题</p>
+							<p>前期调研</p>
+							<p>需求分析</p>
+							<p>项目提案</p>
+							<p>项目执行书</p>
+						</li>
+					</ul>-->
+				</div>
+				
+			</div>
+			<div class="charity-link">
+				<ul class="box-inner">
+					<li class="right">
+						<div class="jijin_logo"><img src="img/jijin02_ico.png"></div>
+						<div class="jj_jieshao">关爱基金于2012年7月正式成立，由漢家族办公室董事长杨辉先生及其夫人翟珈熠女士共同发起创办，是中社社会工作发展基金会的一级专项基金。主要关注方向是整合各类资源，资助扶持民间孤残儿童慈善机构；与医院、大学、专业组织等展开合作，共同...</div>
+						<a href="charity_love_detail.shtml">查看详情&gt;</a>
+					</li>
+					<li class="left">
+						<div class="jijin_logo"><img src="img/jijin_ico01.png"></div>
+						<div class="jj_jieshao">熠辉基金会致力于推动可持续发展公益，以正能量构建仁慈关怀社会，建设华人家族慈善发展交流平台。通过资助能促进社会积极正面和长远造福的项目，推动社会建立“正能量”精神为使命，承载和激励建设良好的社会环境；以及创建国际化公益慈善交流平台，引领华人家族和新慈善家共同参与可持续发展方面的...</div>
+						<a href="charity_yihui_detail.shtml">查看详情&gt;</a>
+					</li>
+				</ul>
+			</div>
+			<!--<div class="charity_fund">
+				<ul class="container clearfix">
+					<li>
+						<h3>熠辉基金会</h3>
+						<p>
+							正像公元前202年，刘邦建立的汉王朝前后传承了500年一样，汉家族办公室将守护华人超富家族传承500年，为他们的家族
+							财产保护、家族财富保障、家族传承规划、提供最高等级的服务—专注。
+						</p>
+						<a href="javascript:;">查看详情</a>
+					</li>
+					<li class="style01">
+						<h3>关爱基金</h3>
+						<p>
+							正像公元前202年，刘邦建立的汉王朝前后传承了500年一样，汉家族办公室将守护华人超富家族传承500年，为他们的家族
+							财产保护、家族财富保障、家族传承规划、提供最高等级的服务—专注。
+						</p>
+						<a href="javascript:;">查看详情</a>
+					</li>
+				</ul>
+			</div>-->
+		</div>	
+		<!--#include file="uc/footer.html" -->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/mobilemenu.js" ></script>
+		<script type="text/javascript" src="js/Jplaceholder.js" ></script>
+	</body>
+</html>

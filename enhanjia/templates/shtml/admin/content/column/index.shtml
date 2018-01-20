@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>栏目管理</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/table.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div class="row">
+<table width="100%" border="0" cellpadding="0" cellspacing="1" align="center">
+	<tr>
+		<td height="26" >
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			<td align="left">
+			<a class="coolbg np" href="<!--{site_url('content/column/add')}-->">增加栏目</a>
+			<a class="coolbg np" href="javascript:;" onclick="upSearch()">重建搜索</a>
+			</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<form name='form1' method='post' action='<!--{site_url('content/column/update_sort')}-->'>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="table">
+  <tr align="center" height="25">
+    <th width="10%">排序</th>
+    <th width="4%">ID</th>
+	<th>名称</th>
+	<th width="6%">类型</th>
+	<th width="10%">模型</th>
+	<th width="10%">移动</th>
+	<th width="15%">操作</th>
+  </tr>
+ <!--{if $lists}-->
+ 	<?php
+ 		$option = '<option>移动到..</option><option value="0">顶级栏目</option>';
+ 		foreach($lists as $v){
+ 			$name = $v['level'] ? $v['level'].$v['name'] : $v['name'];
+ 			$option .= '<option value="'.$v['id'].'">' . $name . '</option>';
+ 		}
+ 	?>
+ 	<!--{foreach $lists as $v}-->
+ 	<!--{/foreach}-->
+ 	<!--{foreach $lists as $v}-->
+  <tr align='center' height="26" align="center">
+	<td>
+	<input type="text" style="width:70px;" value="{$v.sort}" name="sort[{$v.id}]">
+	</td>
+	<td>{$v.id}</td>
+	<td align="left">
+		<!--{if $v.level}-->
+		{$v.level}
+		<!--{/if}-->
+		{$v.name}
+	</td>
+	<td >{$v.ispart}</td>
+	<td align="center">
+		<!--{if $v.ispart != '目录'}-->
+			<!--{foreach $models as $vv}-->
+			<!--{if $v.info_model==$vv.id}-->
+				{$vv.name}
+			<!--{/if}-->
+			<!--{/foreach}-->
+		<!--{/if}-->
+	</td>
+	<td>
+		<select data-id="{$v.id}" data-method="change_parent">
+			{$option}
+		</select>
+	</td>
+	<td align='center'>
+		{$v.do_url}
+		{$v.change_url}<u>更改</u></a>
+		<a href="javascript:;" onclick="columnDel('{$v.id}');" class="del"><u>删除</u></a>
+	</td>
+  </tr>
+	<!--{/foreach}-->
+	<!--{else}-->
+	<tr align='center' height="26" align="center">
+	<td  colspan="5">
+	信息为空
+	</td>
+	</tr>
+<!--{/if}-->
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="1" align="left">
+<tr>
+<td height="36" class="button">
+	<a href="javascript:;" class="coolbg" onClick="upSort();">更新排序</a>
+</td>
+<td height="36" align="right" class="pagination">
+</td>
+</tr>
+</table>
+</form>
+</div>
+<script>
+// 更新排序
+function upSort () {
+	if (window.confirm('你确定要更新排序？')) {
+		document.form1.submit();
+		return true;
+	}else{
+		return false;
+	}
+}
+function upSearch () {
+	if (window.confirm('你确定要重建搜索？')) {
+		window.location.href = '<!--{site_url('search/index/update')}-->?typeid=1';
+		return true;
+	}else{
+		return false;
+	}
+}
+// 删除
+function columnDel (id) {
+	if (!window.confirm('你确定要删除该信息吗？删除后不可恢复！')) return false;
+
+	var columnDelUrl = "<!--{site_url('content/column/del')}-->";
+	
+	$.post(columnDelUrl, {
+		id:id
+	}, function(result){
+		if (result.code != 1000) {
+			alert(result.msg);
+		} else {
+			window.location.reload();
+		}
+	},'json');
+	
+	return true;
+}
+
+$('[data-method="change_parent"]').on('change', function(){
+	$this = $(this);
+	if(!confirm('确定移动栏目吗?')){
+		$this.val('');
+		return false;
+	}
+
+	var data = {
+		id : $this.attr('data-id'),
+		parent_id : $this.val()
+	}
+
+	$.post('<!--{site_url('content/column/change_parent')}-->', data, function(result){
+		if (result.code != 1000) {
+			alert(result.msg);
+			$this.val('');
+		} else {
+			window.location.reload();
+		}
+	}, 'json');
+});
+</script>
+</body>
+</html>

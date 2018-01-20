@@ -1,0 +1,20 @@
+.table{border-top: 1px solid #d6d7d9; border-left: 1px solid #d6d7d9; margin: 16px 0 12px;}
+.table td,
+.table th{border-bottom: 1px solid #E9E9E9; border-right: 1px solid #E9E9E9; padding: 8px;}
+.table th{background: #E9E9E9;}
+.table tr:hover td{background: #E9E9E9;}
+.table .button{border-right: none;}
+.pagination{white-space: nowrap;}
+.pagination a{padding: 5px 10px;font-size: 11px;}
+.pagination a.cur{background: #303641;cursor: default; color: #fff;}
+
+.search_input table{margin-top: 8px;}
+.search_input table td{padding: 8px;}
+
+.search_input_goods table{margin-top: 4px;}
+.search_input_goods table td{padding: 4px;}
+
+.table1{margin-bottom: 16px;}
+.table2 .name{width: 120px; text-align: right;}
+.table2 td{padding: 8px;}
+.row{padding: 20px;}

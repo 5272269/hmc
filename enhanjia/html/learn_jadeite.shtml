@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>漢家族-漢家族leran生活传家翡翠详情页</title>
+		<meta content="" name="description">
+	    <meta content="" name="keywords">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link href="css/mobilemenu.css" rel="stylesheet" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="uc/header.html" -->
+		<div class="box learn_detail">
+			<div class="container">
+				<div class="location">
+					<a href="/">首页</a>
+					<span>&gt;</span>
+					<a href="javascript:;">家族财富保障</a>
+					<span>&gt;</span>
+					<a href="javascript:;">传家翡翠</a>
+				</div>
+				<div class="inner_title">
+					<h3>家族财富保障</h3>
+					<p>传家翡翠</p>
+				</div>
+				<div class="inner_text">
+					<h3>漢家族传家翡翠</h3>
+					<p>
+						<!--翡翠<br />
+						是玉石之王，也称翡翠玉、翠玉、硬玉、缅甸玉。翡翠的内部结构稳定，体积小，易于收藏。-->
+						翡翠，也称翡翠玉、翠玉、硬玉、缅甸玉，是玉的一种。在古代，翡翠是一种鸟的名字。《说文解字》释义：“翡，赤羽雀也；翠，青羽雀也。”翡翠玉石传入中国后，因其有多种色彩，而得此美名。<br />翡翠是玉石之王，它的内部结构稳定，体积小，易于收藏。我们精选翡翠原石，雕琢出吊坠、戒指、手镯、套链等顶级翡翠珠宝。它不仅可以配饰、可以收藏，而且可以传世。
+					</p>
+					<h4>漢家族翡翠介绍</h4>
+					<div class="detail_con clearfix">
+						<div class="con_text float_l">
+							<!--漢家族精选极品翡翠原石，委托当世工艺大师精心雕琢出吊坠、戒指、手镯、套链等顶级翡翠珠宝。它不仅可以配饰、收藏，更可以将其传世。-->
+							漢家族传家翡翠，可以作为一件价值不菲的物件留给子孙；也可以凝聚更多的历史、感情等，作为传家宝，成为一种念想，留给后人，让爱延续。
+						</div>
+						<div class="con_img float_r">
+							<span><img src="img/jadeite01.jpg" /></span>
+							<span><img src="img/jadeite02.jpg" /></span>
+						</div>
+					</div>
+					<div class="detail_con clearfix">
+						<div class="con_text float_l">
+							<!--漢家族传家翡翠，带着家族的荣耀与对后代的祝福，代代相传。传承的不仅仅是这精美绝伦的翡翠玉石，更多的是先辈
+							们风雨闯荡的传奇和长辈们对晚辈的关怀与期盼，它是见证家族荣耀的贴身灵物。-->
+							漢家族传家翡翠，带着家族的荣耀与对后代的祝福，代代相传，传承的，不仅仅是这美丽的翡翠玉石，更多的是先辈们风雨闯荡的传奇以及长辈们对晚辈的关怀与期盼。
+						</div>
+						<div class="con_img float_r">
+							<span><img src="img/jadeite03.jpg" /></span>
+							<span><img src="img/jadeite04.jpg" /></span>
+						</div>
+					</div>
+					<h4><br />服务流程</h4>
+					<p>预约下单&nbsp;——&nbsp;支付定金&nbsp;——&nbsp;看货&nbsp;——&nbsp;支付尾款并收货</p>
+				</div>
+			</div>
+		</div>	
+		<!--#include file="uc/footer.html" -->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/mobilemenu.js" ></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+</html>

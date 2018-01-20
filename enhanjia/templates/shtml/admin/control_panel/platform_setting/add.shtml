@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>添加系统配置</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/table.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="row">
+  <!--#include file="admin/common/top.html"-->
+  <form action="<!--{site_url('control_panel/platform_setting/edit')}-->" method="post" name="form2">
+  <input type="hidden" name="dopost" value="add">
+  <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" class="table">
+ 
+  <tr>
+   <td width="50%" >
+   变量名称：<input type="text" style="width:40%" value="" id="var_name" name="var_name">
+   </td>
+    <td>变量名不能为空并且必须为小写字母</td>
+  </tr>
+
+  <tr> 
+    <td  width="50%" >参数描述：<input type="text" style="width:40%" value="" id="info" name="info"></td>
+    <td>参数描述不能为空</td>
+  </tr>
+  <td width="50%">类型：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <select id="type" name="type" style="width:40%">
+    <option value="">请选择类型</option>
+    <option value="string">输入框</option>
+    <!-- <option value="bool">单选</option>
+    <option value="bstring">文本域</option> -->
+  </select>
+  <td>输入选项值类型</td>
+   </td>
+ 
+  <tr>
+    <td width="50%">
+   <span id="canshu_string" class="canshu" style="display:block;">参数值：&nbsp;&nbsp;&nbsp;
+    <input type="text" style="width:40%" value="" id="string_value" name="string_value">
+   </span>
+   </td>
+    <td>输入选项值</td>
+  </tr>
+  <tr><input type="hidden" name="groupid" value="1" /></tr>  
+
+  <tr>
+    <th colspan="3"><input name="imageField" type="submit" value="保存"/></th>
+  </tr>
+  </table>
+  </form>
+  </div>
+
+<script language="javascript" type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
+</body>
+</html>

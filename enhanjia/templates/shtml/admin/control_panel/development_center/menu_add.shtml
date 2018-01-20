@@ -1,0 +1,116 @@
+<!--#include file="admin/common/meta.html"-->
+<body>
+<div class="row">
+ <!--#include file="admin/common/top.html"-->
+   <form id="form1" name="form1" method="post">
+   <input type='hidden' name='act' value='ok'>
+   <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" id="needset" style="border:1px solid #cfcfcf;background:#ffffff;" class="table2">
+	
+	<tr>
+      <td height="20" colspan="5" class="bline">
+      	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="name">菜单名称：</td>
+          <td>
+		  <input name="name" type="text" id="name" style='width:400px;' />
+		  </td>
+        </tr>
+      </table>
+	  </td>
+    </tr>
+    <tr>
+      <td height="20" colspan="5" class="bline">
+      	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="name" width="20%">所属菜单：</td>
+          <td width="10%">
+		  <?php echo $menuSelect;?>
+		  </td>
+		  <td width="8%"><!-- 权限节点： --></td>
+          <td>
+		  <?php echo $nodeSelect;?> 
+		  </td>
+        </tr>
+      </table>
+	  </td>
+    </tr>
+	<tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="800" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="name">额外链接参数：</td>
+          <td>
+		  <input name="parameter" type="text" id="parameter" style='width:400px;' />
+		  </td>
+        </tr>
+      </table>
+	  </td>
+    </tr>
+	
+	<tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="name">外部链接：</td>
+          <td>
+		  <input name="url" type="text" id="url" style='width:400px;' />
+		  </td>
+        </tr>
+      </table>
+	  </td>
+    </tr>
+    
+	<tr>
+	<td colspan="5" class="bline">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td class="name">菜单描述：</td>
+		  <td>
+		  <textarea name="description" cols="100" style='width:400px;' id="description"></textarea>
+		  </td>
+		</tr>
+	</table>
+	</td>
+	</tr>
+	
+    <tr>
+	<td height="24" colspan="5" class="bline">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td class="name">排序值：</td>
+		  <td>
+		  <input name="sort" type="text" id="sort" value="10" size="6" style='width:400px;' />
+		  </td>
+		</tr>
+	</table>
+	</td>
+	</tr>
+	
+    <tr>
+	<td height="24" colspan="5" class="bline">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td class="name">状态：</td>
+		  <td>
+			<input name="is_check" type="radio" value="1" checked="checked" />
+			正常
+			<input type="radio" name="is_check" value="0" />
+			停用 
+		  </td>
+		</tr>
+	</table>
+	</td>
+	</tr>
+    
+   <tr height="35">
+    <td width="17%">&nbsp;</td>
+    <td width="83%">
+       <input name="imageField" type="submit" value="保存" class="np coolbg"/>
+       <input name="reset" type="reset" value="重置" class="np coolbg" />
+    </td>
+   </tr>
+</table>
+</form>
+</div>
+</body>
+</html>

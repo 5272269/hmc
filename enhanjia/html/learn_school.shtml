@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>漢家族-漢家族leran生活美食详情页</title>
+		<meta content="" name="description">
+	    <meta content="" name="keywords">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link href="css/mobilemenu.css" rel="stylesheet" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="uc/header.html" -->
+		<div class="box learn_detail">
+			<div class="container">
+				<div class="location">
+					<a href="/">首页</a>
+					<span>&gt;</span>
+					<a href="javascript:;">家族乐生活</a>
+					<span>&gt;</span>
+					<a href="javascript:;">漢家族名校</a>
+				</div>
+				<div class="inner_title">
+					<h3>家族乐生活</h3>
+					<p>漢家族名校</p>
+				</div>
+				<div class="inner_text">
+					<h3>海外名校解决方案</h3>
+					<p>
+						我们为您的家族<br>
+						量身打造专属您子女的“海外名校解决方案”，使您家族子女优享系统化的海外留学咨询、规划、面试辅导、协助申请和陪同访学
+						入学体验，保障您的子女最终进入理想的海外名校。
+					</p>
+					<h4>服务内容</h4>
+					<ul>
+						<li>
+							前留学服务：测试评估、根据需求量身优选名校、制定学习计划、海外学习顾问1对1补习、假期短期实践项目、面试辅导、
+							模拟考试
+						</li>
+						<li>
+							中留学服务：收集审核翻译申请材料、海外留学高级咨询师审校申请资料、递交申请、英国留学专属入学考试通道、访学、
+							协助填写录取表格、入学前准备工作、监护人服务、签证代办、安排接机陪同入学
+						</li>
+						<li>
+							后留学服务：1学期1次入学跟踪督导、假期当地高端社会社团活动等
+						</li>
+					</ul>
+					<!--<h4>服务价格</h4>
+					<p>
+						<img src="img/price.jpg" />
+					</p>-->
+					<h4>服务流程</h4>
+					<ul>
+						<li>选定学校</li>
+						<li>预约购买</li>
+						<li>免费测评</li>
+						<li>预约访谈</li>
+						<li>线上面试</li>
+						<li>出具详尽的最佳留学计划报告</li>
+						<li>签订服务协议</li>
+						<li>前留学服务</li>
+						<li>中留学服务</li>
+						<li>后留学服务</li>
+					</ul>
+					<h4>学校介绍</h4>
+					<ul>
+						<li>
+							中学
+							<div class="middle_list clearfix">
+								<div class="list_text float_l">
+									<span>伊顿公学</span>（Eton College）坐落在伦敦20英里的温莎小镇，是英国最著名的贵族中学，排名全英前十。地处白金汉郡
+									的泰晤士河河畔，与女王钟爱的温莎宫隔岸相望，伊顿公学是一座古老的学府，由亨利六世于1440年创办。伊顿以“精
+									英摇篮”、“绅士文化”闻名世界，也素以军事化的严格管理著称，学生成绩大都十分优异，被公认是英国最好的中学，是
+									英国王室、政界经济界精英的培训之地。这里曾造就过20位英国首相，培养出了诗人雪莱、经济学家凯恩斯，
+									演员汤姆·希德勒斯顿、埃迪·雷德梅恩，还有“站在食物链顶端的男人”贝尔·格里尔斯。也是英国王位第二号继承人，
+									剑桥公爵威廉王子和哈里王子的母校。伊顿每年250名左右的毕业生中，70余名进入牛津、剑桥，70%进入世界名校。
+								</div>
+								<img src="img/school01.jpg" class="float_r" />
+							</div>
+							<div class="middle_list clearfix">
+								<div class="list_text float_l">
+									<span>切特豪斯公学</span>是一所男女合校， 素有“英国最美丽的学校之一”的美称，校园环境优美，建筑各具特色，呈现出不同历史时期的多种建
+									筑风格，并和谐地融为一体。它既有富丽堂皇的古代建筑，又有时尚的现代建筑。切特豪斯公学以基督教价值观为基础构建起了合理的
+									学科体系，并继承了学校的优良传统。该校有着骄人的学术成绩，许多学生都会考入英国著名的大学。该校非常重视为学生提供申请大
+									学的各种信息、指导和支持，努力帮助学生申请英国顶尖大学以及世界名校。自创立以来，切特豪斯努力挖掘每个学生个体的潜能，激
+									发学生的好奇心。在这个人地灵的学校里云集了众多社会精英，从英国前任首相罗伯特·詹金森(Robert Banks Jenkinson) 到经济学
+									家莫里斯·多布（Maurice Herbert Dobb），从著名作家萨克雷（William Makepeace Thackera）到汉学家翟里斯（Herbert Allen 
+									Giles），这些精英对英国乃至世界的发展都做出了重要贡献。
+								</div>
+								<img src="img/school02.jpg" class="float_r" />
+							</div>
+							<div class="middle_list clearfix">
+								<div class="list_text float_l">
+									<span>玫瑰山中学</span>（Rosehill College）始建于 1970 年，为男女合校，是世界上闻名遐迩的寄宿制中学之一。该校位于一个100,000m2的私人公园中
+									，能够俯瞰中世纪的圣加仑城，有着如诗如画般的古典建筑物。玫瑰山中学以其优秀的教学质量和学生们的卓越表现在国际上享有声誉。在这里
+									，学生享有安全友好的环境以供他们充分发挥学术、文化、体魄、社交各方面的潜力。学生在享有良好的教学设施，例如音乐室、戏剧室，和设
+									备先进的实验室。玫瑰山中学坐落在 Papakura 镇郊，为年轻人提供了一个欣赏每个季节美景、呼吸新鲜空气、参加各种活动的独特环境。学生
+									们根据性别和年龄居住在绿草如茵的居住区，这里有多个网球和运动场地。校园占地10万平方米。每个建筑都被茂密的草坪、田园美景、无数夏
+									天盛开的玫瑰花所包围，这些给Institut auf demRosenberg 以宁静和舒适的感觉。学校距离奥克兰市中心 30 分钟车程，距离奥克兰国际机场 
+									15 分钟车程。 Papakura 镇拥有大型购物中心和良好的休闲设施。
+								</div>
+								<img src="img/school03.jpg" class="float_r" />
+							</div>
+						</li>
+						<li>
+							大学
+							<div class="middle_list clearfix">
+								<div class="list_text float_l">
+									<span>牛津大学</span>是一所位于英国牛津市的世界顶级公立大学，建校于1167年，为英语世界中最古老的大学，牛津大学不同于其它的
+									大学，城市与大学融为一体，街道就从校园穿过。也是世界上现存第二古老的高等教育机构，被公认为是当今世界最顶尖的高等教育机构之
+									一。牛津大学是一所在世界上享有顶尖大学声誉、巨大影响力的知名学府。
+								</div>
+								<img src="img/school01.jpg" class="float_r" />
+							</div>
+							<div class="middle_list clearfix">
+								<div class="list_text float_l">
+									<span>剑桥大学</span>是一所位于英国剑桥市的世界顶级研究型大学。始创于1209年，亦是英语世界里第二古老的大学。剑桥大学和牛津
+									大学合称为“牛剑”（Oxbridge），除了两所大学在文化和现实上的协作已成为英国社会史的一部分外，两所大学长久以来一直存在竞争。并
+									经常和牛津大学争夺全英最佳学府的声誉。剑桥大学为世界上最杰出的大学之一，其为书院联邦制大学，目前共有31所学院，而各个学术部门
+									则被归入六个主要的学术学院里。它也是众多学术联盟的成员之一，也是英国的一所金三角名校。其也是诞生诺贝尔奖得主最多的高等学府，
+									共有90名诺贝尔奖得主现在或曾经在剑桥大学学习或工作。
+								</div>
+								<img src="img/school02.jpg" class="float_r" />
+							</div>
+							<div class="middle_list clearfix">
+								<div class="list_text float_l">
+									<span>哈佛大学</span>是美国最早的私立大学，是以培养研究生和从事科学研究为主的综合性大学，同时是常春藤盟校成员之一。
+									 哈佛大学是全美第一所大学(第二所是威廉玛丽学院，第三所是耶鲁大学)。美国独立战争以来大量的革命先驱都出自于哈佛的门下。
+									 哈佛大学被誉为美国政府的思想库。这里先后诞生了8位美国总统，40位诺贝尔奖得主和30位普利策奖得主。其商学院案例教学盛
+									 名远播。这里也培养了缔造了微软、IBM、Facebook等一个个商业奇迹的人。
+								</div>
+								<img src="img/school03.jpg" class="float_r" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+		<!--#include file="uc/footer.html" -->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/mobilemenu.js" ></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+</html>

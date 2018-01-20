@@ -1,0 +1,68 @@
+<div class="table">
+	<table width="225" align="left" border="0" cellspacing="0" cellpadding="0" style="text-align:left;">
+		<tbody>
+			<tr>
+				<td width="225" valign="top" id="mainct">
+					<div>
+						<!--{foreach $result as $key=>$val}-->
+						<!-- Strat -->
+						<dl id="sunitems_{$val.id}" class="bitem2">
+						<?php //<a href="http://www.baidu.com" class="single" target="main">阿萨德</a>?>
+							<!--{if $val.tree}-->
+								<dt onclick="showHide('items_{$val.id}',this)">{$val.name}</dt>
+								<dd id="items_{$val.id}" class="sitem" style="display: none;">
+									<ul class="sitemu">
+										<!--{foreach $val.tree as $k=>$v}-->
+											<li>
+												<a href="{$v.href}" title="{$v.name}" target="main">{$v.name}</a>
+												<!--{if $v.tree}-->
+												<ul class="submenu1" style="display: none">
+													<!--{foreach $v.tree as $t}-->
+														<li>
+															<a href="{$t.href}" title="{$t.name}" target="main">{$t.name}</a>
+															<!--{if $t.tree}-->
+																<ul class="submenu2" style="display: none">
+																	<!--{foreach $t.tree as $u}-->
+																		<li>
+																			<a href="{$u.href}" title="{$u.name}" target="main">{$u.name}</a>
+																		</li>
+																	<!--{/foreach}-->
+																</ul>
+															<!--{/if}-->
+														</li>
+													<!--{/foreach}-->
+												</ul>
+												<!--{/if}-->
+											</li>
+										<!--{/foreach}-->
+									</ul>
+								</dd>
+							<!--{else}-->
+							<a href="<!--{if !empty($val.href)}-->{$val.href}<!--{else}-->javascript:;<!--{/if}-->" class="single" target="main">{$val.name}</a>
+							<!--{/if}-->
+						</dl>
+						<!-- End -->
+						<!--{/foreach}-->
+
+						<!-- system_memu -->
+						<!--{foreach $menus as $v}-->
+						<dl id="sunmenu_items_{$v.id}" class="bitem2">
+						<dt onclick="showHide('menu_items_{$v.id}')">{$v.name}</dt>
+						<dd id="menu_items_{$v.id}" class="sitem" style="display:none">
+						<ul class="sitemu">
+						<!--{foreach $v.child as $v2}-->
+						<li><a href="{$v2.url}" title="{$v2.name}" target="main">{$v2.name}</a></li>
+						<!--{/foreach}-->
+						</ul>
+						</dd>
+						</dl>
+						<!--{/foreach}-->
+
+						<!-- system_memu -->
+
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

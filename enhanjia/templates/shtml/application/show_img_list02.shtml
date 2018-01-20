@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--#include file="application/uc/meta.shtml"-->
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/jquery.ad-gallery.css" />
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link href="css/mobilemenu.css" rel="stylesheet" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="application/uc/header.shtml"-->
+		<div class="box picList">
+			<div class="container">
+				<div class="location">
+					<a href="/">首页</a>
+					<span>&gt;</span>
+					<a href="javascript:;">新闻图片</a>
+				</div>
+				<div class="inner_title">
+					<h3>新闻资讯</h3>
+					<p>图片</p>
+				</div>
+                <div id="gallery" class="ad-gallery"> 
+                    <div class="ad-image-wrapper"></div> 
+                    <div class="ad-controls"></div> 
+                    <div class="ad-nav"> 
+                        <div class="ad-thumbs"> 
+                            <ul class="ad-thumb-list">
+                            <!--{loop $view_info.pics as $k=>$v}-->
+                            <li>
+                                <a href="{$v.filename}">
+                                <img src="{$v.filename}" class="image{$k}">
+                                </a>
+                            </li>
+                            <!--{/loop}-->
+                            </ul> 
+                        </div> 
+                    </div> 
+                </div>
+			</div>
+		</div>	
+		<!--#include file="application/uc/footer.shtml"-->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/mobilemenu.js" ></script>
+        <script type="text/javascript" src="js/jquery.ad-gallery.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script>
+		   var navIndex=2;       
+		   $('.header .nav a').eq(navIndex).addClass('active').siblings().removeClass('active');
+           $('.ad-gallery').adGallery(); 
+		</script>
+	</body>
+</html>
+
+

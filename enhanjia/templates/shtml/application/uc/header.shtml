@@ -1,0 +1,67 @@
+<header class="header">
+	<div class="web-top container clearfix">
+		<a href="/" class="logo float_l" title="HMCFamily"><img src="img/logo.png" /></a>
+		<nav class="nav float_l">
+			<!--{omp:nav_main data="info"}-->
+			<!--{if $info.id != 15}-->
+			<a href="{$info.url}" <?php if($params['id']==$info.id){?>style="color: #e3d0a5;"<?php } ?>>{$info.name}</a>
+			<!--{/if}-->
+			<!--{/omp}-->
+		</nav>
+		<div class="r_nav float_r clearfix">
+			<!--{omp:nav_get_parent_url data="assign" list="questionnaire_1" id=11}-->
+			<a href="{site_url($questionnaire_1)}" class="ask float_l">Questionnaire</a>
+			<!--{if $this->_CI->session->userdata('memberid') && $this->_CI->session->userdata('username')}-->
+			<a href="javascript:;" onclick="dologout()" class="login float_l">Logout</a>
+			<!--{else}-->
+			<a href="{site_url('member/login')}" class="login float_l">Login</a>
+			<!--{/if}-->
+			<span class="cn-en float_r">
+				<a href="javascript:;">中文</a>
+				<!--<span></span>
+				<a href="javascript:;">English</a>-->
+			</span>
+		</div>
+	</div>
+	
+	<div class="mobile-nav">
+		<a href="javascript:;" class="icon-nav float_l"><img src="img/mobile/icon-nav.png" /></a>
+		<a href="/" class="mbl-logo"><img src="img/mobile/logo.png" /></a>	
+	</div>
+	<div class="overlay"></div>
+	<div class="mongodb_navbar">
+		<div class="logo"><a href="/"><img src="img/mobile/logo.png" /></a></div>
+		<nav class="mbl-nav">
+			<ul>
+				<li class="login">
+					<!--{if $this->_CI->session->userdata('memberid') && $this->_CI->session->userdata('username')}-->
+					<a href="javascript:;" onclick="dologout()" style="margin-left: 40px;">Logout</a>
+					<!--{else}-->
+					<a href="{site_url('member/login')}" style="margin-left: 40px;">Member Login</a>
+					<!--{/if}-->
+					<span>|</span>
+					<a href="{site_url($questionnaire_1)}">Questionnaire</a>
+				</li>
+				<!--{omp:nav_get_parent_url data="assign" list="url" id=2}-->
+				<li><a href="{site_url($url)}">HMCFO</a></li>
+				<!--{omp:nav_get_parent_url data="assign" list="url" id=3}-->
+				<li><a href="{site_url($url)}">Family Wealth Management</a></li>
+				<!--{omp:nav_get_parent_url data="assign" list="url" id=4}-->
+				<li><a href="{site_url($url)}"> Family Charity</a></li>
+				<!--{omp:nav_get_parent_url data="assign" list="url" id=5}-->
+				<li><a href="{site_url($url)}">HMCFO Research Institute</a></li>
+				<!--{omp:nav_get_parent_url data="assign" list="url" id=6}-->
+				<li><a href="{site_url($url)}"> HMCFO LEARN Lifestyle</a></li>
+				<!--{omp:nav_get_parent_url data="assign" list="url" id=15}-->
+				<!--<li class="style02"><a href="{site_url($url)}">News</a></li>-->
+				<!--{omp:nav_get_parent_url data="assign" list="url" id=19}-->
+				<li><a href="{site_url($url)}">Contact us</a></li>
+			</ul>
+		</nav>
+		<div class="en">
+			<a href="javascript:;">中文</a>
+			<span>|</span>
+			<a href="javascript:;">English</a>
+		</div>
+	</div>
+</header>

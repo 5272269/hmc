@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--#include file="application/uc/meta.shtml"-->
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link rel="stylesheet" href="css/mobilemenu.css" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="application/uc/header.shtml"-->
+		<div class="box institute_detail">
+			<div class="container">
+				<div class="location">
+					<a href="/">Home Page</a>
+					<span>&gt;</span>
+					<a href="javascript:;">Contact us</a>
+				</div>
+				<div class="inner_title">
+					<h3>Contact us</h3>
+					<!-- <p>联系我们</p> -->
+				</div>
+				<div class="switch_tags contact_tags">
+					<a href="javascript:;" class="active" data-type="0">Customer</a>
+					<!--<a href="javascript:;" data-type="1">Media</a>-->
+					<a href="javascript:;" data-type="2">Cooperation</a>
+				</div>
+			
+				<div class="contact-box">
+				
+					<div class="tag-content" style="display: block;">
+						<div class="rightbox">
+							<!--{omp:page_block id=15}-->
+						</div>
+						<div class="leftbox">
+							<div class="form-control">
+								<input type="text" value="Your Phone**" class="float_r input-txt" id="phone"/>
+								<input type="text" value="Your Name*" class="input-txt" id="name"/>
+							</div>
+							<div class="form-control">
+								<textarea name="" class="textarea" id="message">Your Message*</textarea>
+							</div>
+							<div class="form-control">
+								<input type="hidden" id="type" value="0">
+								<button class="btn">Send</button>
+							</div>
+						</div>
+					</div>
+					<div class="tag-content">
+						<div class="rightbox">
+							<!--{omp:page_block id=17}-->
+						</div>
+						<div class="leftbox">
+							<div class="form-control">
+								<input type="text" value="Your Phone**" class="float_r input-txt" id="phone"/>
+								<input type="text" value="Your Name*" class="input-txt" id="name"/>
+							</div>
+							<div class="form-control">
+								<textarea name="" class="textarea" id="message">Your Message*</textarea>
+							</div>
+							<div class="form-control">
+								<input type="hidden" id="type" value="0">
+								<button class="btn">Send</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!--#include file="application/uc/footer.shtml"-->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/mobilemenu.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(".switch_tags").on("click",'a',function(){
+				var _index = $(this).index();
+				$(this).parent().children().attr("class","");
+				$(this).attr("class","active");
+				$("#type").val($(this).attr("data-type"));
+				$('.tag-content').eq(_index).show().siblings('.tag-content').hide();
+			});
+
+
+			$(".btn").click(function(){
+				var phone = $("#phone").val();
+				var name = $("#name").val();
+				var message = $("#message").val();
+				var type = $("#type").val();
+				var status = 1;
+				var errmsg = "";
+
+				if(phone == '' || !phone || phone == 'Your Phone**'){
+					status = 2;
+					errmsg += "Please enter your phone\n";
+				}
+				if(name == '' || !name || name == 'Your Name*'){
+					status = 2;
+					errmsg += "Please enter your name\n";
+				}
+				if(message == '' || !message || message == 'Your Message*'){
+					status = 2;
+					errmsg += "Please enter your message\n";
+				}
+				if(!checkphone(phone)){
+					status = 2;
+					errmsg += "Your phone is not in the right format.\n";
+				}
+
+				if(status == 1){
+					var data = {type:type,phone:phone,name:name,message:message,modelid:13}
+					$.post("{site_url('member/questionnaire')}",data,function(result){
+						if(result.code == 1000){
+							alert("Submit successfully");
+						}
+						else if(result.code == 1001){
+							alert(result.msg);
+						}
+						else if(result.code == 1002){
+							alert(result.msg);
+							window.location.href = result.data.url;
+						}
+					});
+				}
+				else{
+					alert(errmsg);
+				}
+			});
+		</script>
+	</body>
+</html>

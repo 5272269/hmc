@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{$siteName}</title>
+<link href="css/frame.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js" language="javascript" type="text/javascript"></script>
+<script src="js/html5.js" language="javascript" type="text/javascript"></script>
+<script src="js/leftmenu.js" language="javascript" type="text/javascript"></script>
+<script src="js/frame.js" language="javascript" type="text/javascript"></script>
+<script src="js/jquery.jscrollpane.min.js" language="javascript" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.js" language="javascript" type="text/javascript"></script>
+<script src="js/application.js" language="javascript" type="text/javascript"></script>
+<script language="javascript">
+	$ = jQuery;
+</script>
+</head>
+<body class="showmenu">
+<div class="left"  id="container">
+  <div class="menu" id="menu">
+  	<!--#include file="admin/common/header.html"-->
+      <div class="index_menu2 scroll-pane" id="index_menu2">
+		  <div class="left_form">
+			<!--#include file="admin/common/menu.html"-->
+		  </div>
+      </div>
+  </div>
+</div>
+<div class="right">
+	<div class="main">
+		<iframe id="main" name="main" frameborder="0" src="<!--{site_url('control_panel/platform_setting/index')}-->"></iframe>
+	</div>
+</div>
+</body>
+</html>

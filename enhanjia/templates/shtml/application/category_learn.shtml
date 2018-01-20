@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--#include file="application/uc/meta.shtml"-->
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link rel="stylesheet" href="css/mobilemenu.css" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="application/uc/header.shtml"-->
+		<div class="box learn">
+			<div class="inner_banner">
+				<img src="{$params.pic}" />
+			</div>
+			<div class="learn_text container">
+				<!--{omp:page_block id=6}-->
+			</div>
+			<div class="pro_learn">
+				<!--{omp:page_block id=14}-->
+			</div>
+			<!--add by 2016.2.18-->
+            <div class="learn_style">
+                <div class="container">
+                    <h3>LEARN™极优生活方式</h3>
+                    <div class="img_con">
+                        <img src="img/learn_style.png" alt="">
+                    </div>
+                </div>
+            </div>
+			<!--<div class="learn_list container">
+				<ul>
+					<li>
+						<div class="li_text float_l">
+							<h3>私人飞机</h3>
+							<p>
+								漢家族办公室希望让我们的客户享受到优质的空中体验，我们整合现有有效模式，为您打造一个完全专注于客户具体
+								需求点的最佳服务方案。
+							</p>
+							<a href="learn_fly.shtml">查看详情</a>
+						</div>
+						<div class="li_img float_r">
+							<img src="img/learn01.jpg"  />
+						</div>
+					</li>
+					<li>
+						<div class="li_text float_l">
+							<h3>漢家族名校</h3>
+							<p>
+								我们为您的家族量身打造专属您子女的“海外名校解决方案”，使您家族子女优享系统化的海外留学咨询、规划、面试辅导
+								、协助申请和陪同访学入学体验，保障您的子女最终进入理想的海外名校。
+							</p>
+							<a href="learn_school.shtml">查看详情</a>
+						</div>
+						<div class="li_img float_r">
+							<img src="img/learn02.jpg"  />
+						</div>
+					</li>
+					<li>
+						<div class="li_text float_l">
+							<h3>米其林美食</h3>
+							<p>
+								漢家族办公室为您提供全球顶级米其林餐厅预订服务，令您尊享饕餮美食、至臻味宴，体验至尊专属的美食礼遇。
+							</p>
+							<a href="learn_food.shtml">查看详情</a>
+						</div>
+						<div class="li_img float_r">
+							<img src="img/learn03.jpg"  />
+						</div>
+					</li>
+				</ul>
+			</div>-->
+		</div>	
+		<!--#include file="application/uc/footer.shtml"-->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/mobilemenu.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script>
+		    var navIndex=4;       
+		   $('.header .nav a').eq(navIndex).addClass('active').siblings().removeClass('active');
+		</script>
+	</body>
+</html>

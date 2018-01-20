@@ -1,0 +1,79 @@
+.industry .text{}
+.industry .text .p1{ font-size:36px; color:#4a4a4a; padding-top:30px;}
+.industry .text .p2{ font-size:18px; color:#6b6b6b; padding-top:30px;}
+.industry .pic{ padding-top:50px; padding-bottom:180px;}
+.industry .pic .pic_nr{ position:relative; float:left;}
+.industry .pic .pic_nr:hover .pic_btn{ display:block;}
+.industry .pic .pic_nr:hover .pic_s{ display:none;}
+.industry .pic img{ width:598px; height:465px; margin:1px; float:left; position:relative;}
+.industry .pic .pic_s{ position:absolute; left:145px; top:175px; background:url(../img/btn_bg.png) no-repeat 0 0; width:325px; height:112px;}
+.industry .pic .pic_s .p1{ font-size:40px; color:#FFF; text-align:center; line-height:112px;}
+.industry .pic .pic_btn{ position:absolute; left:0; top:0; background:#C00; filter:alpha(opacity=80);opacity:.8; width:598px; height:465px; margin:1px; text-align:center; display:none;}
+.industry .pic .pic_btn .p1{ font-size:40px; color:#FFF; padding-top:100px;}
+.industry .pic .pic_btn .p2{ font-size:12px; color:#FFF;}
+.industry .pic .pic_btn .p3{ font-size:14px; color:#FFF; width:400px; padding:50px 0 0 100px;}
+.industry .pic .pic_btn .pic_j{ background:url(../img/industry_btn+.png) no-repeat 0 0; width:31px; height:31px; float:left; margin:45px 0 0 284px;}
+
+.industry .inner_tab span{ background:url(../img/industry2_btn.png) no-repeat 0 0;}
+.industry .main_con .inner_box .p1{ font-size:36px; color:#4a4a4a; padding-bottom:50px;}
+.industry .main_con .inner_box .p2{ font-size:18px; color:#6b6b6b; padding-top:30px;}
+.industry .main_con .inner_box .p3{ font-size:24px; color:#4a4a4a; padding-top:145px; padding-bottom:20px; border-bottom:#eaeaea 2px solid;}
+.industry .main_con .inner_box .lun{ margin-top:20px; margin-bottom:30px; background:#fff8e9; width:1200px; height:283px;}
+.industry .main_con .inner_box .lun img{ margin:40px 0 0 36px; float:left;}
+
+/*culture*/
+.culture .main_con .container .inner_box{ padding-bottom:150px;}
+.culture .inner_tab span{ background:url(../img/culture_btn.png) no-repeat 0 0;}
+.culture .pic{}
+.culture .pic .imgg{ float:left;}
+.culture .pic .imgg img{ margin:1px 0.5px;}
+.culture .pic .imgg .imgg_nr{ position:relative;}
+.culture .pic .imgg .imgg_nr .p1{ font-size:30px; padding:20px 20px 10px 20px;}
+.culture .pic .imgg .imgg_nr .p2{ font-size:16px; padding-left:20px;}
+.culture .pic .imgg .imgg_nr .imgnr_1{ position:absolute; left:0; bottom:0; background:#cecbc1; width:597px; height:115px; filter:alpha(opacity=80);opacity:.8; color:#585858;}
+.culture .pic .imgg .imgg_nr .imgnr_2{ position:absolute; left:0; bottom:0; background:#cd444e; width:299px; height:192px; filter:alpha(opacity=80);opacity:.8; color:#FFF;}
+.culture .pic .imgg .imgg_nr .imgnr_2 .p1{ padding-top:80px;}
+.culture .pic .imgg .imgg_nr .imgnr_3{ position:absolute; left:0; bottom:0; width:299px; height:192px; color:#FFF;}
+.culture .pic .imgg .imgg_nr .imgnr_3 .p1{ padding-top:110px;}
+.culture .pic .imgg .imgg_nr .imgnr_4{ position:absolute; left:0; bottom:0; width:299px; height:135px; color:#FFF;}
+.culture .pic .imgg .imgg_nr .imgnr_4 p{ padding:5px 10px;}
+.culture .text_box{ padding:80px 0 0 0; position:relative;}
+.culture .text_box .bg{ width:1920px; height:456px; margin:0px -360px; position:relative;}
+.culture .text_box .text_nr{ position:absolute; left:0; top:100px;}
+.culture .text_box .text_nr .nr_pa1{ float:left; width:450px; height:100px; padding-top:30px;}
+.culture .text_box .text_nr .nr_pa2{ float:left; width:450px; height:100px; padding-left:300px; padding-top:30px;}
+.culture .text_box .text_nr .p1{ font-size:30px; color:#FFF;}
+.culture .text_box .text_nr .p2{ font-size:16px; color:#FFF;}
+.culture .con2_hf .btn_sd{ float:left; font-size:30px; color:#CCC; margin:0 30px; padding-bottom:8px; cursor:pointer;}
+.culture .con2_hf .cur{ color:#4a4a4a; border-bottom:#0c7ce7 3px solid;}
+.culture .con2_nr{ padding-top:45px; display:none;}
+.culture .con2_cur{ display:block;}
+.culture .con2_nr .p1{ font-size:28px; color:#4a4a4a; padding-top:40px;}
+.culture .con2_nr .p2{ font-size:14px; color:#4a4a4a; padding-top:30px;}
+.culture .con3_nr1{ background:#f6efe1;}
+.culture .con3_nr1 img{ float:left; padding-right:30px;}
+.culture .con3_nr1 .p1{ font-size:24px; color:#4a4a4a; padding:20px 30px 0 0;}
+.culture .con3_nr1 .p2{ font-size:14px; color:#4a4a4a; width:650px; height:100px; float:left; padding:20px 30px 0 0;}
+.culture .con3_nr1 .p3{ font-size:12px; color:#4a4a4a; padding:0 30px 10px 0; border-bottom:#d8d1c9 1px solid; float:left; width:620px; margin-right:50px;}
+.culture .con3_nr1 a{ background:url(../img/culture03_btn_arrow.png) no-repeat 0 0; width:24px; height:24px; float:left; margin:10px 0;}
+.culture .con3_nr2 img{ float:left; padding-right:30px;}
+.culture .con3_nr2 .p1{ font-size:24px; color:#4a4a4a; padding:20px 30px 0 0;}
+.culture .con3_nr2 .p2{ font-size:14px; color:#4a4a4a; width:650px; height:100px; float:left; padding:20px 30px 0 0;}
+.culture .con3_nr2 .p3{ font-size:12px; color:#4a4a4a; padding:0 30px 10px 0; border-bottom:#d8d1c9 1px solid; float:left; width:620px; margin-right:50px;}
+.culture .con3_nr2 a{ background:url(../img/culture03_btn_arrow.png) no-repeat 0 0; width:24px; height:24px; float:left; margin:10px 0;}
+.culture .con4_hf .btn_sd{ float:left; font-size:30px; color:#CCC; margin:0 30px; padding-bottom:8px; cursor:pointer;}
+.culture .con4_hf .cur{ color:#4a4a4a; border-bottom:#0c7ce7 3px solid;}
+.culture .con4_nr img{ padding-bottom:15px;}
+.culture .con4_nr{ display:none;}
+.culture .con4_cur{ display:block;}
+.culture .con4_nr .p1{ font-size:28px; color:#535353; text-align:center; padding:30px 0 20px 0;}
+.culture .con4_nr .p2{ font-size:14px; color:#4a4a4a; padding-bottom:25px; line-height:24px;}
+.culture .con4_nr .p3{ font-size:12px; color:#B9B9B9; text-align:center; padding:15px;}
+.culture .con4_nr .pic{ padding-top:30px;}
+.culture .con4_nr .pic img{ float:left;}
+.culture .con4_nr .pic .pic_img1{ padding-right:30px;}
+.culture .con4_nr .text .text_con{ border-bottom:#e0d8d0 1px solid; padding-top:30px;}
+.culture .con4_nr .text .text_con .con4_p1{ font-size:28px; color:#4a4a4a; padding-bottom:10px;}
+.culture .con4_nr .text .text_con .con4_p2{ font-size:14px; color:#4a4a4a; line-height:24px; padding-bottom:10px; width:1200px; height:80px;}
+.culture .con4_nr .text .text_con .con4_p3{ font-size:12px; color:#4a4a4a; padding-bottom:10px;}
+.culture .con4_nr .text .text_con .con4_p3 a{ background:url(../img/culture03_btn_arrow.png) no-repeat 0 0; float:right; width:24px; height:24px;}

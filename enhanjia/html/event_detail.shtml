@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>漢家族-关爱大事记详情页</title>
+		<meta content="" name="description">
+	    <meta content="" name="keywords">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link href="css/mobilemenu.css" rel="stylesheet" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="uc/header.html" -->
+		<div class="box news_detail">
+			<div class="container">
+				<div class="location">
+					<a href="/">首页</a>
+					<span>&gt;</span>
+					<a href="javascript:;">家族慈善</a>
+					<span>&gt;</span>
+					<a href="javascript:;">关爱基金</a>
+					<span>&gt;</span>
+					<a href="javascript:;">关爱大事记</a>
+					<span>&gt;</span>
+					<a href="javascript:;">漢家族办公室董事长杨辉先生在重要亚太峰会上勾勒“中国家族办公室行业未来航图”</a>
+				</div>
+				<div class="news_title">
+					<h3>关爱基金</h3>
+					<p>关爱大事记</p>
+				</div>
+				<div class="detail_con">
+					<span>2015.09.18</span>
+					<h3>漢家族办公室董事长杨辉先生在重要亚太峰会上勾勒“中国家族办公室行业未来航图”</h3>
+					<p>
+						2014年9月9日晚，有着亚洲品牌年度“奥斯卡”之称的第9届“亚洲品牌盛典”活动在香港亚洲电视台圆满落幕，作为中国第一家
+						符合国际标 准的家族办公室——漢•家族办公室荣获“亚洲品牌十大创新企业”大奖，这是中国家族办公室行业里，唯一获得此项
+						殊荣的企业。
+					</p>
+					<img src="img/detail_pic.jpg"  />
+					<p>第七届亚太财富管理与私人银行年会</p>
+					<h4>24岁的中国人成为世界上最年轻的亿万富豪</h4>
+					<p class="img_produce">
+						2014年9月9日晚，有着亚洲品牌年度“奥斯卡”之称的第9届“亚洲品牌盛典”活动在香港亚洲电视台圆满落幕，作为中国第一家符
+						合国际标 准的家族办公室——漢•家族办公室荣获“亚洲品牌十大创新企业”大奖，这是中国家族办公室行业里，唯一获得此项殊荣
+						的企业。2014年9月9日晚，有着亚洲品牌年度“奥斯卡”之称的第9届“亚洲品牌盛典”活动在香港亚洲电视台圆满落幕，作为中国
+						第一家符合国际标 准的家族办公室——漢•家族办公室荣获“亚洲品牌十大创新企业”大奖，这是中国家族办公室行业里，唯一获得
+						此项殊荣的企业。2014年9月9日晚，有着亚洲品牌年度“奥斯卡”之称的第9届“亚洲品牌盛典”活动在香港亚洲电视台圆满落幕，
+						作为中国第一家符合国际标 准的家族办公室——漢•家族办公室荣获“亚洲品牌十大创新企业”大奖，这是中国家族办公室行业里，
+						唯一获得此项殊荣的企业。2014年9月9日晚，有着亚洲品牌年度“奥斯卡”之称的第9届“亚洲品牌盛典”活动在香港亚洲电视台圆
+						满落幕。大奖，这是中国家族办公室行业里，唯一获得此项殊荣的企业。
+					</p>
+				</div>
+				<div class="recom_list">
+					<ul class="clearfix">
+						<li class="line1">
+							<div class="inside_box line3">
+								<span>2015.09.18</span>
+								<h3>漢•家族办公室荣获“亚洲品牌十大创新企业”奖</h3>
+								<p>
+									2014年9月9日晚，有着亚洲品牌年度“奥斯卡”之称的第9届“亚洲品牌盛典”活动在香港亚洲电视台圆满落幕，作为中
+									国第一家符合国际标准的家族办公室——漢•家族办公室荣获“亚洲品牌十大创新企
+								</p>
+								<a href="news_detail.shtml">查看详情</a>
+							</div>
+						</li>
+						<li class="line2">
+							<div class="inside_box line3">
+								<span>2015.09.18</span>
+								<h3>漢家族|中国家族传承之闭门论坛暨中国首份家族办公室行业白皮书发布</h3>
+								<p>
+									上海，中国： 漢家族办公室创始人兼董事长杨辉先生在中国最具权威性、影响力的2014年亚太家族财富管理与私人银行
+									年会上引导突破性对话，行业合作创造高净值生态系统，鼓舞行业共同合作创造一个崭新的“高净值生态系统”。
+								</p>
+								<a href="news_detail.shtml">查看详情</a>
+							</div>
+						</li>
+						<li class="line2">
+							<div class="inside_box line3">
+								<span>2015.09.18</span>
+								<h3>漢家族|中国家族传承之闭门论坛暨中国首份家族办公室行业白皮书发布</h3>
+								<p>
+									2014年9月9日晚，有着亚洲品牌年度“奥斯卡”之称的第9届“亚洲品牌盛典”活动在香港亚洲电视台圆满落幕，作为中国
+									第一家符合国际标准的家族办公室——漢•家族办公室荣获“亚洲品牌十大创新企业”大奖，这是中国家族办公室……
+								</p>
+								<a href="news_detail.shtml">查看详情</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+		<!--#include file="uc/footer.html" -->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/mobilemenu.js" ></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+</html>

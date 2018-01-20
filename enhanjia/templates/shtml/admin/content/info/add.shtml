@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{$siteName}</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/table.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="css/jqueryui.css">
+</head>
+<body>
+<div class="row">
+<table width="100%" border="0" cellpadding="0" cellspacing="1" align="center">
+	<tr>
+		<td height="26" >
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			<td align="left">
+			<input type='button' class="coolbg np" name='bb1' onClick="location='<!--{site_url('content/info/index')}-->?cid={$cid}&table={$table}';" value='{$column.name}' />
+			</td>
+			</tr>
+			</table>
+		</td>
+        <td width="20%" height="30" align='right'><a href="<!--{site_url('content/info/index')}-->?cid={$cid}&table={$table}"><u></u></a> {$column.name}/ 添加文档</td>
+	</tr>
+</table>
+<form name="form1" action="" enctype="multipart/form-data" method="post" onsubmit="return checksubmit();">
+  <input type="hidden" name="dopost" value="save" />
+  <input type="hidden" name="aid" value="{$aid}" />
+  <input type="hidden" name="unitid" value="{$cid}" />
+  <input type="hidden" name="id" value="{$id}" />
+  <input type="hidden" name="table" value="{$table}" />
+  <div class="row-10 clearfix">
+ <table width="75%"  border="0" align="left" cellpadding="0" cellspacing="0" id="needset" style="border:1px solid #cfcfcf;background:#ffffff;" class="table2">
+
+	<tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>标题<br />
+			<input name="title" type="text" id="titleid" value="{$newsinfo.title}" style="width:80%" />
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+    <!--{foreach $fields.info as $k=>$v}-->
+	    <?php switch($v.type){
+	    	case "text":
+	    		echo '<tr>
+			      	<td height="20" colspan="5" class="bline">
+			      	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			          <tr>
+			            <td>'.$v['title'].'<br />
+						<input name="'.$v['field'].'" type="text"  value="'.$newsinfo[$v['field']].'" style="width:70%" />
+						<span>'.$v['title'].'</span>
+						</td>
+					  </tr>
+			        </table>
+					</td>
+			   	 </tr>';
+			break;
+
+		  	case "textarea":
+			 	echo '<tr>
+					<td height="24" colspan="5" class="bline">
+					<table border="0" width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+					<td>'.$v['title'].'<br />
+					<textarea name="'.$v['field'].'" rows="4" cols="70" id="'.$v['field'].'">'.$newsinfo[$v['field']].'</textarea>
+					<span>'.$v['title'].'</span>
+					</td>
+					</tr>
+					</table>
+					</td>
+				</tr>';
+			break;
+
+			// case 'editor':
+			// 	echo '<tr>
+			// 	  <td height="28" colspan="2" class="bline2">
+			// 		'.$editor.'
+			// 	  </td>
+			// 	</tr>';
+			// break;
+
+	    } ?>
+	<!--{/foreach}-->
+
+	
+	<tr>
+	<td height="28" colspan="2" class="bline2">
+	{$editor}
+	</td>
+	</tr>
+	
+ 	
+</table>
+	
+<table width="24%"  border="0" align="left" cellpadding="0" cellspacing="0" id="needset" style="border:1px solid #cfcfcf;background:#ffffff; margin-left:1%;" class="table2">
+
+	<!--{foreach $fields.info as $k=>$v}-->
+	   <?php switch($v.type){
+	   		case "pic":
+				echo '<tr id="pictable">
+	      			<td height="24" colspan="5" class="bline">
+	      			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		          <tr>
+		            <td align="center">
+					<div id="divpicview_ee'.$k.'" class="divpre">';
+
+					if(!empty($pic[$v['key']]['filename'])){
+						echo '<img width="70%" src="'.$pic[$v['key']]['filename'].'" />';
+					}
+					
+				echo '</div>
+					<input name="'.$v['field'].'" type="hidden" id="picid_ee'.$k.'" value="'.$pic[$v['key']]['aid'].'" />
+					<iframe name="uplitpicframe_ee'.$k.'" id="uplitpicframe_ee'.$k.'" src="" style="display:none"></iframe>
+					<span class="litpic_span">
+					<input type="button" value="'.$v['title'].'" style="width:70%;cursor:pointer;" />
+					<input name="picid_litpic_ee'.$k.'" type="file" id="picid_litpic_ee'.$k.'" onchange="upload_more_pic(this, \'divpicview_ee'.$k.'\', \'picid_litpic_ee'.$k.'\',\'one\',\'picid_ee'.$k.'\',\'uplitpicframe_ee'.$k.'\');" size="1" class="np coolbg litpic"/></span>
+					</td>
+		          </tr>
+			        </table>
+					</td>
+			    </tr>';
+			break;
+
+			case "pics":
+				echo '<tr id="pictable">
+			      <td height="24" colspan="5" class="bline">
+			      	<table width="100%" border="0" cellspacing="0" cellpadding="0" id="files">
+			          <tr>
+						<td style="text-align: right; width: 141px;"><b>多图片 </b><a href="javascript:addfile();">添加文件</a></td>
+						<td></td>
+			          </tr>
+			          <iframe name="uplitpicfra" id="uplitpicfra" src="" style="display:none"></iframe>';
+				if($pics[0]['aid']){
+				foreach($pics as $k=>$value){
+				echo '<tr>
+						<td colspan="2" style="padding-left: 110px;">
+							<div id="divpicview_o'.$k.'" class="divpre"><img width="80%" src="'.$value['filename'].'" /></div>
+							<input name="files[]" type="hidden" id="file_o'.$k.'" value="'.$pics[$k]['aid'].'" />
+							<span></span>
+							<span class="litpic_span">
+								<input type="button" value="本地上传" style="width:10%;cursor:pointer;" />
+								<input name="ajaxfile_o'.$k.'" style="width:80%" type="file" id="ajaxfile_o'.$k.'" onChange="upload_pic(this, \'divpicview_o'.$k.'\', \'ajaxfile_o'.$k.'\',\'one','file_o'.$k.'\');" size="1" class="np coolbg litpic"/>
+							</span>
+							<span class="litpic_span">
+								<input type="button" value="删除图片" class="deletefile" style="width:10%;cursor:pointer;" onclick="return delete_file(this);"/>
+							</span>
+						</td>
+					</tr>';
+				}}
+				echo '</table>
+						</td>
+				    </tr>';
+			break;
+
+			case 'file':
+			 		echo '<tr id="pictable">
+		      			<td height="24" colspan="5" class="bline">
+		      			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			          	<tr>
+			            <td align="center">
+						<div id="divpicview_file'.$k.'" class="divpre">';
+
+						if(!empty($file_data)){
+							echo $file_data[$v['key']]['description'];
+						}
+					
+					echo '</div>
+						<input name="'.$v['field'].'" type="hidden" id="file_id'.$k.'" value="'.$file_data[$v['key']]['aid'].'" />
+						<iframe name="upload_file_name'.$k.'" id="upload_file_name'.$k.'" src="" style="display:none"></iframe>
+						<span class="litpic_span">
+						<input type="button" value="'.$v['title'].'" style="width:50%;cursor:pointer;" />
+						<input name="upload_file_ee'.$k.'" type="file" id="upload_file_ee'.$k.'" onchange="upload_more_file(this, \'divpicview_file'.$k.'\', \'upload_file_ee'.$k.'\',\'one\',\'file_id'.$k.'\',\'upload_file_name'.$k.'\');" size="1" class="np coolbg litpic"/></span>
+						</td>
+			          	</tr>
+				        </table>
+						</td>
+				   		 </tr>';
+			 	break;
+
+			case 'files':
+			 		echo '<tr id="pictable">
+			      	<td height="24" colspan="5" class="bline">
+			      	<table width="100%" border="0" cellspacing="0" cellpadding="0" id="files_files">
+			          <tr>
+						<td style="text-align: right; width: 141px;"><b>文件集 </b><a href="javascript:addfile_file();">添加文件</a></td>
+						<td></td>
+			          </tr>
+			          <iframe name="upload_file_name" id="upload_file_name" src="" style="display:none"></iframe>';
+
+					if($files_files[0]['aid']){
+						foreach($files_files as $k=>$value){
+						echo '<tr>
+								<td colspan="2" style="padding-left: 110px;">
+									<div id="divpicview_o'.$k.'" class="divpre">'.$value['description'].'</div>
+									<input name="files_files[]" type="hidden" id="file_o'.$k.'" value="'.$files_files[$k]['aid'].'" />
+									<span></span>
+									<span class="litpic_span">
+										<input type="button" value="上传" style="width:10%;cursor:pointer;" />
+										<input name="ajaxfile_o'.$k.'" style="width:80%" type="file" id="ajaxfile_o'.$k.'" onChange="upload_more_file(this, \'divpicview_o'.$k.'\', \'ajaxfile_o'.$k.'\',\'one\',\'file_o'.$k.'\',\'upload_file_name\');" size="1" class="np coolbg litpic"/>
+									</span>
+									<span class="litpic_span">
+										<input type="button" value="删除" class="deletefile" style="width:10%;cursor:pointer;" onclick="return delete_file(this);"/>
+									</span>
+								</td>
+							</tr>';
+						}}
+					echo '</table>
+						</td>
+				    </tr>';
+			 	break;
+	   } ?>
+
+	<!--{/foreach}-->
+
+	<tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<!--{foreach $fields.info as $k=>$v}-->
+			 <?php switch($v['type']){
+			 	case 'date':
+			 		echo '<tr>
+			            <td>'.$v['title'].'<br/>';
+					  	$nowtimestr = $newsinfo[$v['field']] ? $newsinfo[$v['field']] : time();
+				  		$nowtime = date('Y-m-d H:i:s', $nowtimestr);	
+					echo '<input name="'.$v['field'].'" value="'.$nowtime.'" type="text" id="pubdate" style="width:87%" onClick="WdatePicker({dateFmt:\'yyyy-MM-dd HH:mm:ss\',skin:\'twoer\'})">			
+					  </td></tr>';
+			 	break;
+
+			 	case 'radio':
+			 		echo '<tr><td>'.$v['title'].'&nbsp;&nbsp;';
+				 		$radio = $v['field'];
+				 		foreach ($v['value'] as $k => $value) {
+				 			echo '<input name="'.$radio.'" type="radio" value="'.$k.'"  ';
+				 				if($newsinfo[$radio] == $k){
+				 					echo 'checked';
+				 				}
+				 			echo '/>'.$value.'';
+				 		}
+					echo '</td></tr>';
+			 	break;
+
+			 	case 'checkbox':
+			 		echo '<tr><td>'.$v['title'].'&nbsp;&nbsp;';
+				 		$checkbox = $v['field'].'[]';
+				 		$checkboxx = $v['field'];
+				 		$arr_arr = explode(',',trim($newsinfo[$checkboxx],','));
+				 		foreach ($v['value'] as $k => $value) {
+				 			$arr_k = $k;
+				 			echo '<input name="'.$checkbox.'" type="checkbox" value="'.$k.'" ';
+				 					foreach($arr_arr as $val){
+				 						if($val==$arr_k && $val!==''){
+				 							echo "checked";
+				 						}
+				 					}
+				 			echo ' />'.$value.'';
+				 		}
+					echo '</td></tr>';
+			 	break;
+
+			 	case 'select':
+				 	echo '<tr><td>'.$v['title'].'&nbsp;&nbsp;';
+				 	$select = $v['field'];
+				 	echo '<select name="'.$select.'">';
+				 		foreach ($v['value'] as $k => $value) {
+				 			echo '<option value="'.$k.'" ';
+				 				if($newsinfo[$select] == $k){
+				 					echo 'selected';
+				 				}
+				 			echo '>'.$value.'</option>';
+				 		}
+					echo '</select>';
+					echo '</td></tr>';
+			 	break;
+
+			 	case 'password':
+					echo '<tr><td>'.$v['title'].'';
+				 	echo '<input type="password" name="'.$v['field'].'" value="'.$newsinfo[$v['field']].'" />';
+				 	echo '</td></tr>';
+			 	break;
+
+			 	case 're_select':
+			 		if(!empty($v['value'])){
+				 		echo '<tr><td>'.$v['title'].'&nbsp;&nbsp;';
+					 	$select = $v['field'];
+					 	echo '<select name="'.$select.'">';
+					 		foreach ($v['value'] as $k => $value) {
+					 			echo '<option value="'.$value['id'].'" ';
+					 				if($newsinfo[$select] == $value['id']){
+					 					echo 'selected';
+					 				}
+					 			echo '>'.$value['name'].'</option>';
+					 		}
+						echo '</select>';
+						echo '</td></tr>';
+					}
+			 	break;
+			 	} ?>
+		<!--{/foreach}-->
+        </table>
+		</td>
+    </tr>
+
+	<tr height="35">
+	<td width="40%">&nbsp;</td>
+	<td width="60%">
+	   <input name="imageField" type="submit" value="保存" class="np coolbg"/>
+	</td>
+	</tr>
+</table>
+  </div>
+</form>
+</div>
+<script language="javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
+<script language="javascript" src="js/jcomp.js"></script>
+<script language="javascript" type="text/javascript" src="js/jqueryui.js"></script>
+<script language="javascript" type="text/javascript" src="__PUBLIC__/js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+function checksubmit(){
+	if (document.form1.titleid.value=='') {
+		alert('标题不能为空！');
+		document.form1.titleid.focus();
+		return false;
+	}
+}
+var HTTPURL = '<!--{site_url()}-->';
+var BASEURL = '<!--{base_url()}-->';
+</script>
+</body>
+</html>

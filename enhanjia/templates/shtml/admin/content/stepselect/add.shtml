@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>关联选项</title>
+  <link href="css/base.css" rel="stylesheet" type="text/css">
+  <link href="css/table.css" rel="stylesheet" type="text/css">
+  <script language="javascript" type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<body>
+<div class="row">
+<form name="form1" action="<?php echo site_url('content/stepselect/'.$action)?>" enctype="multipart/form-data" method="post" onSubmit="return checkSubmit();">
+<input type="hidden" name="dopost" value="save" />
+<input type="hidden" name="id" value="{$info.id}" />
+<input type="hidden" name="reid" id="reid" value="{$reid}" />
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="border:1px solid #cfcfcf;background:#ffffff;" class="table2">
+	<tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 73px;">分类名称：</td>
+            <td>
+            {$rename}
+            </td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+    <tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 73px;">名称：</td>
+            <td>
+            <input name="name" type="text" id="name" size="30" class="iptxt" style="width:400px" value="{$info.name}" />
+            </td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+
+    <!--{if empty($reid)}-->
+    <tr>
+      <td height="24" colspan="5" class="bline">
+        <table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="text-align: right; width: 73px;">关联栏目id</td>
+            <td>
+            <input name="column_id" type="text" id="column_id" size="30" class="iptxt" style="width:400px" value="{$info.column_id}" />
+            </td>
+          </tr>
+        </table>
+    </td>
+    </tr>
+    <!--{else}-->
+    <tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			      <td style="text-align: right; width: 73px;">值：</td>
+            <td>
+            <input name="value" type="text" id="value" size="30" class="iptxt" style="width:400px" value="{$info.value}" />
+            </td>
+		      </tr>
+        </table>
+		</td>
+    </tr>
+    <!--{/if}-->
+
+	  <tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td width="50%">&nbsp;</td>
+			<td width="50%">
+			<input name="imageField" type="submit" value="保存" class="np coolbg"/>
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+</table>
+</form>
+</div>
+<script language="javascript">
+function checkSubmit()
+{
+	if(document.form1.name.value==""){
+		alert("名称不能为空！");
+		document.form1.name.focus();
+		return false;
+	}
+	return true;
+}
+
+</script>
+</body>
+</html>

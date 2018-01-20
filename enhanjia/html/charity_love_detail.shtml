@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>漢家族-家族慈善关爱基金</title>
+		<meta content="" name="description">
+		<meta content="" name="keywords">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+		<link href="css/reset.css" rel="stylesheet">
+		<link href="css/base.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/respond.css" />
+		<link href="css/mobilemenu.css" rel="stylesheet" />
+		<!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+
+	<body>
+		<!--#include file="uc/header.html" -->
+		<div class="box charity_detail">
+			<div class="container">
+				<div class="location">
+					<a href="/">首页</a>
+					<span>&gt;</span>
+					<a href="javascript:;">家族慈善</a>
+					<span>&gt;</span>
+					<a href="javascript:;">关爱基金</a>
+				</div>
+				<div class="inner_title">
+					<h3>家族慈善</h3>
+					<p>关爱基金</p>
+				</div>
+				<div class="inner_text">
+					<div class="jijin_logo"><img src="img/jijin_logo01.png"></div>
+					<h3>
+						关爱基金于2012年7月正式成立，由漢家族办公室董事长杨辉先生及其夫人创办成立共同发起创办，是中社社会工作发展基金会
+						的一级专项基金。
+					</h3>
+					<p>
+						主要关注方向是整合各类资源，资助扶持民间孤残儿童慈善机构；与医院、大学、专业组织等展开合作，共同探索国内孤残儿童 救助规范标准，填补该领域空白；通过培养孤残救助社工等，建立科学完善的中国民间孤残儿童救助模式；宣传普及公众意识， 提升全民对孤残儿童的救助认知的综合孤残儿童救助体系。
+					</p>
+					<div class="clearfix">
+						<div class="float_l">
+							<h4>关爱宗旨</h4>
+							<ul>
+								<li>捐助民间孤残儿童救助收养机构；</li>
+								<li>探索孤残儿童民间救助规范体系；</li>
+								<li>搭建民间孤残儿童救助科学模式；</li>
+								<li>宣导中国孤残儿童救助公众意识；</li>
+							</ul>
+						</div>
+						<!--<div class="down float_r">
+							<a href="charity_love_event.shtml" class="big_event">关爱大事记</a>
+							<h4>年度报告下载</h4>
+							<a href="javascript:;">关爱基金2013年度报告</a>
+							<a href="javascript:;">关爱基金2014年度报告</a>
+							
+						</div>-->
+					</div>
+					<p class="btm_text">
+						关爱基金始终关注需要帮助的儿童，尤其是孤残儿童。关爱将充分发掘和整合配置社会优质资源参与进孤残儿童民间救助标准 建立和推广，助人自助，真正有效帮扶到需要帮助的民间孤残儿童救助机构和中国孤残儿童生存环境，为中国孤残儿童的明天 而努力！
+					</p>
+					<div class="event">
+						<h4>关爱大事记</h4>
+						<div class="events-item-box hidden">
+							<div class="item item-year" data-year="2012">
+								2012
+							</div>
+							<div class="item event-item" data-year="2012">
+								<div class="pics"></div>
+								<div class="caption">
+									<div class="month">6月</div>
+									<div class="date">2012 年7 月2 日</div>
+									<p>关爱基金正式成立。</p>
+									<div class="date">July 2, 2012</div>
+									<small>The Care Foundation was officially established</small>
+								</div>
+							</div>
+							<div class="item event-item" data-year="2012">
+								<div class="pics"></div>
+								<div class="caption">
+									<div class="month">7月</div>
+									<div class="date">2012 年7 月2 日</div>
+									<p>中社社会工作发展基金会成为第7 2 家通过民政部基金会2 0 1 2 年年度检查的基金会。</p>
+									<div class="date">June 4, 2013</div>
+									<small>Zhongshe　Social Work Development　Foundation became the　72th foundation that　passed the 2012 annual　inspection by the Ministry　of Civil Affairs</small>
+								</div>
+							</div>
+							<div class="item item-year" data-year="2013">
+								2013
+							</div>
+							<div class="item event-item" data-year="2013">
+								<div class="pics">
+									<img src="img/events/event_img01.jpg" />
+									<img src="img/events/event_img02.jpg" />
+									<img src="img/events/event_img03.jpg" />
+								</div>
+								<div class="caption">
+									<div class="month">10月</div>
+									<div class="date">2013 年10 月16 日</div>
+									<p>关爱基金的理事会成员及基金会工作人员携志愿者共1 2 人先后到访了“ 牧羊地儿童村”，“福家残疾孤儿寄养之家”和“奇妙爱之家孤残儿童福利机构”。分别对其机构内的孤残儿童情况、医疗康复设施及环境、培训体系等现状进行了实地参观和深入的交流，并与孩子们一同开展了丰富而充满关爱的康复活动。</p>
+									<div class="date">October 16, 2013</div>
+									<small>The Board of Directors and members of The Care Foundation visited Shepherd's Field, Fu Jia Blessed House, and AGAPE Family Life House with 12 volunteers.The purpose of the visit is to understand more about the facilities, living environment, and the children’s rehabilitation conditions, as well as the current training framework for the social workers. The team had a fruitful communication with the children as well as the workers at the respective social work organizations</small>
+								</div>
+							</div>
+							<div class="item event-item" data-year="2013">
+								<div class="pics">
+									<img src="img/events/event_img10.jpg" />
+								</div>
+								<div class="caption">
+									<div class="month">11月</div>
+									<div class="date">2013 年11 月19 日</div>
+									<p>为众爱慈善商店患白血病的宋子函捐助1 9 0 ， 0 0 0 元的手术治疗费。</p>
+									<div class="date">November 19, 2013</div>
+									<small>Donated RMB190,000 for surgical fees to Zihan Song,a leukemia patient from Zhongai Charity Store</small>
+								</div>
+							</div>
+							<div class="item event-item" data-year="2013">
+								<div class="pics">
+									<img src="img/events/event_img04.jpg" />
+									<img src="img/events/event_img05.jpg" />
+									<img src="img/events/event_img06.jpg" />
+								</div>
+								<div class="caption">
+									<div class="month">11月</div>
+									<div class="date">2013 年11 月28 日</div>
+									<p>成功举办了第二届“ 天使之夜” 感恩慈善晚宴。</p>
+									<div class="date">November 28, 2013</div>
+									<small>The 2nd ‘Night of Angels’ Charity Gala Dinner was held successfully.</small>
+								</div>
+							</div>
+							<div class="item event-item" data-year="2013">
+								<div class="pics">
+									<img src="img/events/event_img07.jpg" />
+									<img src="img/events/event_img08.jpg" />
+									<img src="img/events/event_img09.jpg" />
+								</div>
+								<div class="caption">
+									<div class="month">12月</div>
+									<div class="date">2013 年12 月10 日</div>
+									<p>关爱基金偕同志愿者共1 6 人，一同参观考察了“ 希望之家”， 与“ 希望之家” 的发起人进行了细致的沟通 详细了解了“ 希望之家” 的运作模式和管理经验。</p>
+									<div class="date">December 10, 2013</div>
+									<small>Volunteers from The Care Foundation visited New Day Foster Home and talked with its founder to learn more about the operation and management experience of the New Day Foster Home.</small>
+								</div>
+							</div>
+							<div class="item event-item" data-year="2013">
+								<div class="pics">
+								</div>
+								<div class="caption">
+									<div class="month">12月</div>
+									<div class="date">2013 年12 月23 日</div>
+									<p>关完成慈善晚宴的所有善款核对和捐赠金额确认工作。</p>
+									<div class="date">December 23, 2013</div>
+									<small>Fulfilled all required checks and balances for all donations at the Charity Gala Dinner 2013</small>
+								</div>
+							</div>
+						</div>
+						<div class="events-sliders">
+							<div class="slider-top"></div>
+							<div class="slider-bottom"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--#include file="uc/footer.html" -->
+			<script type="text/javascript" src="js/jquery.js"></script>
+			<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+			<script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
+			<script type="text/javascript" src="js/mobilemenu.js" ></script>
+			<script type="text/javascript" src="js/common.js"></script>
+	</body>
+
+</html>

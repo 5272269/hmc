@@ -1,0 +1,169 @@
+<!--#include file="admin/common/meta.html"-->
+<body>
+<!--  快速转换位置按钮  -->
+<div class="row">
+<table width="100%" border="0" cellpadding="0" cellspacing="1" align="center">
+	<tr>
+		<td height="26" >
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			<td align="left">
+			<!--{if !empty($cid)}-->
+			<input type='button' class="coolbg np" onClick="location='<!--{site_url('content/info/add')}-->?cid={$cid}&table={$table}';" value='添加文档' />
+			<!--{/if}-->
+			<input type='button' class="coolbg np" name='bb1' onClick="location='<!--{site_url('content/info/recycling')}-->?cid={$cid}&table={$table}';" value='回收站' />
+			</td>
+			</tr>
+			</table>
+		</td>
+        <td width="20%" height="30" align='right'><a href="<!--{site_url('content/info/index')}-->"><u>信息列表</u></a>&nbsp;/&nbsp;发布信息</td>
+	</tr>
+</table>
+<!--  内容列表   -->
+<form name="form2" id="form2">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="table">
+<tr align="center" height="25">
+	<th width="5%">选择</th>
+	<th>标题</th>
+	<th width="10%">栏目</th>
+	<th width="7%">状态</th>
+	<th width="6%">操作</th>
+</tr>
+<!--{if !empty($list)}-->
+<!--{foreach $list as $k=>$v}-->
+<tr align='center' height="25" align="center">
+	<td>
+		<input name="arcID" type="checkbox" id="arcID" value="{$v.id}" class="checkbox" />
+	</td>
+	<td align='left'>
+	{$v.title}
+	</td>
+	<td>{$v.column}</td>
+	<td>{$v.status}</td>
+	<td class="top_{$v.id}">
+		<a href='<!--{site_url('content/info/edit/')}-->?id={$v.id}&table={$table}&cid={$cid}' >
+			<u>编辑</u>
+		</a> 
+	</td>
+	
+</tr>
+<!--{/foreach}-->
+<!--{else}-->
+<tr align='center' height="26" align="center">
+	<td  colspan="6">
+	信息为空
+	</td>
+</tr>
+<!--{/if}-->
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="1" align="left">
+<tr>
+<td height="36" class="button">
+	<a href="javascript:selAll()" class="coolbg">全选</a>
+	<a href="javascript:noSelAll()" class="coolbg">取消</a>
+	<a href="javascript:checkArc(0)" class="coolbg">发布</a>
+	<a href="javascript:delArc(0)" class="coolbg">删除</a>
+	<input type="hidden" id="table" value="{$table}" />
+</td>
+<td height="36" align="right" class="pagination">
+	{$pages}
+</td>
+</tr>
+</table>
+</form>
+</div>
+<script language="javascript" src="js/jquery/jquery.js" type="text/javascript"></script>
+<script>
+var HTTPURL = '<!--{site_url()}-->';
+function checkArc(aid){
+	var qstr=getCheckboxItem();
+	var	table= $('#table').val();
+	if(aid==0) aid = getOneItem();
+	
+	locationUrl = "<!--{site_url('/content/info/doaction')}-->?aid="+aid+"&do=checkArchives&qstr="+qstr+"&table="+table;
+	$.ajax({
+			type : "POST",
+			dataType : "json",
+			url : locationUrl,
+			data : {
+			},
+				complete : function() {
+			},
+			success : function(result) {
+				if (result.code != 1000) {
+					alert(result.msg);
+				} else {
+					window.location.reload();
+				}
+			},
+			error : function(ae) {
+			},
+			async : true
+		});
+}
+function delArc(aid){
+	var qstr=getCheckboxItem();
+	if(aid==0) aid = getOneItem();
+	var	table= $('#table').val();
+	locationUrl = "<!--{site_url('/content/info/doaction')}-->?aid="+aid+"&do=delArchives&qstr="+qstr+"&table="+table;
+	$.ajax({
+		type : "POST",
+		dataType : "json",
+		url : locationUrl,
+		data : {
+		},
+			complete : function() {
+		},
+		success : function(result) {
+			if (result.code != 1000) {
+				alert(result.msg);
+			} else {
+				window.location.reload();
+			}
+		},
+		error : function(ae) {
+		},
+		async : true
+	});
+}
+// 获得选中文件的文件名
+function getCheckboxItem() {
+	var allSel="";
+	if(document.form2.arcID.value) return document.form2.arcID.value;
+	for(i=0;i<document.form2.arcID.length;i++)
+	{
+		if(document.form2.arcID[i].checked)
+		{
+			if(allSel=="")
+				allSel=document.form2.arcID[i].value;
+			else
+				allSel=allSel+"`"+document.form2.arcID[i].value;
+		}
+	}
+	return allSel;
+}
+// 获得选中其中一个的id
+function getOneItem() {
+	var allSel="";
+	if(document.form2.arcID.value) return document.form2.arcID.value;
+	for(i=0;i<document.form2.arcID.length;i++)
+	{
+		if(document.form2.arcID[i].checked)
+		{
+			allSel = document.form2.arcID[i].value;
+			break;
+		}
+	}
+	return allSel;
+}
+function selAll()
+{
+	$('#form2 input[type=checkbox][name=arcID]').attr("checked", true);
+}
+function noSelAll()
+{
+	$('#form2 input[type=checkbox][name=arcID]').attr("checked", false);
+}
+</script>
+</body>
+</html>

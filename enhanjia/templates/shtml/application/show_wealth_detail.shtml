@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--#include file="application/uc/meta.shtml"-->
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/jquery.lightbox.css" />
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link href="css/mobilemenu.css" rel="stylesheet" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="application/uc/header.shtml"-->
+		<div class="box wealth_detail learn_detail">
+			<div class="container">
+				<div class="location">
+					<a href="/">Home Page</a>
+					<span>&gt;</span>
+					<!--{omp:nav_get_parent_url data="assign" list="cat_url" id=$params.id}-->
+					<a href="{site_url($cat_url)}">{$params.name}</a>
+					<span>&gt;</span>
+					<a href="javascript:;">{$view_info.title}</a>
+				</div>
+				<div class="inner_title">
+					<h3>{$view_info.subtitle}</h3>
+					<p>{$view_info.atitle}</p>
+				</div>
+				<div class="inner_text">
+					{$view_info.content}
+					<?php
+					if($view_info.id==3){
+					?>
+					<h4 style="font-size: 16px;font-weight: bold;">The HMCFamily Emeralds<br/></h4>
+					
+					<!--{omp:doc_listinfo data="assign" list="list_1" id="23" order="sort DESC"}-->
+					<!--{loop $list_1.infolist as $k=>$v}-->
+					<div class="detail_con clearfix">
+					<div class="con_text float_l">
+					<span style="font-size: 14px;">{$v.jianjie}</span>
+					</div>
+					<div class="con_img float_r">
+					<!--{loop $v.pics as $k=>$pics}-->
+					
+					<img src="{$pics.filename}" style="display: inline-block;width: 45%;margin-left: 10px; <!--{if $k>1}-->margin-top: 5px;<!--{/if}-->"/>
+					<!--{/loop}-->
+					</div></div>
+					<!--{/loop}-->
+					<div class="img-list" id="img-list">
+						<!--{omp:doc_listinfo data="assign" list="list_1" id="24" order="sort DESC"}-->
+						<!--{loop $list_1.infolist as $k=>$v}-->
+                        <div class="item">
+                            <a href="{$v.big.filename}" class="lightbox" title="<h3>{$v.title}</h3><p>{$v.des}</p>"><img src="{$v.small.filename}"></a>
+                        </div>
+                        <!--{/loop}-->
+                    </div>
+					<h4 style="font-size: 16px;font-weight: bold;">Purchase Process</h4><p><span style="font-size: 14px;">Reservation&nbsp;——&nbsp;deposit payment&nbsp;——&nbsp;product appraisal&nbsp;——&nbsp;balance payment and delivery</span></p>
+					<?php } ?>
+				</div>
+			</div>
+		</div>	
+		<!--#include file="application/uc/footer.shtml"-->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+        <script type="text/javascript" src="js/owl.carousel.min.js" ></script>
+        <script type="text/javascript" src="js/jquery.lightbox.min.js" ></script>
+		<script type="text/javascript" src="js/mobilemenu.js" ></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script>
+		    var navIndex=1;       
+		   $('.header .nav a').eq(navIndex).addClass('active').siblings().removeClass('active');
+		</script>
+        <script type="text/javascript">
+		    jQuery(document).ready(function($){
+		      $('.lightbox').lightbox();
+		    });
+		</script>
+	</body>
+</html>

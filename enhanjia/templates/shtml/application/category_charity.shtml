@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--#include file="application/uc/meta.shtml"-->
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link rel="stylesheet" href="css/mobilemenu.css" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="application/uc/header.shtml"-->
+		<div class="box charity">
+			<div class="inner_banner" id="slide-banner">
+                <ul class="slides">
+                	<!--{omp:doc_listinfo data="assign" list="banner_info" id=25 num=5 sort="sort ASC"}-->
+                	<!--{loop $banner_info.infolist as $k=>$v}-->
+                    <li>
+                        <img src="{$v.pic.filename}" />
+                    </li>
+                    <!--{/loop}-->
+                </ul>
+			</div>
+			<div class="container">
+				<div class="inner_text charity-inner-text">
+					<!--<h3>HMCFamily Charity</h3>-->
+					<p><!--{omp:page_block id=10 style=1}--></p>
+					<h4 style="margin: 40px 0 0 0">Services Offered</h4>
+					<ul>
+						<!--{omp:page_block id=11}-->
+					</ul>
+				</div>
+				
+			</div>
+			<div class="charity-link">
+				<ul class="box-inner">
+					<li class="right">
+						<!--{omp:page_info data="assign" list="info_2" id=9}-->
+						<div class="jijin_logo"><img src="{$info_2.info.pic.filename}"></div>
+						<div class="jj_jieshao">{$info_2.info.description}...</div>
+						<!--{omp:nav_get_parent_url data="assign" list="info_2_url" id=9}-->
+						<a href="{site_url($info_2_url)}">Read More&gt;</a>
+					</li>
+					<li class="left">
+						<!--{omp:page_info data="assign" list="info_1" id=8}-->
+						<div class="jijin_logo"><img src="{$info_1.info.pic2.filename}"></div>
+						<div class="jj_jieshao">{$info_1.info.description}...</div>
+						<!--{omp:nav_get_parent_url data="assign" list="info_1_url" id=8}-->
+						<a href="{site_url($info_1_url)}">Read More&gt;</a>
+					</li>
+				</ul>
+			</div>
+		</div>	
+		<!--#include file="application/uc/footer.shtml"-->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+		<script type="text/javascript" src="js/Jplaceholder.js" ></script>
+		<script type="text/javascript" src="js/mobilemenu.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script>
+		    var navIndex=2;       
+		   $('.header .nav a').eq(navIndex).addClass('active').siblings().removeClass('active');
+		</script>
+	</body>
+</html>

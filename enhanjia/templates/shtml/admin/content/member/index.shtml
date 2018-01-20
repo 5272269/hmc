@@ -1,0 +1,179 @@
+<!--#include file="admin/common/meta.html"-->
+<body>
+<!--  快速转换位置按钮  -->
+<div class="row">
+<!-- <table width="100%" border="0" cellpadding="0" cellspacing="1" align="center">
+	<tr>
+		<td height="26" >
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			<td align="left">
+			<input type='button' class="coolbg np" onClick="javascript:;" value='会员设置' />
+			</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table> -->
+<!--  搜索表单   -->
+<div class="search_input">
+	<form name='form3' action='<?php echo site_url('content/member/index')?>' method='get'>
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="table">
+			<tr height="20">
+				<th align="left">
+					注册时间：
+					<input type="text" readonly="readonly" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',skin:'twoer'})" name="start_time" id="start_time" value="{$_GET['start_time']}">至
+					<input type="text" readonly="readonly" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',skin:'twoer'})" name="end_time" id="end_time" value="{$_GET['end_time']}">
+					用户名：
+					<input type="text" name="keywords" value="{$_GET['keywords']}" style="width:200px" />
+					状态：
+					<select name="status">
+						<option <!--{if $_GET['status'] == 1}-->selected="selected"<!--{/if}--> value="1">正常</option>
+						<option <!--{if $_GET['status'] == 2}-->selected="selected"<!--{/if}--> value="2">禁止登陆</option>
+					</select>
+					<input type="submit" class="coolbg np" value="查询" width="60" height="22" border="0"/>
+				</th>
+			</tr>
+		</table>
+	</form>
+</div>
+<!--  内容列表   -->
+<form name="form2" id="form2">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="table">
+		<tr align="center" height="25">
+			<th width="5%">选择</th>
+			<th>用户名称</th>
+			<th>邮箱</th>
+			<th>电话</th>
+			<th>注册时间</th>
+			<th>最后登陆时间</th>
+			<th>状态</th>
+		</tr>
+		<!--{if !empty($lists)}-->
+		<!--{foreach $lists as $k=>$v}-->
+		<tr align='center' height="25" align="center">
+			<td>
+				<input name="arcID" type="checkbox" id="arcID" value="{$v.id}" class="checkbox" />
+			</td>
+			<td>
+				{$v.username}
+			</td>
+			<td>
+				{$v.email}
+			</td>
+			<td>
+				{$v.phone}
+			</td>
+			<td>
+				{date('Y-m-d h:s:i',$v.reg_time)}
+			</td>
+			<td>
+				{date('Y-m-d h:s:i',$v.last_time)}
+			</td>
+			<td>
+				<!--{if $v.status == 1}-->正常<!--{elseif $v.status == 2}--><a title="恢复登录" data-id="{$v.id}" href="javascript:;" class="recovery">禁止登陆</a><!--{/if}-->
+			</td>
+		</tr>
+		<!--{/foreach}-->
+		<!--{else}-->
+		<tr align='center' height="26" align="center">
+			<td  colspan="7">
+			信息为空
+			</td>
+		</tr>
+		<!--{/if}-->
+	</table>
+	<table width="100%" border="0" cellpadding="0" cellspacing="1" align="left">
+		<tr>
+			<td height="36" class="button">
+				<a href="javascript:selAll()" class="coolbg">全选</a>
+				<a href="javascript:noSelAll()" class="coolbg">取消</a>
+				<a href="javascript:delArc(0)" class="coolbg">禁止登陆</a>
+			</td>
+			<td height="36" align="right" class="pagination">
+				{$page_info}
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+<script language="javascript" type="text/javascript" src="/data/public/js/My97DatePicker/WdatePicker.js"></script>
+<script language="javascript" src="js/jquery/jquery.js" type="text/javascript"></script>
+<script>
+var HTTPURL = '<!--{site_url()}-->';
+
+function delArc(aid) {
+	var id = getCheckboxItem();
+	var data = {id:id};
+	locationUrl = "<!--{site_url('/content/member/del')}-->";
+	$.ajax({
+		type : "POST",
+		dataType : "json",
+		url : locationUrl,
+		data : data,
+		complete : function() {
+		},
+		success : function(result) {
+			if (result.code != 1000) {
+				alert(result.msg);
+			} else {
+				window.location.reload();
+			}
+		},
+		error : function(ae) {
+		},
+		async : true
+	});
+}
+// 获得选中文件的文件名
+function getCheckboxItem() {
+	var allSel="";
+	if(document.form2.arcID.value) return document.form2.arcID.value;
+	for(i=0;i<document.form2.arcID.length;i++)
+	{
+		if(document.form2.arcID[i].checked)
+		{
+			if(allSel=="")
+				allSel=document.form2.arcID[i].value;
+			else
+				allSel=allSel+"`"+document.form2.arcID[i].value;
+		}
+	}
+	return allSel;
+}
+// 获得选中其中一个的id
+function getOneItem() {
+	var allSel="";
+	if(document.form2.arcID.value) return document.form2.arcID.value;
+	for(i=0;i<document.form2.arcID.length;i++)
+	{
+		if(document.form2.arcID[i].checked)
+		{
+			allSel = document.form2.arcID[i].value;
+			break;
+		}
+	}
+	return allSel;
+}
+function selAll()
+{
+	$('#form2 input[type=checkbox][name=arcID]').attr("checked", true);
+}
+function noSelAll()
+{
+	$('#form2 input[type=checkbox][name=arcID]').attr("checked", false);
+}
+
+/*恢复登录*/
+$(".recovery").click(function(){
+	$.post("<!--{site_url('/content/member/recovery')}-->",{id:$(this).attr("data-id")},function(result){
+		if (result.code != 1000) {
+			alert(result.msg);
+		} else {
+			window.location.reload();
+		}
+	})
+});
+</script>
+</body>
+</html>

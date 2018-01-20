@@ -1,0 +1,508 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>添加栏目</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/table.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/jcomp.js"></script>
+</head>
+<body>
+<div class="row">
+<table width="100%" border="0" cellpadding="0" cellspacing="1" align="center">
+	<tr>
+		<td height="26" >
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			<td align="left">
+			<a class="coolbg np" href="<!--{site_url('content/column/index')}-->">栏目列表</a>
+			</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<form name="form1" action="" enctype="multipart/form-data" method="post" onSubmit="return checkSubmit();">
+<input type="hidden" name="do" value="save" />
+<input type="hidden" name="id" value="{$info.id}" />
+<input type="hidden" name="reid" id="reid" value="{$re_info.id}" />
+<input type="hidden" name="old_ispart" value="{$info.ispart}"/>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="border:1px solid #cfcfcf;background:#ffffff;" class="table2">
+	<tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">栏目上级：</td>
+            <td>
+            	<!--{if $re_info.name}-->
+            		{$re_info.name}
+            	<!--{else}-->
+            		顶级栏目
+            	<!--{/if}-->
+            </td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+    <tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">栏目名称：</td>
+            <td>
+            <input name="name" type="text" id="name" size="30" class="iptxt" style="width:400px" value="{$info.name}" />
+            </td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+	
+	<tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">栏目属性：</td>
+            <td id="isparttd">
+            <input name="ispart" type="radio" value="doc" class='np' id="ispart"<!--{if $info.ispart=='doc'}-->checked="checked"<!--{/if}-->/>
+              文档 <br>
+            <input name="ispart" type="radio" value="catalog" class='np' <!--{if $info.ispart=='catalog'}-->checked="checked"<!--{/if}-->/>
+              目录 <br>
+            <input name="ispart" type="radio" value="link" class='np' <!--{if $info.ispart=='link'}-->checked="checked"<!--{/if}-->/>
+              外链 <br>
+            <input name="ispart" type="radio" value="page" class='np' <!--{if $info.ispart=='page'}-->checked="checked"<!--{/if}-->/>
+              页面 <br>
+            <input name="ispart" type="radio" value="form" class='np' <!--{if $info.ispart=='form'}-->checked="checked"<!--{/if}-->/>
+              表单
+            </td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+
+    <tr>
+    	<td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">是否在导航栏显示：</td>
+            <td>
+            <!--{if  $mark==1 }-->
+           		<input name="is_nav" type="checkbox" id="is_nav" value="1" checked="checked"/> 
+            <!--{else}-->
+            	<input name="is_nav" type="checkbox" id="is_nav" value="1" <!--{if $info.is_nav=='1'}-->checked="checked"<!--{/if}-->/>
+            <!--{/if}-->
+            </td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+
+    <tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">是否在新窗口打开：</td>
+            <td>
+            <input name="is_open" type="checkbox" id="is_open" value="1" <!--{if $info.is_open=='1'}-->checked="checked"<!--{/if}-->/>
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+	
+	<tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">排列顺序：</td>
+            <td>
+            <input name="sort" size="6" type="text" value="<!--{if $info.sort}-->{$info.sort}<!--{else}-->50<!--{/if}-->" class="pubinputs" style="width:60px" />（由低 -&gt; 高） 
+            </td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+
+     <tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">搜索类型：</td>
+            <td>
+				<select name="searchtype" id="searchtype" style="width:200px" >
+					<!--{foreach $searchtypes as $k=>$v}-->
+					<option value="{$k}"<!--{if $k == $info.searchtype }--> selected = "selected"<!--{/if}-->>{$v}</option>
+					<!--{/foreach}-->
+				</select>
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+
+    <tr class="show_engtitle">
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">英文名称：</td>
+            <td>
+			<input name="eng_name" type="text" style="width:400px" id="eng_name" class="alltxt" value="{$info.eng_name}" />
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+
+    <tr class="show_category">
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">是否存在页面：</td>
+            <td>
+            <input name="is_exist" type="checkbox" id="is_exist" value="1" <!--{if $info.is_exist=='1'}-->checked="checked"<!--{/if}-->/>
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+
+    <tr id="show_category">
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">选择目录页模板：</td>
+            <td>
+				<select name="category_template" id="category_template" style="width:400px" >
+					<option value=""<!--{if $info.category_template =='' }--> selected = "selected"<!--{/if}-->>默认模板</option>
+					<!--{foreach $category_template as $k=>$v}-->
+					<option value="{$v}"<!--{if $v == $info.category_template }--> selected = "selected"<!--{/if}-->>{$v}</option>
+					<!--{/foreach}-->
+				</select>
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+	
+    <tr class="show_list">
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">选择列表页模板：</td>
+            <td>
+				<select name="list_template" id="list_template" style="width:400px" >
+					<option value=""<!--{if $info.list_template =='' }--> selected = "selected"<!--{/if}-->>默认模板</option>
+					<!--{foreach $list_template as $k=>$v}-->
+					<option value="{$v}"<!--{if $v == $info.list_template }--> selected = "selected"<!--{/if}-->>{$v}</option>
+					<!--{/foreach}-->
+				</select>
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+	
+    <tr class="show_file">
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">选择内容页模板：</td>
+            <td>
+				<select name="show_template" id="show_template" style="width:400px" >
+					<option value=""<!--{if $info.show_template =='' }--> selected = "selected"<!--{/if}-->>默认模板</option>
+					<!--{foreach $show_template as $k=>$v}-->
+					<option value="{$v}"<!--{if $v == $info.show_template }--> selected = "selected"<!--{/if}-->>{$v}</option>
+					<!--{/foreach}-->
+				</select>
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+	
+	<tr class="show_file">
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">信息模型：</td>
+            <td>
+				<select name="info_model" id="info_model" style="width:200px" >
+					<!--{foreach $info.info_model_list as $k=>$v}-->
+					<option value="{$v.id}"<!--{if $v.id == $info.info_model }--> selected = "selected"<!--{/if}-->>{$v.name}</option>
+					<!--{/foreach}-->
+				</select>
+			<a href="<!--{site_url('content/models/index')}-->"><u>查看模型</u></a>
+			<input type="hidden" value="{$info.info_model}" name="info_model_before"/>
+			<input type="hidden" value="{$info.ispart}" name="ispart_before"/>
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+
+  
+
+	<tr class="show_file show_pic">
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">栏目图片：</td>
+            <td>
+             <div id='divpicview' class='divpre'>
+			<!--{if $info.picid }-->
+			<img width="80%" src="{$info.picidarr.filename}" />
+			<!--{/if}-->
+			</div>
+			<input name="picid" type="hidden" id="picid" value="{$info.picid}" />
+			<iframe name='uplitpicfra' id='uplitpicfra' src='' style='display:none'></iframe>
+			<span class="litpic_span">
+			<input type="button" value="本地上传" style="width:10%;cursor:pointer;" />
+			<input name="picid_litpic" type="file" id="picid_litpic" onChange="upload_pic(this, 'divpicview', 'picid_litpic','one','picid');" size="1" class='np coolbg litpic'/>
+			</span>
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+
+    <tr class="show_chain">
+		<td height="24" colspan="5" class="bline">
+			<table width="1000" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td style="text-align: right; width: 113px;">外链：</td>
+					<td>
+						<input name="out_chain" type="text" style="width:400px" id="out_chain" class="alltxt" value="{$info.out_chain}" />
+					</td>
+				</tr>
+			</table>
+		</td>
+    </tr>
+	
+	<tr class="show_file show_seo">
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">SEO标题：</td>
+            <td>
+            <input name="seo_title" type="text" style="width:400px" id="seo_title" class="alltxt" value="{$info.seo_title}" />
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>	
+		
+	<tr class="show_file show_seo">
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">关键字：</td>
+            <td>
+			<input name="keywords" type="text" style="width:400px" id="keywords" class="alltxt" value="{$info.keywords}" />
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>		
+    
+	<tr class="show_file show_seo">
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td style="text-align: right; width: 113px;">描述：</td>
+            <td>
+            <textarea name="description" cols="64" style="height:80px" rows="8" id="description" class="alltxt">{$info.description}</textarea>
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+    
+       
+	<tr>
+      <td height="24" colspan="5" class="bline">
+      	<table width="1000" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<td width="50%">&nbsp;</td>
+			<td width="50%">
+			<input name="imageField" type="submit" value="保存" class="np coolbg"/>
+			</td>
+		  </tr>
+        </table>
+		</td>
+    </tr>
+</table>
+</form>
+</div>
+<script language="javascript">
+var HTTPURL = '<!--{site_url()}-->'
+
+function checkSubmit()
+{
+	if(document.form1.name.value==""){
+		alert("栏目名称不能为空！");
+		document.form1.name.focus();
+		return false;
+	}
+	var isparttdval = $("input[name='ispart']:checked").val();
+
+	if(isparttdval==null){
+		alert("请选择栏目属性！");
+		document.getElementById('ispart').focus();
+		return false;
+	}
+	
+	if(isparttdval!='link' && $("#eng_name").val()==''){
+		alert("英文名称不能为空！");
+		document.form1.eng_name.focus();
+		return false;
+	}
+	
+	
+	return true;
+}
+
+$("#is_exist").change(function() { 
+	var n = $("#is_exist:checked").length; 
+	if(n==0){ 
+		$('#show_category').hide();
+		$('.show_file.show_seo').hide();
+		$('.show_file.show_pic').hide();
+	}else{
+		$('#show_category').show();
+		$('.show_file.show_seo').show();
+		$('.show_file.show_pic').show();
+	} 
+}); 
+
+$("#isparttd").bind('change',function(){
+	var isparttdval = $("input[name='ispart']:checked").val();
+	if(isparttdval == 'doc' || isparttdval == 'page' || isparttdval == 'form'){
+		if(isparttdval == 'page' || isparttdval == 'form'){
+			$('.show_list').hide();
+		}else{
+			$('.show_list').show();
+		}
+		$('.show_file').show();
+		$('.show_engtitle').show();
+		$('.show_chain').hide();
+		$('.show_category').hide();
+		$('#show_category').hide();
+	}
+	if(isparttdval == 'catalog'){
+		$('.show_category').show();
+		$('.show_file').hide();
+		$('.show_list').hide();
+		$('.show_chain').hide();
+		$('.show_engtitle').show();
+		var n = $("#is_exist:checked").length; 
+		if(n==0){ 
+			$('#show_category').hide();
+			$('.show_file.show_seo').hide();
+		}else{
+			$('#show_category').show();
+			$('.show_file.show_seo').show();
+		} 
+	}
+	if(isparttdval == 'link'){
+		$('.show_file').hide();
+		$('.show_engtitle').hide();
+		$('.show_list').hide();
+		$('.show_chain').show();
+		$('.show_category').hide();
+		$('#show_category').hide();
+	}
+
+	var data = {ispart:isparttdval};
+	var url = '<!--{site_url('content/column/info_model')}-->'
+	$.ajax({
+          type : "POST",
+          dataType : "json",
+          url : url,
+          data : data,
+          complete : function() {
+          },
+          success : function(result) {
+          	$("#info_model").empty();
+            $("#info_model").append(result.data);
+          },
+          error : function(ae) {
+          },
+          async : true
+          });
+});
+
+$('#info_model').bind('change',function(){
+
+	var	modelid_after = parseInt($('#info_model').val());
+	var	modelid_before = parseInt('{$info.info_model}');
+	if (modelid_after!==modelid_before) {
+		alert('修改模型，原数据将会被清空！');
+	};
+	
+});
+
+/*产品技术栏目选择是否首页展示*/
+$('#is_home').on('change',function(){
+	var val = $(this).val();
+	if(val == '1'){
+		$('.home_info').show();
+	}
+	else{
+		$('.home_info').hide();
+	}
+});
+
+//载入页面时，需要隐藏的模块
+	$('.show_file').hide();
+	$('.show_chain').hide();
+	$('.show_engtitle').hide();
+	$('.show_list').hide();
+	$('.show_category').hide();
+	$('#show_category').hide();
+if($("input[name='ispart']:checked").val()=='doc' || $("input[name='ispart']:checked").val()=='page' || $("input[name='ispart']:checked").val()=='form'){
+	if($("input[name='ispart']:checked").val() == 'page' || $("input[name='ispart']:checked").val() == 'form'){
+		$('.show_list').hide();
+	}else{
+		$('.show_list').show();
+	}
+	$('.show_file').show();
+	$('.show_engtitle').show();
+	$('.show_chain').hide();
+	$('.show_category').hide();
+	$('#show_category').hide();
+}
+if($("input[name='ispart']:checked").val()=='catalog'){
+	$('.show_file').hide();
+	$('.show_chain').hide();
+	$('.show_list').hide();
+	$('.show_engtitle').show();
+	$('.show_category').show();
+	var n = $("#is_exist:checked").length; 
+	if(n==0){ 
+		$('#show_category').hide();
+		$('.show_file.show_seo').hide();
+		$('.show_file.show_pic').hide();
+	}else{
+		$('#show_category').show();
+		$('.show_file.show_seo').show();
+		$('.show_file.show_pic').show();
+	} 
+}
+if($("input[name='ispart']:checked").val()=='link'){
+	$('.show_file').hide();
+	$('.show_engtitle').hide();
+	$('.show_chain').show();
+	$('.show_list').hide();
+	$('.show_category').hide();
+	$('#show_category').hide();
+}
+var n = $("#is_exist:checked").length; 
+if(n==0){ 
+	$('#show_category').hide();
+}else{
+	$('#show_category').show();
+}
+
+</script>
+</body>
+</html>

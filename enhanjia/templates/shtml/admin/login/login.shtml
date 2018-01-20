@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录_</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="css/reset.css" media="screen">
+<link type="text/css" rel="stylesheet" href="css/base.css" media="screen" id="base_css">
+<link type="text/css" rel="stylesheet" href="css/style.css" media="screen" id="style_css">
+<link type="text/css" rel="stylesheet" href="css/ie.css">
+</head>
+<body>
+<div class="container">
+	<!--------底部背景图------------>
+	<div class="xys_img"><!-- <img src="images/sign_r.jpg"> --></div>
+	<div class="sign_l float_l">
+    	<div class="mark_wenhao"></div>
+    	<div class="logo"></div>
+        <div class="title_1">
+        	<p></p>
+            <p class="p_1">{$sitename ? $sitename : "网站"}系统管理平台</p>
+        </div>
+        <div class="sign_form">
+        	<form name="form1" method="post" action="<!--{site_url('common/login/check_login')}-->" onsubmit="return checksubmit()">
+				<input type="hidden" name="gotopage" value="<!--{if !empty($gotopage)}--><!--{RemoveXSS($gotopage)}--><!--{/if}-->" />
+				<input type="hidden" name="dopost" value="login" />
+				<input name='act' type='hidden' value='ok' />
+				<p><input name="username" id="username" type="text" class="input_text1" value="" ></p>
+				<p>
+				<!-- <input id="password_hidden" type="text" class="input_text1 input_text2" > -->
+				<input id="password" name="password" type="password" class="input_text1 input_text2">
+				</p>
+				<p class="form_p" id="tip_msg" style="display:none;"></p>
+				<p class="button_p">
+				<input name="" type="image" class="button_1" src="images/button_1.png">
+				</p>
+            </form>
+        </div>
+        <div class="footer">
+            <p>©<!--{date('Y')}--></p>
+        </div>
+    </div>
+</div>
+
+<script language="javascript" type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>   
+<script>
+	var indexUrl = '<!--{site_url('')}-->';
+	var checksubmit = function (){
+		var username = $("#username");
+		var password = $("#password");
+		var dosubmit = true;
+		var loginUrl = '<!--{site_url('common/login/check_login')}-->';
+		if (!username.val() || username.val()=='账户' || username.val() =='') {
+			$("#tip_msg").html('请输入您的账户。');
+			$("#tip_msg").show();
+			username.focus();
+			dosubmit = false;
+			return false;
+		}
+		if (!password.val() || password.val()=='') {
+			$("#tip_msg").html('请输入密码。');
+			$("#tip_msg").show();
+			password.focus();
+			dosubmit = false;
+			return false;
+		}
+		if(dosubmit) {
+			$('#tip_msg').html('登录中...');
+			$("#tip_msg").show();
+			$.ajax({
+				type : "POST",
+				dataType : "json",
+				url : loginUrl,
+				data : {
+					username:username.val(),		
+					password:password.val()		
+				},
+					complete : function() {
+				},
+				success : function(result) {
+					if (result.code == 1104) 
+					{
+						window.location.href = indexUrl;
+					} 
+					else if (result.code != 1000) {
+						$('#tip_msg').html(result.msg);
+						$("#tip_msg").show();
+					} 
+					else {
+						window.location.href = indexUrl;
+					}
+				},
+				error : function(ae) {
+					
+				},
+				async : true
+			});
+		}
+		return false;
+	}
+	
+</script>
+</body>
+</html>

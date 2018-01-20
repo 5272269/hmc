@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--#include file="application/uc/meta.shtml"-->
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="application/uc/header.shtml"-->
+		<div class="box institute_detail">
+			<div class="container">
+				<div class="location">
+					<a href="/">Home Page</a>
+					<span>&gt;</span>
+					<a href="javascript:;">Member Registration </a>
+				</div>
+				<div class="ucenter-box">
+					<div class="form-box">
+						<h3 class="form-t">Member Registration </h3>
+						<div class="form-control account">
+							<input id="user-account" type="text" name="account" class="input-txt"  value="E-mail address"/>
+						</div>
+						<div class="form-control account">
+							<input id="user-phone" type="text" name="account" class="input-txt"  value="mobile phone number "/>
+						</div>
+						<div class="form-control password">
+							<input type="password" name="password" class="input-txt pw" value="" id="password"/>
+							<input type="text" name="password" class="input-txt new-pw" value="Password "  />
+						</div>
+						<div class="form-control password">
+							<input type="password" name="password" class="input-txt pw" value="" id="is_password"/>
+							<input type="text" name="password" class="input-txt new-pw" value="Confirm password "  />
+						</div>
+						<div class="form-control">
+							<span style="display: block;width: 400px;margin-bottom: 6px;">
+								<input class="checkbox" type="checkbox" name="" id="clause"/>&nbsp;<label>Agree<!--<a href="#"><i> --> to the HMCFamily Office registration service terms <!--</i></a>--></label>
+							</span>
+							<span style="display: block; color: #666;">
+								If registered already, <a href="login.html"><i>login directly</i></a>
+							</span>
+						</div>
+						<div class="form-control">
+							<button class="btn">Register<!-- immediately--></button>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>	
+		<!--#include file="application/uc/footer.shtml"-->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(".btn").click(function(){
+				var username = $("#user-account").val();
+				var phone = $('#user-phone').val();
+				var password = $('#password').val();
+				var is_password = $('#is_password').val();
+				var clause = $('#clause').attr('checked') ? 1 : 0;
+				var status = 1;
+				var errmsg = '';
+
+				if(!username || username == ''){
+					status = 2;
+					errmsg += '请输入邮箱\n';
+				}
+				if(!isemail(username)){
+					status = 2;
+					errmsg += '邮箱格式不正确\n'
+				}
+				if(!phone || phone == ''){
+					status = 2;
+					errmsg += '请输入手机号\n';
+				}
+				if(!checkphone(phone)){
+					status = 2;
+					errmsg += '手机号码格式不正确\n';
+				}
+				if(!password || password == ''){
+					status = 2;
+					errmsg += '请输入密码\n';
+				}
+				if(!is_password || is_password == ''){
+					status = 2;
+					errmsg += '请输入确认密码\n';
+				}
+				if(clause != 1){
+					status = 2;
+					errmsg += '请同意漢家族注册服务条款\n';
+				}
+
+				if(status == 1){
+					var data = {username:username,phone:phone,password:password,is_password:is_password,clause:clause};
+					var url = "<?php echo site_url('member/sub_register')?>";
+					$.ajax({
+						type: "POST",
+			            dataType: "json",
+			            url: url,
+			            data: data,
+			            complete: function() {},
+			            success: function(result) {
+			            	if(result.code == 1001){
+			            		alert(result.msg);
+			            	}
+			            	else{
+			            		alert(result.msg);
+			            		window.location.href = result.data.url;
+			            	}
+			            }
+		            });
+				}
+				else{
+					alert(errmsg);
+				}
+			});
+		</script>
+	</body>
+</html>

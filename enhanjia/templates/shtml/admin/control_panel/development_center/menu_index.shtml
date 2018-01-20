@@ -1,0 +1,77 @@
+<!--#include file="admin/common/meta.html"-->
+<body>
+<div class="row">
+<!--#include file="admin/common/top.html"-->
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" id="needset" class="table">
+  <tr>
+	<th width="8%">排序</th>
+	<th align="left">名称</th>
+	<th width="12%">操作</th>
+  </tr>
+  <form name='form1' method='post' action='<?php echo site_url('control_panel/development_center/menuUpdateSort')?>'>
+
+  <!--{foreach $lists as $k=>$v}-->
+  <tr align="center">
+	<td><input type="text" style="width:70px;" value="{$v.sort}" name="sortrank[{$v.id}]"></td>
+	<td align="left">{$v.pre}{$v.name}</td>
+	<td>
+	<a href="javascript:;" onclick="indexDel('{$v.id}');" class="del"><u>删除</u></a>
+	</td>
+  </tr>
+  <!--{/foreach}-->
+
+  </form>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="1" align="left">
+<tr>
+<td height="36" class="button">
+	<a href="javascript:;" class="coolbg" onClick="upSort();">更新排序</a>
+</td>
+<td height="36" align="right" class="pagination">
+	
+</td>
+</tr>
+</table>
+</div>
+<script>
+// 更新排序
+function upSort () {
+	if (window.confirm('你确定要更新排序？')) {
+		document.form1.submit();
+		return true;
+	}else{
+		return false;
+	}
+}
+// 删除
+function indexDel (id) {
+	if (window.confirm('你确定要删除该信息吗？删除后不可恢复！')) {
+		var columnDelUrl = "<?php echo site_url('control_panel/development_center/menuDelete');?>";
+		$.ajax({
+			type : "POST",
+			dataType : "json",
+			url : columnDelUrl,
+			data : {
+				id:id
+			},
+				complete : function() {
+			},
+			success : function(result) {
+				if (result.code != 1000) {
+					alert(result.msg);
+				} else {
+					window.location.reload();
+				}
+			},
+			error : function(ae) {
+			},
+			async : true
+		});
+		return true;
+	}else{
+		return false;
+	}
+}
+</script>
+</body>
+</html>

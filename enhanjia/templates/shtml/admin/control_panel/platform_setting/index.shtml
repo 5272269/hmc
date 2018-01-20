@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>网站信息管理</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/table.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="row">
+  <!--#include file="admin/common/top.html"-->
+  <form action="<!--{site_url('control_panel/platform_setting/update')}-->" method="post" name="form1">
+  <input type="hidden" name="dopost" value="save">
+  <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" class="table">
+  <tr>
+   <th width="15%">名称</td>
+   <th>参数值</th>
+  </tr>
+    <!--{if !empty($lists)}-->
+    <!--{foreach $lists as $v}-->
+    <tr align="center" height="25">
+    <td align="right">{$v.info} : </td>
+    <td align="left">
+     <!--{if $v.type=='bool'}-->
+    <input type='radio' class='np' <!--{if $v.value=='Y'}--> checked <!--{/if}--> name='edit__{$v.var_name}' value='Y'>是
+    <input type='radio' class='np' <!--{if $v.value=='N'}--> checked <!--{/if}--> name='edit__{$v.var_name}' value='N'>否
+    <!--{else if $v.type=='bstring'}-->
+    <textarea name='edit__{$v.var_name}' row='4' id='edit__{$v.var_name}' class='textarea_info' style='width:98%;height:50px'>{$v.value}</textarea>
+    <!--{else}-->
+    <input type='text' name='edit__{$v.var_name}' id='edit__{$v.var_name}' value="{$v.value}" style='width:98%'>
+    <!--{/if}-->
+    </td>
+    </tr>
+    <!--{/foreach}-->
+     <!--{/if}-->
+
+    <!--smtp测试-->
+    <tr align="center" height="25">
+      <td align="right">邮箱测试 : </td>
+      <td align="left">
+        <input type='text' name='test_email' id='test_email' value="" style='width:98%'>
+        <input type='button' name='test_send' id='test_send' value="测试发送">
+      </td>
+    </tr>
+  <tr>
+    <th colspan="3"><input name="imageField" type="submit" value="保存"/></th>
+  </tr>
+  </table>
+  </form>
+  </div>
+
+<script language="javascript" type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+  $('#test_send').click(function(){
+    var smtp_host = $("#edit__smtp_host").val();
+    var smtp_user = $("#edit__smtp_user").val();
+    var smtp_pass = $("#edit__smtp_pass").val();
+    var smtp_port = $("#edit__smtp_port").val();
+    var sender_email = $("#edit__sender_email").val();
+    var sender_name = $("#edit__sender_name").val();
+    var subject = $("#edit__subject").val();
+    var test_email = $("#test_email").val();
+
+    var data = {smtp_host:smtp_host,smtp_user:smtp_user,smtp_pass:smtp_pass,smtp_port:smtp_port,sender_email:sender_email,sender_name:sender_name,subject:subject,test_email:test_email};
+
+    $.post("{site_url('content/member/test_email')}",data,function(result){
+      alert(result.msg);
+    });
+  });
+</script>
+</body>
+</html>

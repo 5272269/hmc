@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>漢家族-漢家族研究院详情页</title>
+		<meta content="" name="description">
+		<meta content="" name="keywords">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="format-detection" content="telephone=no" />
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+		<link href="css/reset.css" rel="stylesheet">
+		<link href="css/base.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/allchecks.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/respond.css" />
+		<link href="css/mobilemenu.css" rel="stylesheet" />
+		<!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+
+	<body>
+		<!--#include file="uc/header.html" -->
+		<div class="box institute_detail">
+			<div class="container">
+				<div class="location">
+					<a href="index.shtml">首页</a>
+					<span>&gt;</span>
+					<a href="javascript:;">调查问卷</a>
+				</div>
+				<div class="inner_title">
+					<h3>RiskMetri财富保障评估系统</h3>
+					<p>风险评估</p>
+				</div>
+				<div class="switch_tags">
+					<a href="questionnaire_1.shtml">基本信息评估</a>
+					<a href="questionnaire_2.shtml" class="active">风险评估</a>
+				</div>
+				<div class="questionnaire-box">
+					<div class="why-show">
+						尊敬的客户：
+						<br />为了尽可能准确的了解您的投资习惯及风险承受能力，请您花一点时间完成以下的调查问卷。谢谢！
+					</div>
+					<div class="items">
+						<dl>
+							<dt><em>1、</em><span>与别人相比，在承受投资风险方面，您如何评价自己？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>极低风险承受者</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>非常低风险承受者</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>低风险承受者</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>一般风险承受者</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>高风险承受者</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>非常高风险承受者</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>极高风险承受者</label>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>2、</em><span>您如何看待投资亏损？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>很难接受，影响正常的生活</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>受到一定的影响，但不影响正常生活</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>平常心看待，对情绪没有明显的影响</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>很正常，投资有风险，没有人只赚不赔</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>3、</em><span>当您在金融的环境中考虑“风险”一词时，您最先想到哪个词？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>危险</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>不确定性</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>机会</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>兴奋</label>
+									</li>								
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>4、</em><span>您是否曾为了博取差价而将大笔资金投入某项有风险的投资？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>没有</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>有过，但很少</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>有过，但不经常这样做</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>有，较为频繁</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>有，非常频繁</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>5、</em><span>如果您要在非常稳定但薪水涨幅小的工作和很不稳定但薪水涨幅大的工作之间进行选择，您会选择哪一个？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>一定选择非常稳定但薪水涨幅小的工作</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>可能选择非常稳定但薪水涨幅小的工作</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>不太确定</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>可能选择很不稳定但薪水涨幅大的工作</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>一定选择很不稳定但薪水涨幅大的工作</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>6、</em><span>当您面临投资决策时，您更关心的是潜在的损失还是潜在的收益？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>总是关心潜在的损失</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>有时候关心潜在的损失</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>有时候关心潜在的收益</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>总是关心潜在的收益</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>7、</em><span>当您做出投资决策以后，您会感到：</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>非常担心</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>有点担心</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>比较自信</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>非常自信</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>8、</em><span>如果您的工作报酬可以通过固定工资、业绩提成或者二者结合的形式支付，您会如何选择？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>全部是固定工资</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>主要是固定工资</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>固定工资、业绩提成各占一半</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>主要是业绩提成</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>全部是业绩提成</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>9、</em><span>在过去的投资决策中，您承受的风险如何？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>非常小</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>非常小</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>中等</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>大</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>非常大</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>10、</em><span>您准备为您现在的投资承担多大风险？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>非常小</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>非常小</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>中等</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>大</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>非常大</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>11、</em><span>您曾经有过借钱投资的经历吗？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>没有</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>有</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>12、</em><span>您对自己做出正确的投资决策有多大的信心？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>一点都没有</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>有一点</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>比较有</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>非常有</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>完全有信心</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>13、</em><span>假设5年前您曾购买一家被普遍看好的公司的股票。但当年该公司因为管理不善出现销售业绩严重下滑，股价随之大幅跳水，您抛售了
+       这些股票，并因此承受了巨大亏损。现在，该公司已经由新的管理层进行了重组，多数专家预期这一变化会产生超额收益，鉴于您过去
+       买这家公司股票亏损的经历，您现在还会买它的股票吗？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>绝对不会</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>可能不会</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>不确定</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>可能会</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>绝对会</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>14、</em><span>投资可能会赚钱也可能会亏钱，多大的投资损失会使您感到不安？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>任何损失都会使我感到不安</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>10%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>20%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>33%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>50%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>多于50%</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>15.</em><span>假设您的一位远亲过世后留给您一栋破旧的房子，但是位于正在兴起的郊区。如果即时卖出去可套现300万元，但是如果您花费100万元进行装修，卖价可能会变成600万元。可是有消息说这栋房子旁边可能会建工厂，这将大大降低房子的价值。您会进行怎样的选择？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>现在就卖掉</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>保持现状，租出去</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>抵押贷款100万元进行装修</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>16、</em><span>大部分投资组合都是由不同类型的投资产品组成的，有一些投资产品有高预期收益也蕴含着高风险，有一些投资产品预期收益低风险也低。例如，股票与房地产投资是高风险高收益，存款与银行理财产品投资是低风险低收益。下面哪一个投资组合您认为最具有吸引力？</span></dt>
+							<dd>
+								<table>
+                                    <thead>
+                                        <tr><th class="first"></th><th>高风险/高收益</th><th>中等风险/中等收益</th><th>低风险/低收益</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input class="radio" type="radio"/>
+										        <label>投资组合1</label>
+                                            </td>
+                                            <td>0%</td><td>30%</td><td>100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="radio" type="radio" />
+										        <label>投资组合1</label>
+                                            </td>
+                                            <td>0%</td><td>30%</td><td>100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="radio" type="radio"/>
+										        <label>投资组合1</label>
+                                            </td>
+                                            <td>0%</td><td>30%</td><td>100%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>17、</em><span>您正在考虑用四分之一的可投资资金进行一个项目的投资，这项投资预期收益是定期存款的两倍，但不保证投资本金不受损失。您认为这项投资会损失的机会有多大？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>损失的可能性有50%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>非常低风险承受者</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>损失的可能性很小</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>不可能有损失</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>18、</em><span>有些投资，例如现金、定期存款，其价值是固定的。然而通货膨胀会使这些价值的购买力下降。另外一些投资，例如股票和股权，价值不是固定的。短期来看，它们的价值可能低于购买价格，然而长期来看，其价值增长应该能够超过通货膨胀。基于该理念，以下哪项对您更重要？保持投资价值不下跌，还是保持购买力？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>投资价值不下跌最重要</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>投资价值不下跌更重要一点</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>保持购买力更重要一点</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>保持购买力最重要</label>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>19、</em><span>最近这些年，您的个人投资是如何变化的？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>总是向低风险变化</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>部分向低风险变化</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>部分向高风险变化</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>总是向高风险变化</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>20、</em><span>进行投资时，通常都是收益和风险并存。高收益的投资意味着要承受高风险，您愿意将多少可用资金投入到收益和风险都高于一般水平的投资中？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>0$</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>10%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>20%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>30%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>40%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>50%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>60%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>70%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>80%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>90%</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>100%</label>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>21、</em><span>您对您未来10年的投资回报有什么预期？与您认为的定期存款收益率相比：</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>与定期存款差不多</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>是定期存款的两倍</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>是定期存款的三倍</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>是定期存款的四倍及以上</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>22、</em><span>人们经常会做财务规划，以便获得政府福利或税收优惠，然而立法或其他原因可能会使最后的结果比您什么都不做更糟。那么，您会为了获得政府福利或税收优惠而冒险规划自己的财务吗？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>如果有任何可能会使情况变糟，我不会去冒风险</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>如果只有很小的可能会使情况变糟，我愿意去冒风险</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>只要有50%以上的可能会使情况更好，我就会去冒风险</label>
+									</li>
+									
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>23、</em><span>假设您在将来要进行一笔借款，并不清楚未来利率将会怎样变化，可能会上升，也可能会下降。您可以选择浮动利率，或者选择固定利率，或者两者结合。您更倾向于如何选择？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>100%固定利率</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>75%固定利率，25%浮动利率</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>50%固定利率，50%浮动利率</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>25%固定利率，75%浮动利率</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>100%浮动利率</label>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>24、</em><span>保险帮助我们防范生活中的风险（火灾、事故、疾病等）。您已经拥有了多少保险？</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>非常少</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>有一些</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>相当多</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>已完全防范风险</label>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt><em>25、</em><span>如果风险承受能力以百分制计分，得分越高表示风险承受能力越强。那么，您认为您的风险承受能力的得分为：</span></dt>
+							<dd>
+								<ul class="inline-list">
+									<li>
+										<input class="radio" type="radio" checked="checked" />
+										<label>25分以下</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>25分至34分</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>35分至44分</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>45分至54分</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>55分至64分</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>65分至74分</label>
+									</li>
+									<li>
+										<input class="radio" type="radio" />
+										<label>75分以上</label>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="question_submit">
+					    <a href="javascript:;">提交评估问卷</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--#include file="uc/footer.html" -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/mobilemenu.js" ></script>
+		<script type="text/javascript" src="js/icheck.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+
+</html>

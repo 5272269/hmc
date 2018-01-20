@@ -1,0 +1,736 @@
+@media screen and (max-width:1440px) {
+	/*关于漢家族*/
+	.about .inner_list li .inner_about .hover_box h3 {
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+	.about .inner_list li .inner_about .hover_box p {
+		line-height: 22px;
+		padding: 0 15px;
+	}
+}
+@media only screen and (max-width:1280px ){
+    .learn_detail .img-list{width: 100%;margin-left: 0;}
+    .learn_detail .img-list .item{margin: 0 15px;}
+    .learn_detail .owl-controls .owl-buttons .owl-prev{left: 10px;}
+    .learn_detail .owl-controls .owl-buttons .owl-next{right: 10px;}
+}
+
+@media only screen and (max-width: 1140px ) {
+	/*导航*/
+	.header {
+		height: 58px;
+	}
+	.header .web-top {
+		display: none;
+	}
+	.header .mobile-nav {
+		display: block;
+	}
+	.header .mongodb_navbar {
+		display: block;
+	}
+}
+
+@media only screen and (max-width:1080px) {
+	.container {
+		width: 92%;
+		min-width: 94%;
+		padding: 0 2%;
+		max-width: none;
+	}
+	.box .inner_banner .container {
+		margin-left: -495px;
+	}
+	.header .nav {
+		padding: 12px 0px 12px 35px;
+	}
+	.header .nav a {
+		padding-right: 22px;
+	}
+	/*家族财富保障*/
+	.wealth .wealth_list .inner_con {
+		width: 308px;
+	}
+	/*新闻资讯*/
+	.news .new_con li .inside_box {
+		width: 100%;
+	}
+	.index .produce .inner_con {
+		width: 300px;
+	}
+	/*关于漢家族*/
+	.about .inner_list li .inner_about .hover_box h3 {
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+	.about .inner_list li .inner_about .hover_box p {
+		line-height: 20px;
+		padding: 0 10px;
+	}
+	/*家族慈善*/
+	.box .charity-link .box-inner {
+		width: 90%;
+		min-width: 94%;
+	}
+	/*家族研究院*/
+	.institute .institute_con .con_img {
+		width: 30%;
+	}
+	.institute .institute_con .con_img img {
+		width: 100%;
+	}
+	/*调查问卷*/
+	.inline-list li {
+		width: 50%;
+	}
+	.questionnaire-box dl dt em {
+		width: 3%;
+	}
+	.questionnaire-box dl dt span {
+		width: 96%;
+	}
+	.questionnaire-box dl label {
+		float: none;
+	}
+}
+
+@media only screen and (max-width:1024px) {
+	/*首页*/
+	.index .produce .inner_con.style02 {
+		width: 280px;
+	}
+	.index .produce .style01,
+	.index .produce .style02 {
+		margin-left: 16px;
+	}
+	/*漢家族研究院*/
+	.institute .institute_con .con_text {
+		width: 65%;
+	}
+	/*家族财富保障*/
+	.wealth .wealth_list .inner_con {
+		width: 280px;
+		/*height: 210px;*/
+	}
+}
+
+@media screen and (max-width:990px) {
+	/*漢家族首页*/
+	.index .produce .inner_con {
+		width: 298px;
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	
+	/*轮播图*/
+	.box .mobile-banner {
+		display: block;
+	}
+	.box .web-banner {
+		display: none;
+	}
+	.header {
+	    height: 58px;
+	    position: fixed;
+	    left: 0;
+	    top: 0;
+	    z-index: 200;
+	}
+	.box {
+	    margin-top: 58px;
+	}
+	/*首页*/
+	.index .produce li {
+		margin-bottom: 20px;
+	}
+	.index .produce li.index01,
+	.index .produce li.index02,
+	.index .produce li.index03 {
+		width: 100%;
+	}
+	.index .produce .inner_con,
+	.index .produce .inner_con.style02 {
+		width: 100%;
+	}
+	.index .produce .line1 {
+		border: none;
+	}
+	.index .produce .style01,
+	.index .produce .style02 {
+		margin-left: 0;
+	}
+	.index .produce .inner_con {
+		min-height: auto;
+		border: none;
+	}
+	.index .produce .style01 {
+		min-height: 215px;
+	}
+	.index .produce .out_box,
+	.index .produce li {
+		height: auto !important;
+	}
+	.index .produce .inner_con h3 {
+		width: 150px;
+		font-weight: bold;
+		border-bottom: 1px solid #802428;
+		padding-bottom: 8px;
+	}
+	/*底部*/
+	.footer .web-idea {
+		display: none;
+	}
+	.footer .mobile-idea {
+		display: block;
+	}
+	.footer .idea_box{
+		display: none;
+	}
+	.footer .mobile-idea{
+		display: block;
+	}
+	.footer .mobile-idea .follow_us {
+		width: 300px;
+		margin-top: 30px; 
+	}
+	.footer .mobile-idea .follow_us a {
+		margin-top: 0;
+		background: url(../img/mobile/wechat.png) left center no-repeat;
+		width: 42px;
+		height: 35px;
+	}
+	.footer .mobile-idea .follow_us a:hover {
+		background: url(../img/mobile/wechat.png) left center no-repeat;
+	}
+	.footer .idea_box .idea span,
+	.footer .idea_box .follow_us span {
+		font-size: 22px;
+	}
+	.footer .idea_box .idea {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.footer .idea_box .idea span {
+		font-weight: bold;
+	}
+	.footer .idea_box .idea input {
+		height: 100px;
+		line-height: 30px;
+		width: 98%;
+		padding-left: 2%;
+	}
+	.footer .idea_box .idea a {
+		width: 100%;
+	}
+	.footer .idea_box .foot_logo {
+		width: 40%;
+	}
+	.footer .footer_nav {
+		display: none;
+	}
+	.footer .copyright {
+		width: 100%;
+	}
+	.footer .copyright .f_nav {
+		display: none;
+	}
+	.footer .copyright p {
+		width: 100%;
+		font-size: 22px;
+		line-height: 30px;
+		text-align: center;
+	}
+	/*关于我们*/
+	.about .inner_list li .inner_about .hover_box h3 {
+		font-size: 16px;
+	}
+	/*家族财富保障*/
+	.wealth .wealth_list li.inner01,
+	.wealth .wealth_list li.inner02,
+	.wealth .wealth_list li.inner03 {
+		width: 100%;
+		margin-bottom: 20px;
+		height: auto;
+	}
+	.wealth .wealth_list .inner_con {
+		width: 100%;
+		border-bottom: none;
+		height: auto;
+	}
+	.wealth .wealth_list .line1 {
+		border-right: none;
+	}
+	.wealth .wealth_list .style01,
+	.wealth .wealth_list .style02 {
+		margin-left: 0;
+	}
+	.wealth .wealth_list .out_box {
+		height: auto;
+	}
+	/*家族LEARN生活*/
+	.learn .pro_learn li {
+		width: 33.33%;
+		margin-bottom: 30px;
+	}
+	.learn .pro_learn ul {
+		padding: 60px 4% 30px 4%;
+	}
+	/*家族研究院*/
+	.institute .institute_con .con_text h3 {
+		margin-bottom: 8px;
+		font-size: 18px;
+	}
+	.institute .institute_con .con_text h3 a {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.institute .institute_con .con_text {
+		min-height: 150px;
+	}
+	.institute .institute_con .con_img {
+		width: 35%;
+	}
+	.institute .institute_con .con_text {
+		width: 62%;
+	}
+	/*分页*/
+	.box .page li.page_num a {
+		width: 7%;
+	}
+}
+
+@media only screen and (max-width:860px) {
+	/*新闻动态详情页*/
+	.news_detail .recom_list li .inside_box {
+		height: 402px;
+	}
+	.news_detail .recom_list li {
+		height: 382px;
+	}
+	.news_detail .detail_con h3 {
+		width: 100%;
+		font-size: 16px;
+		margin-bottom: 15px;
+		line-height: 28px;
+	}
+	.news .news_title h3,
+	.news_detail .news_title h3,
+	.event .event_title h3 {
+		font-size: 20px;
+	}
+	.news .news_title p,
+	.news_detail .news_title p,
+	.event .event_title p {
+		font-size: 22px;
+	}
+	.news_detail .detail_con .img_produce,
+	.news_detail .detail_con p {
+		width: 100%;
+		line-height: 24px;
+	}
+	.news_detail .detail_con img {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width:800px) {
+	.inline-list li {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width:768px) {
+.introduce .introduce_text h4 {
+    font-size: 16px;
+    color: #812a2a;
+    margin-bottom: 20px;
+	line-height:20px;
+}
+.introduce .introduce_text p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+.about .about_text h3, .introduce .introduce_text h3 {
+    font-size: 18px;
+    color: #666666;
+    line-height: 25px;
+}
+.introduce .introduce_text h3 span{
+	font-size: 14px !important;
+}
+	/*家族研究院*/
+	.institute .institute_con .con_img {
+		width: 42%;
+	}
+	.institute .institute_con .con_text {
+		width: 55%;
+	}
+	/*公共部分*/
+	.box .inner_title {
+		height: 160px;
+	}
+	.box .inner_title h3 {
+		top: 20px;
+		font-size: 20px;
+	}
+	.box .inner_title p {
+		top: 75px;
+		font-size: 20px;
+	}
+	.box .inner_title {
+		margin-bottom: 25px;
+	}
+	/*新闻详情页*/
+	.news_detail .recom_list li {
+		width: 100%;
+		height: 240px;
+	}
+	.news_detail .recom_list li .line3 {
+		border: none;
+	}
+	.news_detail .recom_list li.line1,
+	.news_detail .recom_list li.line2 {
+		border: none;
+	}
+	.news_detail .recom_list li .inside_box {
+		width: 100%;
+		height: 240px;
+		border-bottom: 1px solid #CDCDCD;
+	}
+	.news_detail .recom_list li .inside_box span,
+	.news_detail .recom_list li .inside_box a {
+		padding-left: 0;
+	}
+	.news_detail .recom_list li .inside_box h3,
+	.news_detail .recom_list li .inside_box p {
+		padding: 0;
+	}
+	.news .new_con ul {
+		margin: 5px 0 45px 0;
+	}
+	.news .container {
+		margin-top: 20px;
+	}
+	/*调查问卷*/
+	.questionnaire-box dl dt em {
+		width: 6%;
+	}
+	.questionnaire-box dl dt span {
+		width: 93%;
+	}
+	/*详情页*/
+	.learn_detail .detail_con .con_img {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.learn_detail .detail_con .con_text {
+		width: 94%;
+	}
+	.box .inner_text h3 {
+		margin-bottom: 20px;
+	}
+	.box .inner_text p {
+		font-size: 14px;
+		line-height:25px;
+	}
+    .box .inner_text  img{
+		width: 100%;
+	}
+	.learn_detail .detail_con {
+		margin-top: 15px;
+	}
+	/*分页*/
+	.box .web-page {
+		display: none;
+	}
+	.box .mbl-page {
+		display: block;
+	}
+	.box .page ul {
+		width: 310px;
+		margin: 30px auto;
+	}
+	.box .page li.page_num {
+		width: 120px;
+		margin-left: 50px;
+		overflow: hidden;
+	}
+	.box .page li.page_num a {
+		width: 40px;
+	}
+	/*关于我们*/
+	.about .about_text h3 {
+		font-size: 14px;
+		line-height: 26px;
+	}
+	.wealth .wealth_text h3,
+	.charity .charity_text h3,
+	.learn .learn_text h3 {
+		font-size: 16px;
+		line-height: 30px;
+		margin-bottom: 20px;
+	}
+	.wealth .wealth_text p,
+	.charity .charity_text p,
+	.learn .learn_text p {
+		font-size: 14px;
+		line-height: 24px;
+	}
+	
+	.footer .idea_box .follow_us span{
+		font-size: 14px;
+		display: inline-block;
+		line-height: 35px;
+	}
+	.footer .idea_box .foot_logo{
+		width: 182px;
+		height: 58px;
+	}
+	.footer .idea_box .foot_logo img{
+		width: 100%;
+	}
+	.footer .mobile-idea .follow_us{
+		width: 200px;
+	}
+	.footer .mobile-idea .follow_us{
+		margin-top: 12px;
+	}
+	.introduce .introduce_text img{
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width:640px) {
+	/*关于我们*/
+	.about .inner_list li .inner_about .hover_box h3 {
+		font-size: 14px;
+	}
+	.about .inner_list li {
+		width: 33.33%;
+	}
+	/*底部*/
+	.footer .copyright p {
+		font-size: 12px;
+		line-height: 24px;
+	}
+	/*家族慈善机构*/
+	.box .charity-inner-text ul li,
+	.box .charity-link .box-inner li {
+		width: 92%;
+		margin:10px auto;
+	}
+	.box .charity-link .box-inner li.right {
+		float: none;
+		margin-bottom: 40px;
+	}
+	.wealth .wealth_list .inner_con{
+		height: 180px !important;
+	}
+	/*家族研究院*/
+	.institute .institute_con .con_text p {
+		line-height: 20px;
+		height: 60px;
+		font-size: 14px;
+	}
+	.institute .institute_con .con_text .down {
+		height: 25px;
+		line-height: 25px;
+		font-size: 12px;
+		width: 80px;
+	}
+	.institute .institute_con .con_text {
+		min-height: 120px;
+	}
+	.institute .institute_con .con_text h3 {
+		margin-bottom: 2px;
+		font-size: 16px;
+	}
+	.institute .institute_con .con_text h3 a {
+		font-size: 16px;
+	}
+	/*联系我们*/
+	.tag-content .leftbox,
+	.tag-content .rightbox {
+		width: 100%;
+	}
+	.tag-content .rightbox {
+		float: none;
+		margin-bottom: 25px;
+	}
+	/*调查问卷*/
+	.questionnaire-box dl dt {
+		font-size: 14px;
+	}
+	/*家族财富保障*/
+	.wealth .wealth_list .inner_con h3 {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 580px) {
+	/*家族LEARN生活*/
+	.learn .pro_learn li {
+		width: 100%;
+	}
+	/*新闻动态*/
+	.news .new_con li {
+		width: 100%;
+	}
+	.news .new_con li .line3 {
+		border-top: none;
+		border-right: none;
+	}
+	.news .new_con .line1 {
+		border-left: none;
+		border-top: none;
+		border-right: none;
+	}
+	.news .new_con .line2 {
+		border-right: none;
+		margin-left: 0;
+	}
+	.news .new_con li .inside_box,
+	.news .new_con li,
+	.news .new_con li .out_box {
+		height: 230px;
+	}
+	.news .new_con li .inside_box a {
+		margin-top: 5px;
+	}
+	.news .new_con li .inside_box p,
+	.news_detail .recom_list li .inside_box p {
+		padding: 0;
+	}
+	.news .new_con li .inside_box h3,
+	.news_detail .recom_list li .inside_box h3 {
+		padding: 0;
+	}
+	.news .new_con li .inside_box a,
+	.news .new_con li .inside_box span,
+	.news_detail .recom_list li .inside_box span {
+		padding-left: 0;
+	}
+	.news_detail .recom_list li,
+	.news_detail .recom_list li .inside_box {
+		height: 280px;
+	}
+	/*公共部分*/
+	.box .inner_text h4 {
+		font-size: 16px;
+		margin: 25px 0 10px 0;
+	}
+}
+
+@media only screen and (max-width:480px) {
+	/*底部*/
+	.footer .idea_box .foot_logo img {
+		width: 180px;
+	}
+	.footer .idea_box .follow_us span{
+		width: 80px;
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.footer .mobile-idea .follow_us{
+		width: 126px;
+	}
+	/*头部*/
+	.header .mobile-nav .mbl-logo img,
+	.header .mobile-nav .mbl-logo {
+		width: 140px;
+	}
+	/*.header .mobile-nav .mbl-logo {
+		padding: 22px 0;
+	}*/
+	/*家族研究院*/
+	.institute .institute_con .con_img,
+	.institute .institute_con .con_text {
+		width: 100%;
+	}
+	.institute .institute_con .con_text {
+		margin-top: 25px;
+	}
+	.wealth .wealth_list .inner_con{
+		height: 210px !important;
+	}
+	/*会员部分*/
+	.form-control,
+	.form-box,
+	.pwback_wrap,
+	.pwback_wrap .pwback_codetext {
+		width: 320px;
+	}
+	.pwback_wrap .form-t ul li {
+		width: 107px;
+	}
+	.pwback_wrap .pwback_code .random_code {
+		margin: 15px 0 0 0;
+		margin-left: 0;
+	}
+	/*新闻详情页*/
+	.news_detail .recom_list li,
+	.news_detail .recom_list li .inside_box {
+		height: 300px;
+	}
+	.news .industry_con .img-con,
+	.news .industry_con .text-con{
+		width: 100%;
+	}
+	.news .industry_con .text-con{
+		margin-top: 15px;
+	}
+	.institute .institute_con .con_text {
+		min-height: 140px;
+	}
+}
+
+@media only screen and (max-width:380px) {
+	/*调查问卷*/
+	.questionnaire-box dl dt em {
+		width: 8%;
+	}
+	.questionnaire-box dl dt span {
+		width: 90%;
+	}
+	.questionnaire-box dl label {
+		width: 80%;
+	}
+	.switch_tags a {
+		width: 35%;
+	}
+	.pwback_wrap .pwback_code {
+		width: 100%;
+	}
+	.footer .idea_box .foot_logo{
+		width: 140px;
+	}
+	.footer .idea_box .foot_logo img{
+		width: 140px;
+	}
+	.footer .idea_box .foot_logo{
+		margin-right: 0;
+	}
+	.wealth .wealth_list .inner_con{
+		height: auto !important;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	/*家族LEARN生活*/
+	.learn .pro_learn li {
+		width: 100%;
+	}
+	/*会员部分*/
+	.form-control,
+	.form-box,
+	.pwback_wrap .pwback_codetext {
+		width: 100%;
+	}
+	.pwback_wrap .form-t ul li {
+		width: 33.33%;
+	}
+}

@@ -1,0 +1,109 @@
+/*通用*/
+body{font-family:'Arial','Microsoft YaHei';}
+.hide {display: none;}
+.flt {float:left;}
+.frt {float:right;}
+.clear { clear: both;}
+.clearfix { *zoom: 1;} 
+.clearfix:before, .clearfix:after { display: table; line-height: 0; content: "";}
+.clearfix:after { clear: both;}
+/*找回密码*/
+.pwback_wrap{
+   /* margin-left: 28%;*/
+    width: 354px;
+}
+.pwback_wrap .form-t ul li {
+    font-size: 14px;
+    line-height: 30px;
+    color: #b5b5b5;
+    width: 259px;
+    height: 30px;
+    float: left;
+}
+.pwback_wrap .form-t ul li a{
+    padding-left: 21px;
+    display: block;
+    width: 259px;
+    height: 30px;
+    color: #b5b5b5;
+
+}
+.pwback_wrap .form-t ul li a:hover{
+    color: #fff;
+
+}
+.pwback_wrap .form-t ul .pwback_nol{
+    margin-left: -8px;
+}
+.pwback_wrap .form-t ul .pwback_nol a{
+    background: url(../img/pwback01.png) no-repeat 0 0;
+
+}
+.pwback_wrap .form-t ul .pwback_nol a:hover{
+    background:url(../img/pwback_active01.png) no-repeat 0 0;
+    color: #fff;
+
+}
+.pwback_wrap .form-t ul .pwback_active a{
+    background:url(../img/pwback_active01.png) no-repeat 0 0;
+    color: #fff;
+
+}
+.pwback_wrap .form-t ul .pwback_first a{
+    background: url(../img/pwback_first01.png) no-repeat 0 0;
+}
+.pwback_wrap .form-t ul .pwback_first a:hover{
+    background: url(../img/pwback_firstActive01.png) no-repeat 0 0;
+}
+.pwback_wrap .form-t ul .pwback_first_active a{
+    padding-left: 14px;
+    background: url(../img/pwback_firstActive01.png) no-repeat 0 0;
+    color: #fff;
+}
+/*验证码*/
+.pwback_wrap .pwback_code .form-control{
+    margin: 0;
+}
+.pwback_wrap .pwback_code{
+    width: 358px;
+    margin-bottom: 20px;
+}
+
+.pwback_wrap .pwback_codetext{
+    width: 230px;
+    float: left;
+}
+.pwback_wrap .pwback_code .random_code{
+    margin-left: 10px;
+    float: left;
+    border: 1px solid #cdcdcd;
+    height: 38px;
+    width: 108px;
+}
+.pwback_wrap .pwback_code .random_code img{
+
+    height: 38px;
+    width: 108px;
+}
+/*安全验证*/
+.pwback_wrap .pwback_safe{
+    margin-bottom: 96px;
+
+}
+.pwback_wrap .pwback_safe h4{
+    font-size: 16px;
+    line-height: 30px;
+    color: #757575;
+}
+.pwback_wrap .pwback_safe p{
+    font-size: 16px;
+    line-height: 30px;
+    color: #757575;
+}
+.pwback_wrap .btn a{
+    color: #fff;
+    font-family:'Arial','Microsoft YaHei';
+}
+
+
+

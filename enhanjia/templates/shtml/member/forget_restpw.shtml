@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--#include file="application/uc/meta.shtml"-->
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/base.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+    	<link rel="stylesheet" href="css/respond.css" />
+    	<link rel="stylesheet" href="css/pwback.css">
+	    <!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+	<body>
+		<!--#include file="application/uc/header.shtml"-->
+		<div class="box institute_detail">
+			<div class="container">
+				<div class="location">
+					<a href="/">Home Page</a>
+					<span>&gt;</span>
+					<a href="{site_url('member/login')}">Login</a>
+					<span>&gt;</span>
+					<a href="javascript:;">Retrieve Password</a>
+				</div>
+				<div class="ucenter-box">
+					<div class="form-box pwback_wrap">
+						<h3 class="form-t">
+						    <ul class="clearfix">
+						        <li class="pwback_first_active"><a href="javascript:;">1 Confirm Account</a></li>
+						        <li class="pwback_nol"><a href="javascript:;">2 Security Certificate</a></li>
+						        <li class="pwback_nol"><a href="javascript:;">3 Reset Password</a></li>
+						    </ul>
+						</h3>
+						<div class="form-control password">
+							<input  type="password" name="newpassword" class="input-txt pw"  value=""/>
+							<input type="text" name="password" class="input-txt new-pw" value="New password"  />
+						</div>
+                        
+						    <div class="form-control password">
+                                <input type="password" name="repeatpassword" class="input-txt pw" value="" />
+                                <input type="text" name="password" class="input-txt new-pw" value="Confirm new password"  />
+						    </div>
+						    
+						
+						<div class="form-control">
+							<button class="btn">Completed</button>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>	
+		<!--#include file="application/uc/footer.shtml"-->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$('.btn').click(function(){
+				var newpassword = $('[name=newpassword]').val();
+				var repeatpassword = $('[name=repeatpassword]').val();
+				var status = 1;
+				var errmsg = '';
+
+				if(newpassword == '' || !newpassword){
+					status = 2;
+					errmsg += '请输入新密码\n';
+				}
+				if(repeatpassword == '' || !repeatpassword){
+					status = 2;
+					errmsg += '请再次输入新密码\n';
+				}
+				if(newpassword != repeatpassword){
+					status = 2;
+					errmsg += '两次密码不一致！\n';
+				}
+
+				if(status == 1){
+					var data = {newpassword:newpassword,repeatpassword:repeatpassword};
+
+					$.post("{site_url('member/sub_reset')}",data,function(result){
+						if(result.code == 1001){
+							alert(result.msg);
+						}
+						else{
+							alert(result.msg);
+							window.location.href = result.data.url;
+						}
+					});
+				}
+				else{
+					alert(errmsg);
+				}
+			});
+		</script>
+	</body>
+</html>

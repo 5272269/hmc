@@ -1,0 +1,47 @@
+<!--#include file="admin/common/meta.html"-->
+<body>
+<!--  快速转换位置按钮  -->
+<div class="row">
+<table width="100%" border="0" cellpadding="0" cellspacing="1" align="center">
+	<tr>
+		<td height="26" >
+			网站后台管理
+		</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="table">
+	<tr align="center"  height="100"><td colspan="6">系统信息</td></tr>
+	<tr align="center" height="50">
+	<th>操作系统</th>
+	<th>PHP 版本</th>
+	<th>MYSQL 扩展</th>
+	<th>GD 扩展</th>
+	<th>Mcrypt扩展</th>
+	</tr>
+	<tr align='center' height="200" align="center">
+		<td><?php echo php_uname();?></td>	
+		<td>PHP <?php echo phpversion();?></td>	
+		<td><?php if(extension_loaded('mysql')){ ?>已开启<?php }else{ ?>未开启<?php }?></td>
+		<td><?php if($PHP_GD){ ?>已开启（支持 <?php echo $PHP_GD;?>）<?php }else{ ?>未开启<?php }?></td>
+		<td><?php if(extension_loaded('mcrypt')){ ?>已开启<?php }else{ ?>未开启<?php }?></td>
+	</tr>
+	<tr align="center" height="50">
+	<th>WEB 服务器</th>
+	<th>JSON扩展</th>
+	<th>ZLIB 扩展</th>
+	<th>FTP 扩展</th>
+	<th>allow_url_fopen</th>
+	</tr>
+	<tr align='center' height="200" align="center">
+		<td><?php echo $_SERVER['SERVER_SOFTWARE'];?></td>	
+		<td><?php if($PHP_JSON){ ?>已开启<?php }else{ ?>未开启<?php }?></td>
+		<td><?php if(extension_loaded('zlib')){ ?>已开启<?php }else{ ?>未开启<?php }?></td>
+		<td><?php if(extension_loaded('ftp')){ ?>已开启<?php }else{ ?>未开启<?php }?></td>
+		<td><?php if(ini_get('allow_url_fopen')){ ?>已开启<?php }else{ ?>未开启<?php }?></td>
+	</tr>
+</table>
+
+</div>
+<script language="javascript" src="js/jquery/jquery.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--#include file="application/uc/meta.shtml"-->
+		<link href="css/reset.css" rel="stylesheet">
+		<link href="css/base.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/allchecks.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/respond.css" />
+		<link rel="stylesheet" href="css/jcDate.css">
+			<link rel="stylesheet" href="css/mobilemenu.css" />
+		<!--[if lt IE 9]>
+	      <script src="js/html5.js"></script>
+	      <link href="style/ie.css" rel="stylesheet">
+    	<![endif]-->
+	</head>
+
+	<body>
+		<!--#include file="application/uc/header.shtml"-->
+		<div class="box institute_detail">
+			<div class="container">
+				<div class="location">
+					<a href="/">Home Page</a>
+					<span>&gt;</span>
+					<a href="javascript:;">Questionnaire</a>
+				</div>
+				<div class="inner_title">
+					<h3>RiskMetri Wealth Preservation Evaluation System</h3>
+					<p>Basic Information Evaluation </p>
+				</div>
+				<div class="switch_tags">
+					<!--{omp:nav_get_parent_url data="assign" list="questionnaire_1" id=11}-->
+					<!--{omp:nav_get_parent_url data="assign" list="questionnaire_2" id=13}-->
+					<a href="{site_url($questionnaire_1)}" class="active">Basic Information Evaluation </a>
+					<!--{if $this->_CI->session->userdata('memberid') && $this->_CI->session->userdata('username')}-->
+					<a href="{site_url($questionnaire_2)}">Risk Evaluation</a>
+					<!--{/if}-->
+				</div>
+				<div class="questionnaire-box">
+					<div class="why-show">
+						Dear customer, 
+						<br />To understand your investment habits and attitude to bearing risk as accurately as possible, we need you to spend a little time finishing the following questionnaire. Thank you! 
+					</div>
+					<div class="items">
+						<form id="questionnaire">
+							<dl>
+								<dt>1、You are: </dt>
+								<dd>
+									<ul>
+										<!--{omp:doc_option data="assign" list="field" id=11 field="sex"}-->
+										<!--{loop $field.sex as $k=>$v}-->
+										<li>
+											<input class="radio" type="radio" name="sex" value="{$k}"/>
+											<label class="new_label">{$v}</label>
+										</li>
+										<!--{/loop}-->
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt>2、You were born in:</dt>
+								<dd class="person_date">
+									<input type="text" name="birthday" class="pro_name date" value="Please choose from"/>
+                                	<span><img src="img/person_date.png" alt=""></span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>3、Your highest educational qualification is:</dt>
+								<dd>
+									<ul>
+										<!--{omp:doc_option data="assign" list="field" id=11 field="education"}-->
+										<!--{loop $field.education as $k=>$v}-->
+										<li>
+											<input class="radio" type="radio" name="education" value="{$k}"/>
+											<label class="new_label">{$v}</label>
+										</li>
+										<!--{/loop}-->
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt>4、Taking all income sources into account, you estimate your personal pre-tax annual income is: </dt>
+								<dd>
+									<ul>
+										<!--{omp:doc_option data="assign" list="field" id=11 field="income"}-->
+										<!--{loop $field.income as $k=>$v}-->
+										<li>
+											<input class="radio" type="radio" name="income" value="{$k}"/>
+											<label class="new_label">{$v}</label>
+										</li>
+										<!--{/loop}-->
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt>5、Are you married? </dt>
+								<dd>
+									<ul>
+										<!--{omp:doc_option data="assign" list="field" id=11 field="is_married"}-->
+										<!--{loop $field.is_married as $k=>$v}-->
+										<li>
+											<input class="radio" type="radio" name="is_married" value="{$k}"/>
+											<label class="new_label">{$v}</label>
+										</li>
+										<!--{/loop}-->
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt>6、If you’re married, which of the following represents your annual family income? </dt>
+								<dd>
+									<ul>
+										<!--{omp:doc_option data="assign" list="field" id=11 field="family_income"}-->
+										<!--{loop $field.family_income as $k=>$v}-->
+										<li>
+											<input class="radio" type="radio" name="family_income" value="{$k}"/>
+											<label class="new_label">{$v}</label>
+										</li>
+										<!--{/loop}-->
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt>7、Apart from yourself, how many other family members do you need to support? </dt>
+								<dd>
+									<ul>
+										<!--{omp:doc_option data="assign" list="field" id=11 field="family_members"}-->
+										<!--{loop $field.family_members as $k=>$v}-->
+										<li>
+											<input class="radio" type="radio" name="family_members" value="{$k}"/>
+											<label class="new_label">{$v}</label>
+										</li>
+										<!--{/loop}-->
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt>8、What is your family net worth? </dt>
+								<dd>
+									<ul>
+										<!--{omp:doc_option data="assign" list="field" id=11 field="assets"}-->
+										<!--{loop $field.assets as $k=>$v}-->
+										<li>
+											<input class="radio" type="radio" name="assets" value="{$k}"/>
+											<label class="new_label">{$v}</label>
+										</li>
+										<!--{/loop}-->
+									</ul>
+								</dd>
+							</dl>
+							<input type="hidden" name="modelid" value="8">
+						</form>
+					</div>
+					<div class="question_submit">
+					    <a href="javascript:;" id="submit">Submit</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--#include file="application/uc/footer.shtml"-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/icheck.js"></script>
+		<script type="text/javascript" src="js/jQuery-jcDate-en.js"></script>
+		<script type="text/javascript" src="js/mobilemenu.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+			$(function (){
+				$("input.date").jcDate({					       
+					Event : "click",
+					Speed : 100,
+					Left : 0,
+					Top : 50,
+					format : "-",
+					Timeout : 100
+				});
+			});
+			$("#submit").click(function(){
+				var data = $("#questionnaire").serialize();
+				$.post("{site_url('member/questionnaire')}",data,function(result){
+					if(result.code == 1000){
+						alert(result.msg);
+					}
+					else if(result.code == 1001){
+						alert(result.msg);
+					}
+					else if(result.code == 1002){
+						alert(result.msg);
+						window.location.href = result.data.url;
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

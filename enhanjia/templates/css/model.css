@@ -1,0 +1,103 @@
+html, body, div, input,select,img, ul, ol, li, p, map, area, a, h1, h2, h3, h4, h5, h6, dl, dt, dd, ins, em, i, form, fieldset{
+	margin:0;
+	padding:0;
+	border: 0;
+	font-size:12px;
+    outline: 0;
+}
+html,body{
+	font-size: 12px;
+	font-family: 'Microsoft YaHei','微软雅黑'，Arial,Helvetica,sans-serif;
+}
+img{vertical-align:middle; border:0 none;}
+ul,li{
+	list-style: none;
+}
+a{text-decoration: none; outline: 0; overflow: hidden;} a:hover{text-decoration: none;}
+
+.clearfix {
+    zoom:1;
+}
+
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.container{
+    margin: 20px;
+    border: 1px solid #d6d7d9;
+}
+.box{
+    padding-bottom: 20px;
+}
+.box >li{
+    position: relative;
+    padding: 10px 20px 20px;
+    border-bottom: 1px solid #d6d7d9;
+}
+.box .delete{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+}
+.box .last{
+    text-align: right;
+    border: 0;
+}
+.box .submit{
+    border: 1px solid #303641;
+    background: #303641;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 6px 12px;
+    font-size: 12px;
+    line-height: 1em;
+    color: #fff;
+    vertical-align: middle;
+}
+.box .item li{
+    margin-top: 20px;
+}
+label{
+    float: left;
+    width: 100px;
+    text-align: right;
+}
+.area{
+    float: left;
+    width: 70%;
+    margin-left: 20px;
+}
+.box .item li.first{
+    margin: 0;
+}
+.box .item li.add{
+    text-align: center;
+}
+input[type=text]{
+    width: 400px;
+	padding:2px 4px;
+	height: 21px;
+	line-height: 21px;
+	vertical-align:middle;
+    border: 1px solid #ababab;
+}
+textarea{
+    width: 400px;
+    height: 80px;
+    padding:2px 4px;
+    vertical-align: text-top;
+    resize: vertical;
+    border: 1px solid #ababab;
+}
+select{
+    width: 400px;
+    padding: 2px 4px;
+    height: 27px;
+    line-height: 27px;
+    vertical-align: middle;
+    border: 1px solid #ababab;
+}
